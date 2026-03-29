@@ -116,12 +116,25 @@ export default async function Portfolio() {
           </Link>
         </div>
 
+        <style>{`
+          .home-portfolio-grid {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 24px;
+          }
+          @media (min-width: 640px) {
+            .home-portfolio-grid { grid-template-columns: repeat(2, 1fr); }
+          }
+          @media (min-width: 1024px) {
+            .home-portfolio-grid { grid-template-columns: repeat(3, 1fr); }
+          }
+        `}</style>
         {items.length === 0 ? (
           <p style={{ color: '#6B7280', textAlign: 'center', padding: '48px 0' }}>
             Noch keine Projekte vorhanden.
           </p>
         ) : (
-          <div className="animate-on-scroll grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+          <div className="animate-on-scroll home-portfolio-grid">
             {items.map((item) => (
               <PortfolioCardStatic key={item.id} item={item} />
             ))}
