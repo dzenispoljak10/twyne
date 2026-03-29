@@ -1,0 +1,51 @@
+{
+  "nav": {
+    "leistungen": "Leistungen",
+    "portfolio": "Portfolio",
+    "blog": "Blog",
+    "kontakt": "Kontakt",
+    "projektStarten": "Projekt starten"
+  },
+  "hero": {
+    "label": "Digitalagentur · Schweiz",
+    "headline": "Wir bauen digitale\nProdukte die wirken.",
+    "subtext": "Webseiten, Apps, Software, KI-Beratung & SEO — präzise gebaut, messbar wirksam.",
+    "cta": "Projekt starten",
+    "ctaSecondary": "Portfolio ansehen"
+  },
+  "services": {
+    "title": "Was wir für Sie leisten",
+    "items": {
+      "webseiten": "Webseiten & Webdesign",
+      "webapps": "Webapplikationen",
+      "software": "Softwareentwicklung",
+      "cms": "CMS-Lösungen",
+      "ki": "KI-Beratung",
+      "transformation": "Digitale Transformation",
+      "seo": "SEO & Suchmaschinenoptimierung"
+    }
+  },
+  "contact": {
+    "title": "Projekt anfragen",
+    "vorname": "Vorname",
+    "nachname": "Nachname",
+    "firma": "Firma",
+    "email": "E-Mail",
+    "telefon": "Telefon",
+    "website": "Website (optional)",
+    "dienstleistung": "Gewünschte Dienstleistung",
+    "budget": "Budget",
+    "nachricht": "Ihre Nachricht",
+    "datenschutz": "Ich habe die Datenschutzerklärung gelesen und akzeptiert.",
+    "senden": "Anfrage senden",
+    "erfolg": "Vielen Dank! Wir melden uns in Kürze.",
+    "budgetOptions": {
+      "unter2k": "Unter CHF 2'000",
+      "2k5k": "CHF 2'000 – 5'000",
+      "5k15k": "CHF 5'000 – 15'000",
+      "15k50k": "CHF 15'000 – 50'000",
+      "ueber50k": "Über CHF 50'000",
+      "offen": "Offen / noch unklar"
+    }
+  }
+}

@@ -1,7 +1,31 @@
 {
   "permissions": {
     "allow": [
-      "Bash(npx create-next-app@latest . --typescript --tailwind --eslint --app --no-src-dir --import-alias \"@/*\" --yes)"
+      "Bash(npx create-next-app@latest . --typescript --tailwind --eslint --app --no-src-dir --import-alias \"@/*\" --yes)",
+      "Bash(npm install:*)",
+      "Bash(npx tsc:*)",
+      "Bash(mkdir -p /c/Users/dzeni/Documents/twyne/app/admin/anfragen/[id])",
+      "Bash(mkdir -p /c/Users/dzeni/Documents/twyne/app/admin/projekte/[id])",
+      "Bash(mkdir -p /c/Users/dzeni/Documents/twyne/app/api/auth/[...nextauth])",
+      "Bash(mkdir -p /c/Users/dzeni/Documents/twyne/app/api/anfragen/[id]/annehmen)",
+      "Bash(mkdir -p /c/Users/dzeni/Documents/twyne/app/api/anfragen/[id]/ablehnen)",
+      "Bash(npm run:*)",
+      "Bash(npx prisma:*)",
+      "Bash(ls /c/Users/dzeni/Documents/twyne/prisma.config.*)",
+      "Bash(python3 -c \"import sys,json; d=json.load\\(sys.stdin\\); print\\(d.get\\(''''exports'''',{}\\).get\\(''''./config'''',{}\\)\\)\")",
+      "Bash(find C:/Users/dzeni/Documents/twyne/node_modules/next/dist/docs -name sitemap*)",
+      "Bash(node -e \"const p = require\\(''C:/Users/dzeni/Documents/twyne/node_modules/react-hook-form/package.json''\\); console.log\\(''react-hook-form:'', p.version\\)\")",
+      "Bash(node -e \"const p = require\\(''C:/Users/dzeni/Documents/twyne/node_modules/zod/package.json''\\); console.log\\(''zod:'', p.version\\)\")",
+      "Bash(node -e \"const p = require\\(''C:/Users/dzeni/Documents/twyne/node_modules/@hookform/resolvers/package.json''\\); console.log\\(''@hookform/resolvers:'', p.version\\)\")",
+      "Bash(cd:*)",
+      "Bash(rm \"C:/Users/dzeni/Documents/twyne/app/api/crm/projekte/[id]/offerte/route.ts\" \"C:/Users/dzeni/Documents/twyne/app/api/crm/projekte/[id]/rechnung/route.ts\" \"C:/Users/dzeni/Documents/twyne/app/api/crm/projekte/[id]/positionen/route.ts\" \"C:/Users/dzeni/Documents/twyne/app/api/crm/projekte/[id]/zahlung/route.ts\" \"C:/Users/dzeni/Documents/twyne/app/api/crm/projekte/[id]/pdf/route.ts\")",
+      "Bash(rm -rf \"C:/Users/dzeni/Documents/twyne/app/api/crm/projekte/[id]/positionen\")",
+      "Bash(node -e \"require\\(''dotenv''\\).config\\({path:''.env.local''}\\); const {execSync}=require\\(''child_process''\\); execSync\\(''npx tsx prisma/seed.ts'', {stdio:''inherit'', env: process.env}\\)\")",
+      "Bash(npx tsx:*)",
+      "Bash(find /c/Users/dzeni/Documents/twyne/app/admin -type f -name *.ts -o -type f -name *.tsx -o -type f -name *.js)",
+      "Bash(ls:*)",
+      "Bash(echo 'UPDATE uploads SET \"\"\"\"projektId\"\"\"\" = NULL;')",
+      "Bash(xargs grep:*)"
     ]
   }
 }

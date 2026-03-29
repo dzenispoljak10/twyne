@@ -1,0 +1,358 @@
+generator client {
+  provider      = "prisma-client-js"
+  binaryTargets = ["native", "rhel-openssl-1.0.x"]
+}
+
+datasource db {
+  provider = "postgresql"
+}
+
+// ─── ANFRAGEN (Kontaktformular) ────────────────────────────────────────────
+
+model Anfrage {
+  id              String        @id @default(cuid())
+  createdAt       DateTime      @default(now())
+  updatedAt       DateTime      @updatedAt
+  vorname         String
+  nachname        String
+  firma           String
+  email           String
+  telefon         String
+  website         String?
+  budget          String?
+  dienstleistung  String[]
+  nachricht       String        @db.Text
+  status          AnfrageStatus @default(NEU)
+  ablehnungsgrund String?       @db.Text
+  projekt         Projekt?
+  mails           Mail[]
+  uploads         Upload[]
+  @@map("anfragen")
+}
+
+enum AnfrageStatus {
+  NEU
+  IN_BEARBEITUNG
+  ANGENOMMEN
+  ABGELEHNT
+  ARCHIVIERT
+}
+
+model Mail {
+  id        String    @id @default(cuid())
+  createdAt DateTime  @default(now())
+  an        String
+  betreff   String
+  inhalt    String    @db.Text
+  typ       MailTyp
+  anfrage   Anfrage?  @relation(fields: [anfrageId], references: [id])
+  anfrageId String?
+  @@map("mails")
+}
+
+enum MailTyp {
+  BESTAETIGUNG
+  ANNAHME
+  ABLEHNUNG
+  UPLOAD_ANFRAGE
+  OFFERTE
+  STATUSUPDATE
+  INDIVIDUELL
+}
+
+model Upload {
+  id                String       @id @default(cuid())
+  createdAt         DateTime     @default(now())
+  token             String       @unique @default(cuid())
+  status            UploadStatus @default(AUSSTEHEND)
+  dateiname         String?
+  dateipfad         String?
+  dateigroesse      Int?
+  heruntergeladenAm DateTime?
+  anfrage           Anfrage?     @relation(fields: [anfrageId], references: [id])
+  anfrageId         String?
+  projekt           Projekt?     @relation(fields: [projektId], references: [id])
+  projektId         String?
+  @@map("uploads")
+}
+
+enum UploadStatus {
+  AUSSTEHEND
+  HOCHGELADEN
+  HERUNTERGELADEN
+}
+
+// ─── CRM ──────────────────────────────────────────────────────────────────
+
+model Kunde {
+  id          String       @id @default(cuid())
+  createdAt   DateTime     @default(now())
+  updatedAt   DateTime     @updatedAt
+  firma       String
+  vorname     String
+  nachname    String
+  email       String       @unique
+  telefon     String?
+  website     String?
+  adresse     String?      @db.Text
+  notiz       String?      @db.Text
+  projekte    Projekt[]
+  mails       KundenMail[]
+  @@map("kunden")
+}
+
+model Projekt {
+  id              String         @id @default(cuid())
+  createdAt       DateTime       @default(now())
+  updatedAt       DateTime       @updatedAt
+  name            String
+  beschreibung    String?        @db.Text
+  status          ProjektStatus  @default(ANGEBOT)
+  // Optional Kunde (manuell erstellte Projekte)
+  kundeId         String?
+  kunde           Kunde?         @relation(fields: [kundeId], references: [id])
+  // Optional Anfrage (aus Anfrage entstandene Projekte)
+  anfrageId       String?        @unique
+  anfrage         Anfrage?       @relation(fields: [anfrageId], references: [id])
+  // Kontaktdaten (für anfrage-basierte Projekte ohne Kunde)
+  kontaktVorname  String?
+  kontaktNachname String?
+  kontaktEmail    String?
+  kontaktTelefon  String?
+  kontaktFirma    String?
+  // Relationen
+  offerten        Offerte[]
+  rechnungen      Rechnung[]
+  mails           ProjektMail[]
+  notizen         ProjektNotiz[]
+  uploads         Upload[]
+  @@map("projekte")
+}
+
+enum ProjektStatus {
+  ANGEBOT
+  AKTIV
+  IN_BEARBEITUNG
+  ABGESCHLOSSEN
+  PAUSIERT
+  STORNIERT
+}
+
+model Offerte {
+  id         String        @id @default(cuid())
+  createdAt  DateTime      @default(now())
+  updatedAt  DateTime      @updatedAt
+  nr         String        @unique
+  datum      DateTime      @default(now())
+  gueltigBis DateTime
+  status     OfferteStatus @default(ENTWURF)
+  notiz      String?       @db.Text
+  mwst       Boolean       @default(true)
+  positionen Position[]
+  projekt    Projekt       @relation(fields: [projektId], references: [id], onDelete: Cascade)
+  projektId  String
+  @@map("offerten")
+}
+
+model Rechnung {
+  id               String            @id @default(cuid())
+  createdAt        DateTime          @default(now())
+  updatedAt        DateTime          @updatedAt
+  nr               String            @unique
+  datum            DateTime          @default(now())
+  faelligBis       DateTime
+  status           RechnungsStatus   @default(ENTWURF)
+  zahlungsreferenz String?
+  bezahltBetrag    Decimal?          @db.Decimal(10, 2)
+  positionen       RechnungsPosition[]
+  projekt          Projekt           @relation(fields: [projektId], references: [id], onDelete: Cascade)
+  projektId        String
+  @@map("rechnungen")
+}
+
+model Position {
+  id           String   @id @default(cuid())
+  beschreibung String   @db.Text
+  menge        Decimal  @db.Decimal(10, 2) @default(1)
+  einheit      String   @default("Std.")
+  einzelpreis  Decimal  @db.Decimal(10, 2)
+  reihenfolge  Int      @default(0)
+  offerte      Offerte  @relation(fields: [offerteId], references: [id], onDelete: Cascade)
+  offerteId    String
+  @@map("positionen")
+}
+
+model RechnungsPosition {
+  id           String   @id @default(cuid())
+  beschreibung String   @db.Text
+  menge        Decimal  @db.Decimal(10, 2) @default(1)
+  einheit      String   @default("Std.")
+  einzelpreis  Decimal  @db.Decimal(10, 2)
+  reihenfolge  Int      @default(0)
+  rechnung     Rechnung @relation(fields: [rechnungId], references: [id], onDelete: Cascade)
+  rechnungId   String
+  @@map("rechnungs_positionen")
+}
+
+enum OfferteStatus {
+  ENTWURF
+  VERSENDET
+  ANGENOMMEN
+  ABGELEHNT
+}
+
+enum RechnungsStatus {
+  ENTWURF
+  VERSENDET
+  TEILBEZAHLT
+  BEZAHLT
+  UEBERFAELLIG
+  MAHNUNG_1
+  MAHNUNG_2
+}
+
+model KundenMail {
+  id        String   @id @default(cuid())
+  createdAt DateTime @default(now())
+  an        String
+  betreff   String
+  inhalt    String   @db.Text
+  typ       MailTyp2
+  kunde     Kunde    @relation(fields: [kundeId], references: [id])
+  kundeId   String
+  @@map("kunden_mails")
+}
+
+model ProjektMail {
+  id        String   @id @default(cuid())
+  createdAt DateTime @default(now())
+  an        String
+  betreff   String
+  inhalt    String   @db.Text
+  typ       MailTyp2
+  projekt   Projekt  @relation(fields: [projektId], references: [id])
+  projektId String
+  @@map("projekt_mails")
+}
+
+model ProjektNotiz {
+  id        String   @id @default(cuid())
+  createdAt DateTime @default(now())
+  inhalt    String   @db.Text
+  projekt   Projekt  @relation(fields: [projektId], references: [id])
+  projektId String
+  @@map("projekt_notizen")
+}
+
+enum MailTyp2 {
+  OFFERTE
+  NACHFASSEN
+  AUFTRAGSBESTAETIGUNG
+  RECHNUNG
+  ZAHLUNGSERINNERUNG
+  MAHNUNG_1
+  MAHNUNG_2
+  INDIVIDUELL
+}
+
+// ─── LEADS ────────────────────────────────────────────────────────────────
+
+model Lead {
+  id             String             @id @default(cuid())
+  createdAt      DateTime           @default(now())
+  updatedAt      DateTime           @updatedAt
+  firma          String
+  ansprechperson String
+  email          String
+  telefon        String?
+  nachricht      String?            @db.Text
+  quelle         LeadQuelle
+  produkt        ProduktTyp?
+  dienstleistung DienstleistungTyp?
+  status         LeadStatus         @default(NEU)
+  notiz          String?            @db.Text
+  @@map("leads")
+}
+
+enum LeadQuelle {
+  PRODUKT_DEMO
+  DIENSTLEISTUNG
+  KONTAKTFORMULAR
+}
+
+enum ProduktTyp {
+  CLUB
+  TABLE
+  DESK
+  FLOW
+}
+
+enum DienstleistungTyp {
+  WEBSEITEN
+  WEBAPPLIKATIONEN
+  SOFTWARE
+  CMS
+  KI_BERATUNG
+  DIGITALE_TRANSFORMATION
+  SEO
+}
+
+enum LeadStatus {
+  NEU
+  KONTAKTIERT
+  IN_VERHANDLUNG
+  GEWONNEN
+  VERLOREN
+}
+
+// ─── CONTENT ──────────────────────────────────────────────────────────────
+
+model Portfolio {
+  id             String             @id @default(cuid())
+  createdAt      DateTime           @default(now())
+  updatedAt      DateTime           @updatedAt
+  name           String
+  kategorie      PortfolioKategorie
+  jahr           Int
+  beschreibung   String             @db.Text
+  tags           String[]
+  bildUrl        String?
+  thumbnailColor String             @default("#1a1a2e")
+  technologie    String             @default("")
+  reihenfolge    Int                @default(0)
+  sichtbar       Boolean            @default(true)
+  @@map("portfolio")
+}
+
+enum PortfolioKategorie {
+  WEBSEITEN
+  WEBAPPLIKATIONEN
+  SOFTWARE
+  CMS
+  KI_BERATUNG
+  DIGITALE_TRANSFORMATION
+  SEO
+}
+
+model KursInteresse {
+  id        String   @id @default(cuid())
+  createdAt DateTime @default(now())
+  email     String   @unique
+  @@map("kurs_interesse")
+}
+
+model BlogPost {
+  id              String   @id @default(cuid())
+  createdAt       DateTime @default(now())
+  updatedAt       DateTime @updatedAt
+  titelDe         String
+  titelEn         String
+  slugDe          String   @unique
+  slugEn          String   @unique
+  inhaltDe        String   @db.Text
+  inhaltEn        String   @db.Text
+  excerptDe       String?
+  excerptEn       String?
+  veroeffentlicht Boolean  @default(false)
+  @@map("blog_posts")
+}
