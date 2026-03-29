@@ -121,11 +121,7 @@ export default async function Portfolio() {
             Noch keine Projekte vorhanden.
           </p>
         ) : (
-          <div className="animate-on-scroll" style={{
-            display: 'grid',
-            gridTemplateColumns: 'repeat(3, 1fr)',
-            gap: '24px',
-          }}>
+          <div className="animate-on-scroll grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
             {items.map((item) => (
               <PortfolioCardStatic key={item.id} item={item} />
             ))}
