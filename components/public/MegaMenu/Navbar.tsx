@@ -132,6 +132,7 @@ export default function Navbar() {
         onMouseLeave={handleAreaLeave}
       >
         <div
+          className="nav-inner"
           style={{
             maxWidth: '1280px',
             margin: '0 auto',
@@ -142,6 +143,7 @@ export default function Navbar() {
             justifyContent: 'space-between',
           }}
         >
+          <style>{`@media (max-width: 767px) { .nav-inner { padding: 0 16px !important; } }`}</style>
           {/* Logo */}
           <Link href="/" style={{ flexShrink: 0, textDecoration: 'none' }}>
             <Logo />

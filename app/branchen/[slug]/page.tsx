@@ -64,6 +64,22 @@ export default async function BrancheDetailPage({ params }: Props) {
 
   return (
     <>
+      <style>{`
+        .branche-cards-3 { display: grid; grid-template-columns: 1fr; gap: 24px; }
+        .branche-cards-2 { display: grid; grid-template-columns: 1fr; gap: 24px; }
+        @media (min-width: 640px) {
+          .branche-cards-3 { grid-template-columns: repeat(2, 1fr); }
+          .branche-cards-2 { grid-template-columns: repeat(2, 1fr); }
+        }
+        @media (min-width: 1024px) {
+          .branche-cards-3 { grid-template-columns: repeat(3, 1fr); }
+        }
+        @media (min-width: 1024px) {
+          .branche-cards-4 { grid-template-columns: repeat(4, 1fr); }
+        }
+        .branche-cards-4 { display: grid; grid-template-columns: 1fr; gap: 24px; }
+        @media (min-width: 640px) { .branche-cards-4 { grid-template-columns: repeat(2, 1fr); } }
+      `}</style>
       <Navbar />
       <main className="pt-16">
 
@@ -98,7 +114,7 @@ export default async function BrancheDetailPage({ params }: Props) {
             <h2 style={{ fontSize: 'clamp(24px, 3vw, 36px)', fontWeight: 800, color: '#111111', letterSpacing: '-1px', marginBottom: '48px' }}>
               Herausforderungen in dieser Branche
             </h2>
-            <div style={{ display: 'grid', gridTemplateColumns: 'repeat(3, 1fr)', gap: '24px' }}>
+            <div className="branche-cards-3">
               {data.herausforderungen.map((item) => (
                 <div key={item.title} style={{ background: '#F8F9FA', borderRadius: '20px', padding: '36px', border: '1px solid #EFEFEF' }}>
                   <div style={{ width: '48px', height: '48px', borderRadius: '14px', background: '#EDE9FE', display: 'flex', alignItems: 'center', justifyContent: 'center', marginBottom: '20px' }}>
@@ -125,7 +141,7 @@ export default async function BrancheDetailPage({ params }: Props) {
             <h2 style={{ fontSize: 'clamp(24px, 3vw, 36px)', fontWeight: 800, color: '#111111', letterSpacing: '-1px', marginBottom: '48px' }}>
               Was Twyne liefert
             </h2>
-            <div style={{ display: 'grid', gridTemplateColumns: data.leistungen.length === 4 ? 'repeat(4, 1fr)' : 'repeat(3, 1fr)', gap: '24px' }}>
+            <div className={data.leistungen.length === 4 ? 'branche-cards-4' : 'branche-cards-3'}>
               {data.leistungen.map((item) => (
                 <div key={item.title} style={{ background: 'white', borderRadius: '20px', padding: '36px', border: '1px solid #EFEFEF' }}>
                   <div style={{ width: '48px', height: '48px', borderRadius: '14px', background: '#EDE9FE', display: 'flex', alignItems: 'center', justifyContent: 'center', marginBottom: '20px' }}>
@@ -152,7 +168,7 @@ export default async function BrancheDetailPage({ params }: Props) {
             <h2 style={{ fontSize: 'clamp(24px, 3vw, 36px)', fontWeight: 800, color: '#111111', letterSpacing: '-1px', marginBottom: '48px' }}>
               Passende Projekte
             </h2>
-            <div style={{ display: 'grid', gridTemplateColumns: 'repeat(2, 1fr)', gap: '24px' }}>
+            <div className="branche-cards-2">
               {data.projekte.map((projekt) => (
                 <div key={projekt.name} style={{ borderRadius: '20px', overflow: 'hidden', boxShadow: '0 2px 12px rgba(0,0,0,0.07)' }}>
                   <div style={{ background: projekt.thumbnailColor, height: '160px', display: 'flex', alignItems: 'center', justifyContent: 'center', position: 'relative' }}>

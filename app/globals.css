@@ -15,6 +15,9 @@
 
 * { box-sizing: border-box; }
 
+/* Prevent horizontal overflow on all viewports */
+html, body { overflow-x: hidden; }
+
 html { scroll-behavior: smooth; }
 
 body {

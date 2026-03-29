@@ -63,7 +63,7 @@ export default async function PortfolioPage() {
                 Noch keine Projekte vorhanden.
               </p>
             ) : (
-              <div style={{ display: 'grid', gridTemplateColumns: 'repeat(3, 1fr)', gap: '24px' }}>
+              <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
                 {items.map((item) => {
                   const meta = kategorieMeta[item.kategorie] ?? { label: item.kategorie, color: '#7C3AED' }
                   const bgColor = item.thumbnailColor || meta.color

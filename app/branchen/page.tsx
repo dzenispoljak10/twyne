@@ -54,7 +54,7 @@ export default function BranchenPage() {
         `}</style>
         <section style={{ background: 'white', padding: '80px 0' }}>
           <div className="max-w-7xl mx-auto px-6 lg:px-8">
-            <div style={{ display: 'grid', gridTemplateColumns: 'repeat(3, 1fr)', gap: '24px' }}>
+            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
               {branchen.map(([slug, meta]) => (
                 <Link
                   key={slug}

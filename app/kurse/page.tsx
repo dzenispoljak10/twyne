@@ -141,7 +141,7 @@ export default function KursePage() {
               </h2>
             </div>
 
-            <div style={{ display: 'grid', gridTemplateColumns: 'repeat(3, 1fr)', gap: '24px' }}>
+            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
               {kurse.map((kurs) => {
                 const Icon = kurs.icon
                 return (
@@ -228,7 +228,7 @@ export default function KursePage() {
             <h2 style={{ fontSize: 'clamp(24px, 3vw, 36px)', fontWeight: 800, color: '#111111', letterSpacing: '-1px', marginBottom: '48px' }}>
               So funktioniert die Twyne Academy
             </h2>
-            <div style={{ display: 'grid', gridTemplateColumns: 'repeat(3, 1fr)', gap: '32px' }}>
+            <div className="grid grid-cols-1 sm:grid-cols-3 gap-8">
               {schritte.map((schritt, i) => {
                 const Icon = schritt.icon
                 return (

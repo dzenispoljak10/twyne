@@ -42,8 +42,22 @@ function FooterLink({ href, children }: { href: string; children: React.ReactNod
 export default function Footer() {
   return (
     <footer style={{ background: '#0A0A0A', borderTop: '1px solid rgba(255,255,255,0.06)' }}>
+      <style>{`
+        .footer-grid {
+          display: grid;
+          grid-template-columns: 1fr;
+          gap: 40px;
+          margin-bottom: 48px;
+        }
+        @media (min-width: 640px) {
+          .footer-grid { grid-template-columns: repeat(2, 1fr); gap: 40px; }
+        }
+        @media (min-width: 1024px) {
+          .footer-grid { grid-template-columns: repeat(4, 1fr); gap: 48px; }
+        }
+      `}</style>
       <div className="max-w-7xl mx-auto px-6 lg:px-8" style={{ paddingTop: '64px', paddingBottom: '32px' }}>
-        <div style={{ display: 'grid', gridTemplateColumns: 'repeat(4, 1fr)', gap: '48px', marginBottom: '48px' }}>
+        <div className="footer-grid">
 
           {/* Spalte 1 — Logo + Info */}
           <div>
@@ -115,7 +129,7 @@ export default function Footer() {
         </div>
 
         {/* Bottom bar */}
-        <div style={{ borderTop: '1px solid rgba(255,255,255,0.06)', paddingTop: '24px', display: 'flex', justifyContent: 'space-between', alignItems: 'center', flexWrap: 'wrap', gap: '12px' }}>
+        <div style={{ borderTop: '1px solid rgba(255,255,255,0.06)', paddingTop: '24px', display: 'flex', justifyContent: 'space-between', alignItems: 'center', flexWrap: 'wrap', gap: '12px', minHeight: '44px' }}>
           <p style={{ fontSize: '12px', color: 'rgba(255,255,255,0.3)', margin: 0 }}>
             © 2025 Twyne
           </p>

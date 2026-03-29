@@ -85,7 +85,7 @@ export default function Hero() {
               </span>
             </div>
 
-            <h1 className="fade-up-1" style={{ fontSize: 'clamp(40px, 5.5vw, 72px)', fontWeight: 800, letterSpacing: '-2.5px', lineHeight: 1.05, color: '#111111', marginBottom: '24px' }}>
+            <h1 className="fade-up-1" style={{ fontSize: 'clamp(32px, 5.5vw, 72px)', fontWeight: 800, letterSpacing: '-2px', lineHeight: 1.05, color: '#111111', marginBottom: '24px' }}>
               Wir bauen digitale<br />
               <span style={{ color: '#7C3AED' }}>Produkte die wirken.</span>
             </h1>
@@ -94,10 +94,11 @@ export default function Hero() {
               Twyne ist Ihre Digitalagentur in der Schweiz — spezialisiert auf Webseiten, Webapplikationen, Software und KI-Beratung für Schweizer KMU in der ganzen Schweiz.
             </p>
 
-            <div className="fade-up-3" style={{ display: 'flex', flexWrap: 'wrap', gap: '12px', marginBottom: '48px' }}>
+            <div className="fade-up-3 hero-btns" style={{ display: 'flex', flexWrap: 'wrap', gap: '12px', marginBottom: '48px' }}>
               <Link
                 href="/anfrage"
-                style={{ background: '#7C3AED', color: 'white', padding: '14px 28px', borderRadius: '10px', fontSize: '15px', fontWeight: 600, transition: 'all 0.25s ease', display: 'inline-flex', alignItems: 'center' }}
+                className="hero-btn-primary"
+                style={{ background: '#7C3AED', color: 'white', padding: '14px 28px', borderRadius: '10px', fontSize: '15px', fontWeight: 600, transition: 'all 0.25s ease', display: 'inline-flex', alignItems: 'center', justifyContent: 'center', minHeight: '44px' }}
                 onMouseEnter={(e) => { e.currentTarget.style.transform = 'translateY(-2px)'; e.currentTarget.style.boxShadow = '0 8px 24px rgba(124,58,237,0.4)'; e.currentTarget.style.background = '#6D28D9' }}
                 onMouseLeave={(e) => { e.currentTarget.style.transform = 'translateY(0)'; e.currentTarget.style.boxShadow = 'none'; e.currentTarget.style.background = '#7C3AED' }}
               >
@@ -105,13 +106,20 @@ export default function Hero() {
               </Link>
               <Link
                 href="/leistungen"
-                style={{ background: 'transparent', border: '1.5px solid #E8E8ED', color: '#374151', padding: '14px 28px', borderRadius: '10px', fontSize: '15px', fontWeight: 600, transition: 'all 0.25s ease', display: 'inline-flex', alignItems: 'center' }}
+                className="hero-btn-secondary"
+                style={{ background: 'transparent', border: '1.5px solid #E8E8ED', color: '#374151', padding: '14px 28px', borderRadius: '10px', fontSize: '15px', fontWeight: 600, transition: 'all 0.25s ease', display: 'inline-flex', alignItems: 'center', justifyContent: 'center', minHeight: '44px' }}
                 onMouseEnter={(e) => { e.currentTarget.style.borderColor = '#7C3AED'; e.currentTarget.style.color = '#7C3AED' }}
                 onMouseLeave={(e) => { e.currentTarget.style.borderColor = '#E8E8ED'; e.currentTarget.style.color = '#374151' }}
               >
                 Leistungen entdecken ↓
               </Link>
             </div>
+            <style>{`
+              @media (max-width: 767px) {
+                .hero-btns { flex-direction: column; }
+                .hero-btn-primary, .hero-btn-secondary { width: 100%; }
+              }
+            `}</style>
 
             <div className="fade-up-4" style={{ borderTop: '1px solid #F0F0F0', paddingTop: '28px' }}>
               <div style={{ display: 'flex', flexWrap: 'wrap', gap: '40px' }}>
