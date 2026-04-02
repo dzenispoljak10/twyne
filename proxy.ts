@@ -55,9 +55,11 @@ export async function proxy(request: NextRequest) {
 
   // ── Admin-Schutz ───────────────────────────────────────────────────────────
   if (pathname.startsWith('/admin')) {
+    const secureCookie = request.url.startsWith('https://')
     const token = await getToken({
       req: request,
-      secret: process.env.NEXTAUTH_SECRET ?? process.env.AUTH_SECRET,
+      secret: process.env.AUTH_SECRET ?? process.env.NEXTAUTH_SECRET,
+      secureCookie,
     })
 
     if (!token) {
