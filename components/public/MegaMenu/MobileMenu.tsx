@@ -248,6 +248,7 @@ export default function MobileMenu({ isOpen, onClose, pathname }: Props) {
           </div>
 
           <Link href="/portfolio" onClick={onClose} style={linkStyle('/portfolio')}>Portfolio</Link>
+          <Link href="/ueber-uns" onClick={onClose} style={linkStyle('/ueber-uns')}>Über uns</Link>
           <Link href="/kontakt" onClick={onClose} style={linkStyle('/kontakt')}>Kontakt</Link>
         </nav>
 
