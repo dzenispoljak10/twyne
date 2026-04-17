@@ -131,7 +131,7 @@ export default function Footer() {
         {/* Bottom bar */}
         <div style={{ borderTop: '1px solid rgba(255,255,255,0.06)', paddingTop: '24px', display: 'flex', justifyContent: 'space-between', alignItems: 'center', flexWrap: 'wrap', gap: '12px', minHeight: '44px' }}>
           <p style={{ fontSize: '12px', color: 'rgba(255,255,255,0.3)', margin: 0 }}>
-            © 2025 Twyne
+            © {new Date().getFullYear()} Twyne
           </p>
           <div style={{ display: 'flex', gap: '20px' }}>
             {[{ href: '/impressum', label: 'Impressum' }, { href: '/datenschutz', label: 'Datenschutz' }].map(({ href, label }) => (
