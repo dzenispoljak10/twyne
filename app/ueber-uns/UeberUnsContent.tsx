@@ -7,15 +7,15 @@ import Footer from '@/components/public/Footer'
 const werte = [
   {
     titel: 'Präzision',
-    text: 'Kein Overhead, kein Bullshit. Jede Lösung ist auf den Punkt gebaut.',
+    text: 'Effizienz ohne Kompromisse. Jede Lösung ist zielgerichtet und auf den Punkt gebaut.',
   },
   {
     titel: 'Partnerschaft',
-    text: 'Ich denke langfristig — als Partner, nicht als Dienstleister.',
+    text: 'Ich denke langfristig und handle als echter Partner, nicht als reiner Dienstleister.',
   },
   {
     titel: 'Resultate',
-    text: 'Messbare Ergebnisse die zählen. Nicht Versprechen, sondern Fakten.',
+    text: 'Messbare Ergebnisse, die zählen. Keine leeren Versprechen, sondern nachweisbare Fakten.',
   },
 ]
 
@@ -45,7 +45,7 @@ export default function UeberUnsContent() {
             Persönlich. Präzise. Digital.
           </h1>
           <p style={{ fontSize: '18px', color: 'rgba(255,255,255,0.55)', lineHeight: 1.7, maxWidth: '560px', margin: '0 auto' }}>
-            Twyne ist eine Schweizer Digitalagentur mit dem Fokus auf das Wesentliche — Lösungen, die wirklich funktionieren.
+            Twyne ist eine Schweizer Digitalagentur mit dem Fokus auf das Wesentliche: Lösungen, die wirklich funktionieren.
           </p>
         </div>
       </section>
@@ -135,10 +135,10 @@ export default function UeberUnsContent() {
             </h2>
             <div style={{ display: 'flex', flexDirection: 'column', gap: '16px' }}>
               <p style={{ fontSize: '16px', color: '#374151', lineHeight: 1.8, margin: 0 }}>
-                Ich bin Dzenis Poljak, Gründer und Geschäftsführer von Twyne. Mit über 10 Jahren Erfahrung in der IT-Branche — von der Softwareentwicklung bis zur strategischen Beratung — begleite ich Unternehmen auf dem Weg zur digitalen Exzellenz.
+                Ich bin Dzenis Poljak, Gründer und Geschäftsführer von Twyne. Mit über 10 Jahren Erfahrung in der IT-Branche, von der Softwareentwicklung bis zur strategischen Beratung, begleite ich Unternehmen auf dem Weg zur digitalen Exzellenz.
               </p>
               <p style={{ fontSize: '16px', color: '#374151', lineHeight: 1.8, margin: 0 }}>
-                Meine Überzeugung: Digitale Lösungen müssen nicht kompliziert sein. Sie müssen funktionieren, messbare Resultate liefern und zum Unternehmen passen — nicht umgekehrt.
+                Meine Überzeugung: Digitale Lösungen müssen nicht kompliziert sein. Sie müssen funktionieren, messbare Resultate liefern und zum Unternehmen passen. Nicht umgekehrt.
               </p>
               <p style={{ fontSize: '16px', color: '#374151', lineHeight: 1.8, margin: 0 }}>
                 Mit Twyne habe ich eine Agentur aufgebaut die genau das liefert: präzise, persönlich und ohne Overhead.
