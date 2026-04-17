@@ -121,6 +121,7 @@ export default function UeberUnsContent() {
                 style={{ objectFit: 'cover' }}
                 sizes="320px"
                 priority
+                unoptimized
               />
             </div>
           </div>
