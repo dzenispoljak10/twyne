@@ -36,7 +36,7 @@ export async function POST(req: NextRequest) {
       email: data.email,
       dienstleistung: data.dienstleistung,
       nachricht: data.nachricht,
-    }).catch(console.error)
+    }).catch((err) => console.error('[Mail Eingangsbestaetigung]', err))
 
     await sendAdminBenachrichtigung({
       vorname: data.vorname,
@@ -47,7 +47,7 @@ export async function POST(req: NextRequest) {
       dienstleistung: data.dienstleistung,
       nachricht: data.nachricht,
       budget: data.budget,
-    }).catch(console.error)
+    }).catch((err) => console.error('[Mail Admin Benachrichtigung]', err))
 
     await prisma.mail.create({
       data: {

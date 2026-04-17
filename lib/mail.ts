@@ -4,6 +4,12 @@ const resend = new Resend(process.env.RESEND_API_KEY)
 const FROM = 'Twyne <info@twyne.ch>'
 const APP_URL = process.env.NEXT_PUBLIC_APP_URL || 'http://localhost:3000'
 
+async function send(params: Parameters<typeof resend.emails.send>[0]) {
+  const { data, error } = await resend.emails.send(params)
+  if (error) throw new Error(`Resend: ${error.message}`)
+  return data
+}
+
 // ─── Logo (weiss für dunklen Header) ──────────────────────────────────────────
 
 const logoSvg = `<svg width="110" height="26" viewBox="0 0 140 32" xmlns="http://www.w3.org/2000/svg">
@@ -120,7 +126,7 @@ export async function sendEingangsbestaetigung(data: {
       ['Nachricht', data.nachricht.length > 300 ? data.nachricht.substring(0, 300) + '…' : data.nachricht],
     ])}
   `
-  return resend.emails.send({
+  return send({
     from: FROM,
     to: data.email,
     subject: 'Ihre Anfrage bei Twyne — Bestätigung',
@@ -141,7 +147,7 @@ export async function sendAnnahme(data: {
     ${para(`wir freuen uns, Ihr Projekt annehmen zu können! Unter dem Namen <strong style="color:#7C3AED;">${data.projektName}</strong> werden wir Ihr Vorhaben gemeinsam umsetzen.`)}
     ${para('In Kürze melden wir uns mit den nächsten Schritten.')}
   `
-  return resend.emails.send({
+  return send({
     from: FROM,
     to: data.email,
     subject: 'Ihr Projekt bei Twyne — Willkommen!',
@@ -171,7 +177,7 @@ export async function sendAbsage(data: {
     ${grundBlock}
     ${para('Wir wünschen Ihnen viel Erfolg und hoffen auf eine zukünftige Zusammenarbeit.')}
   `
-  return resend.emails.send({
+  return send({
     from: FROM,
     to: data.email,
     subject: 'Ihre Anfrage bei Twyne — Rückmeldung',
@@ -200,7 +206,7 @@ export async function sendUploadLink(data: {
       </td></tr>
     </table>
   `
-  return resend.emails.send({
+  return send({
     from: FROM,
     to: data.an,
     subject: `Dateien hochladen für Ihr Twyne-Projekt`,
@@ -225,7 +231,7 @@ export async function sendOfferte(data: {
     ? [{ filename: `${data.offerteNr}_Offerte.pdf`, content: data.pdfBuffer }]
     : undefined
 
-  return resend.emails.send({
+  return send({
     from: FROM,
     to: data.an,
     subject: data.betreff,
@@ -251,7 +257,7 @@ export async function sendRechnung(data: {
     ? [{ filename: `${data.rechnungNr}_Rechnung.pdf`, content: data.pdfBuffer }]
     : undefined
 
-  return resend.emails.send({
+  return send({
     from: FROM,
     to: data.an,
     subject: data.betreff,
@@ -281,7 +287,7 @@ export async function sendZahlungserinnerung(data: {
     ])}
     ${para('Falls Sie die Zahlung bereits veranlasst haben, ignorieren Sie bitte diese Mail.')}
   `
-  return resend.emails.send({
+  return send({
     from: FROM,
     to: data.an,
     subject: `Zahlungserinnerung — Rechnung ${data.rechnungNr}`,
@@ -321,7 +327,7 @@ export async function sendMahnung(data: {
       ${para('Bei Nichtbezahlung behalten wir uns vor, die Forderung einem Inkassobüro zu übergeben.')}
     `
 
-  return resend.emails.send({
+  return send({
     from: FROM,
     to: data.an,
     subject: data.stufe === 1
@@ -339,7 +345,7 @@ export async function sendIndividuelleMail(data: {
   inhalt: string
 }) {
   const content = `<p style="margin:0;font-size:16px;color:#374151;font-family:Arial,sans-serif;line-height:1.7;white-space:pre-line;">${data.inhalt}</p>`
-  return resend.emails.send({
+  return send({
     from: FROM,
     to: data.an,
     subject: data.betreff,
@@ -355,7 +361,7 @@ export async function sendIndividuelleMailMitAnhang(data: {
   anhang?: { filename: string; content: Buffer }
 }) {
   const content = `<p style="margin:0;font-size:16px;color:#374151;font-family:Arial,sans-serif;line-height:1.7;white-space:pre-line;">${data.inhalt}</p>`
-  return resend.emails.send({
+  return send({
     from: FROM,
     to: data.an,
     subject: data.betreff,
@@ -386,7 +392,7 @@ export async function sendLeadBestaetigung(data: {
     ])}
     ${para('Wir freuen uns auf das Gespräch mit Ihnen.')}
   `
-  return resend.emails.send({
+  return send({
     from: FROM,
     to: data.email,
     subject: 'Twyne — Ihre Anfrage ist eingegangen',
@@ -418,7 +424,7 @@ export async function sendAdminBenachrichtigung(data: {
     ])}
     ${para(`<strong>Nachricht:</strong><br>${data.nachricht.replace(/\n/g, '<br>')}`)}
   `
-  return resend.emails.send({
+  return send({
     from: FROM,
     to: 'info@twyne.ch',
     subject: `Neue Anfrage von ${data.vorname} ${data.nachname} (${data.firma})`,
