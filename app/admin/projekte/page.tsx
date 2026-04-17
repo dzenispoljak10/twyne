@@ -3,6 +3,7 @@ import Link from 'next/link'
 import { ProjektStatusBadge } from '@/components/admin/StatusBadge'
 import { Calendar, FolderOpen } from 'lucide-react'
 import NeuesProjektButton from './NeuesProjektButton'
+import ProjektAktionen from './ProjektAktionen'
 
 export const dynamic = 'force-dynamic'
 
@@ -89,6 +90,7 @@ export default async function ProjektePage({
                 <th className="text-left px-6 py-3 text-xs font-semibold text-[#6B7280] uppercase tracking-wider hidden md:table-cell">Kunde / Kontakt</th>
                 <th className="text-left px-6 py-3 text-xs font-semibold text-[#6B7280] uppercase tracking-wider hidden lg:table-cell">Aktualisiert</th>
                 <th className="text-left px-6 py-3 text-xs font-semibold text-[#6B7280] uppercase tracking-wider">Status</th>
+                <th className="px-6 py-3"></th>
               </tr>
             </thead>
             <tbody className="divide-y divide-[#E8E8ED]">
@@ -127,6 +129,9 @@ export default async function ProjektePage({
                     </td>
                     <td className="px-6 py-4">
                       <ProjektStatusBadge status={p.status as any} />
+                    </td>
+                    <td className="px-6 py-4 text-right">
+                      <ProjektAktionen projektId={p.id} projektName={p.name} />
                     </td>
                   </tr>
                 )

@@ -8,7 +8,7 @@ import { OfferteStatusBadge, RechnungsStatusBadge } from '@/components/admin/Sta
 import { PositionenEditorKern, PositionRow, initialPositionenToRows } from './PositionenEditor'
 import {
   Plus, Download, Send, CheckCircle, XCircle, FileText,
-  StickyNote, LayoutGrid, Trash2, AlertTriangle, X, Mail, RefreshCw, Upload as UploadIcon, Link as LinkIcon,
+  StickyNote, LayoutGrid, Trash2, AlertTriangle, X, Mail, RefreshCw, Upload as UploadIcon, Link as LinkIcon, Pencil,
 } from 'lucide-react'
 
 // ─── Types ────────────────────────────────────────────────────────────────────
@@ -822,6 +822,83 @@ function RechnungDetailModal({
   )
 }
 
+// ─── Edit Projekt Modal ───────────────────────────────────────────────────────
+
+const PROJEKT_STATI = [
+  { value: 'ANGEBOT', label: 'Angebot' },
+  { value: 'AKTIV', label: 'Aktiv' },
+  { value: 'IN_BEARBEITUNG', label: 'In Bearbeitung' },
+  { value: 'ABGESCHLOSSEN', label: 'Abgeschlossen' },
+  { value: 'PAUSIERT', label: 'Pausiert' },
+  { value: 'STORNIERT', label: 'Storniert' },
+]
+
+function EditProjektModal({
+  projekt, onClose, onSaved,
+}: {
+  projekt: ProjektFull
+  onClose: () => void
+  onSaved: () => void
+}) {
+  const [name, setName] = useState(projekt.name)
+  const [beschreibung, setBeschreibung] = useState(projekt.beschreibung ?? '')
+  const [status, setStatus] = useState(projekt.status as string)
+  const [saving, setSaving] = useState(false)
+  const [error, setError] = useState('')
+
+  async function handleSave() {
+    setSaving(true)
+    setError('')
+    try {
+      const res = await fetch(`/api/crm/projekte/${projekt.id}`, {
+        method: 'PATCH',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ name, beschreibung: beschreibung || null, status }),
+      })
+      if (!res.ok) throw new Error('Fehler beim Speichern')
+      onSaved()
+    } catch (e: any) {
+      setError(e.message)
+      setSaving(false)
+    }
+  }
+
+  return (
+    <Modal onClose={onClose}>
+      <h2 style={{ fontSize: '17px', fontWeight: 700, color: '#111', marginBottom: '20px' }}>Projekt bearbeiten</h2>
+      <div className="space-y-3">
+        <div>
+          <label className={labelCls}>Name *</label>
+          <input value={name} onChange={(e) => setName(e.target.value)} className={inputCls} required />
+        </div>
+        <div>
+          <label className={labelCls}>Beschreibung</label>
+          <textarea value={beschreibung} onChange={(e) => setBeschreibung(e.target.value)} rows={3} className={inputCls + ' resize-none'} />
+        </div>
+        <div>
+          <label className={labelCls}>Status</label>
+          <select value={status} onChange={(e) => setStatus(e.target.value)} className={inputCls}>
+            {PROJEKT_STATI.map((s) => (
+              <option key={s.value} value={s.value}>{s.label}</option>
+            ))}
+          </select>
+        </div>
+      </div>
+      {error && <p style={{ fontSize: '13px', color: '#DC2626', marginTop: '12px' }}>{error}</p>}
+      <div style={{ display: 'flex', gap: '10px', justifyContent: 'flex-end', marginTop: '20px' }}>
+        <button onClick={onClose} type="button"
+          style={{ padding: '9px 20px', borderRadius: '8px', border: '1px solid #E5E7EB', fontSize: '14px', fontWeight: 600, color: '#374151', background: 'white', cursor: 'pointer' }}>
+          Abbrechen
+        </button>
+        <button onClick={handleSave} disabled={saving || !name.trim()} type="button"
+          style={{ padding: '9px 20px', borderRadius: '8px', border: 'none', fontSize: '14px', fontWeight: 600, color: 'white', background: saving ? '#A78BFA' : '#7C3AED', cursor: saving ? 'not-allowed' : 'pointer' }}>
+          {saving ? 'Speichert...' : 'Speichern'}
+        </button>
+      </div>
+    </Modal>
+  )
+}
+
 // ─── Offerten Tab ─────────────────────────────────────────────────────────────
 
 function OffertenTab({ projekt, onRefresh }: { projekt: ProjektFull; onRefresh: () => void }) {
@@ -1385,7 +1462,16 @@ function UploadsTab({ projekt, onRefresh }: { projekt: ProjektFull; onRefresh: (
 
 export default function ProjektCrmTabs({ projekt }: { projekt: ProjektFull }) {
   const [tab, setTab] = useState<Tab>('uebersicht')
+  const [showEditProjekt, setShowEditProjekt] = useState(false)
+  const [showDeleteProjekt, setShowDeleteProjekt] = useState(false)
+  const [deletingProjekt, setDeletingProjekt] = useState(false)
   const router = useRouter()
+
+  async function deleteProjekt() {
+    setDeletingProjekt(true)
+    await fetch(`/api/crm/projekte/${projekt.id}`, { method: 'DELETE' })
+    router.push('/admin/projekte')
+  }
 
   const tabs: { key: Tab; label: string; icon: React.ReactNode }[] = [
     { key: 'uebersicht', label: 'Übersicht', icon: <LayoutGrid size={15} /> },
@@ -1398,6 +1484,40 @@ export default function ProjektCrmTabs({ projekt }: { projekt: ProjektFull }) {
 
   return (
     <div>
+      {showEditProjekt && (
+        <EditProjektModal
+          projekt={projekt}
+          onClose={() => setShowEditProjekt(false)}
+          onSaved={() => { setShowEditProjekt(false); router.refresh() }}
+        />
+      )}
+      {showDeleteProjekt && (
+        <ConfirmModal
+          title="Projekt löschen?"
+          text={`„${projekt.name}" und alle zugehörigen Daten werden unwiderruflich gelöscht.`}
+          onConfirm={deleteProjekt}
+          onCancel={() => setShowDeleteProjekt(false)}
+          loading={deletingProjekt}
+        />
+      )}
+
+      <div style={{ display: 'flex', justifyContent: 'flex-end', gap: '8px', marginBottom: '16px' }}>
+        <button
+          onClick={() => setShowEditProjekt(true)}
+          type="button"
+          style={{ display: 'inline-flex', alignItems: 'center', gap: '6px', padding: '7px 14px', borderRadius: '8px', fontSize: '13px', fontWeight: 600, color: '#374151', background: 'white', border: '1px solid #E5E7EB', cursor: 'pointer' }}
+        >
+          <Pencil size={13} /> Bearbeiten
+        </button>
+        <button
+          onClick={() => setShowDeleteProjekt(true)}
+          type="button"
+          style={{ display: 'inline-flex', alignItems: 'center', gap: '6px', padding: '7px 14px', borderRadius: '8px', fontSize: '13px', fontWeight: 600, color: '#991B1B', background: 'white', border: '1px solid #FCA5A5', cursor: 'pointer' }}
+        >
+          <Trash2 size={13} /> Löschen
+        </button>
+      </div>
+
       <div className="flex gap-1 bg-[#F4F4F6] p-1 rounded-xl mb-6 flex-wrap">
         {tabs.map((t) => (
           <button
