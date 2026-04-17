@@ -394,6 +394,38 @@ export async function sendLeadBestaetigung(data: {
   })
 }
 
+// ─── Admin-Benachrichtigung ───────────────────────────────────────────────────
+
+export async function sendAdminBenachrichtigung(data: {
+  vorname: string
+  nachname: string
+  firma: string
+  email: string
+  telefon: string
+  dienstleistung: string[]
+  nachricht: string
+  budget?: string
+}) {
+  const inhalt = `
+    ${heading('Neue Anfrage eingegangen')}
+    ${infoBlock([
+      ['Name', `${data.vorname} ${data.nachname}`],
+      ['Firma', data.firma],
+      ['E-Mail', data.email],
+      ['Telefon', data.telefon],
+      ['Dienstleistung', data.dienstleistung.join(', ')],
+      ...(data.budget ? [['Budget', data.budget] as [string, string]] : []),
+    ])}
+    ${para(`<strong>Nachricht:</strong><br>${data.nachricht.replace(/\n/g, '<br>')}`)}
+  `
+  return resend.emails.send({
+    from: FROM,
+    to: 'info@twyne.ch',
+    subject: `Neue Anfrage von ${data.vorname} ${data.nachname} (${data.firma})`,
+    html: htmlTemplate(inhalt, 'Anfragen öffnen →', `${APP_URL}/admin/anfragen`),
+  })
+}
+
 // ─── Backward-compat Aliases ──────────────────────────────────────────────────
 
 /** @deprecated Verwende sendAnnahme */

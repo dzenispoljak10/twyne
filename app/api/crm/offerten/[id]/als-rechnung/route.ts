@@ -1,7 +1,7 @@
 import { NextRequest, NextResponse } from 'next/server'
 import { prisma } from '@/lib/prisma'
 import { auth } from '@/lib/auth'
-import { naechsteRechnungsNr } from '@/lib/crm-helpers'
+import { naechsteRechnungsNr } from '@/lib/crm-helpers-server'
 
 export async function POST(req: NextRequest, { params }: { params: Promise<{ id: string }> }) {
   const session = await auth()

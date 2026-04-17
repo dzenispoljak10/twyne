@@ -1,7 +1,7 @@
 import { NextRequest, NextResponse } from 'next/server'
 import { prisma } from '@/lib/prisma'
 import { anfrageSchema } from '@/lib/validations'
-import { sendEingangsbestaetigung } from '@/lib/mail'
+import { sendEingangsbestaetigung, sendAdminBenachrichtigung } from '@/lib/mail'
 import { sanitizeAnfrage } from '@/lib/sanitize'
 
 export async function POST(req: NextRequest) {
@@ -36,6 +36,17 @@ export async function POST(req: NextRequest) {
       email: data.email,
       dienstleistung: data.dienstleistung,
       nachricht: data.nachricht,
+    }).catch(console.error)
+
+    await sendAdminBenachrichtigung({
+      vorname: data.vorname,
+      nachname: data.nachname,
+      firma: data.firma,
+      email: data.email,
+      telefon: data.telefon,
+      dienstleistung: data.dienstleistung,
+      nachricht: data.nachricht,
+      budget: data.budget,
     }).catch(console.error)
 
     await prisma.mail.create({
