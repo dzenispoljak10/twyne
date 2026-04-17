@@ -24,7 +24,6 @@ function Logo() {
 
 const navLinks = [
   { href: '/portfolio', label: 'Portfolio' },
-  { href: '/kurse', label: 'Kurse' },
   { href: '/kontakt', label: 'Kontakt' },
 ]
 
