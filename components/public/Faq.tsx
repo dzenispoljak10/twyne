@@ -2,10 +2,6 @@ import FaqAccordion from './FaqAccordion'
 
 const homepageFaq = [
   {
-    question: 'Was kostet eine professionelle Website in der Schweiz?',
-    answer: "Einfache Websites starten ab CHF 2'500, vollständige Unternehmenswebsites kosten CHF 5'000–15'000. Komplexe Webapplikationen beginnen ab CHF 10'000. Wir erstellen immer eine detaillierte, transparente Offerte — keine versteckten Kosten, keine bösen Überraschungen.",
-  },
-  {
     question: 'Wie lange dauert die Umsetzung eines Projekts?',
     answer: 'Eine Landing Page dauert 1–2 Wochen. Eine vollständige Website 3–6 Wochen. Webapplikationen 2–6 Monate je nach Komplexität. Wir halten uns an vereinbarte Deadlines — das ist für uns keine Selbstverständlichkeit, sondern ein Versprechen.',
   },
