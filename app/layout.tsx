@@ -3,6 +3,7 @@ import { Manrope } from 'next/font/google'
 import './globals.css'
 import ScrollObserver from '@/components/ScrollObserver'
 import FloatingCta from '@/components/FloatingCta'
+import CookieBanner from '@/components/public/CookieBanner'
 
 const manrope = Manrope({
   subsets: ['latin'],
@@ -47,10 +48,14 @@ export const metadata: Metadata = {
     images: ['/opengraph-image'],
   },
   icons: {
-    icon: '/favicon.svg',
-    shortcut: '/favicon.svg',
+    icon: [
+      { url: '/favicon.ico', sizes: 'any' },
+      { url: '/favicon-16x16.png', sizes: '16x16', type: 'image/png' },
+      { url: '/favicon-32x32.png', sizes: '32x32', type: 'image/png' },
+    ],
     apple: '/apple-touch-icon.png',
   },
+  manifest: '/site.webmanifest',
 }
 
 const jsonLd = {
@@ -95,6 +100,7 @@ export default function RootLayout({
         <ScrollObserver />
         {children}
         <FloatingCta />
+        <CookieBanner />
       </body>
     </html>
   )

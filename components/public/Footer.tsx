@@ -1,18 +1,16 @@
 'use client'
+import Image from 'next/image'
 import Link from 'next/link'
 
 function Logo() {
   return (
-    <svg width="120" height="28" viewBox="0 0 140 32" xmlns="http://www.w3.org/2000/svg" aria-label="twyne">
-      <circle cx="12" cy="16" r="9" fill="none" stroke="#7C3AED" strokeWidth="2.5" />
-      <circle cx="32" cy="16" r="9" fill="none" stroke="#A78BFA" strokeWidth="2.5" />
-      <line x1="21" y1="16" x2="23" y2="16" stroke="#7C3AED" strokeWidth="2.5" strokeLinecap="round" />
-      <circle cx="12" cy="16" r="3" fill="#7C3AED" />
-      <circle cx="32" cy="16" r="3" fill="#A78BFA" />
-      <text x="50" y="22" style={{ fontFamily: 'Manrope, sans-serif', fontWeight: 800, fontSize: '22px', fill: '#FFFFFF', letterSpacing: '-1px' }}>
-        twyne
-      </text>
-    </svg>
+    <Image
+      src="/twyne-logo.png"
+      alt="Twyne"
+      width={1521}
+      height={471}
+      style={{ height: '32px', width: 'auto', display: 'block' }}
+    />
   )
 }
 
