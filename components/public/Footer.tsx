@@ -132,7 +132,7 @@ export default function Footer() {
           {/* Spalte 4 — Unternehmen */}
           <div>
             <h4 style={h4Style}>Unternehmen</h4>
-            <FooterLink href="/portfolio">Portfolio</FooterLink>
+            <FooterLink href="/projekte">Projekte</FooterLink>
             <FooterLink href="/ueber-uns">Über uns</FooterLink>
             <FooterLink href="/kurse">Kurse</FooterLink>
             <FooterLink href="/kontakt">Kontakt</FooterLink>

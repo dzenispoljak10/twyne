@@ -32,12 +32,12 @@ export default function CtaSection() {
             Projekt anfragen
           </Link>
           <Link
-            href="/portfolio"
+            href="/projekte"
             style={{ background: 'transparent', border: '1px solid rgba(255,255,255,0.3)', color: 'rgba(255,255,255,0.85)', padding: '14px 32px', borderRadius: '10px', fontSize: '15px', fontWeight: 600, transition: 'all 0.25s ease', display: 'inline-flex', alignItems: 'center' }}
             onMouseEnter={(e) => { e.currentTarget.style.borderColor = 'rgba(255,255,255,0.6)'; e.currentTarget.style.color = 'white' }}
             onMouseLeave={(e) => { e.currentTarget.style.borderColor = 'rgba(255,255,255,0.3)'; e.currentTarget.style.color = 'rgba(255,255,255,0.85)' }}
           >
-            Portfolio ansehen
+            Projekte ansehen
           </Link>
         </div>
       </div>

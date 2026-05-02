@@ -1,7 +1,7 @@
 {
   "nav": {
     "leistungen": "Leistungen",
-    "portfolio": "Portfolio",
+    "projekte": "Projekte",
     "blog": "Blog",
     "kontakt": "Kontakt",
     "projektStarten": "Projekt starten"
@@ -11,7 +11,7 @@
     "headline": "Wir bauen digitale\nProdukte die wirken.",
     "subtext": "Webseiten, Apps, Software, KI-Beratung & SEO — präzise gebaut, messbar wirksam.",
     "cta": "Projekt starten",
-    "ctaSecondary": "Portfolio ansehen"
+    "ctaSecondary": "Projekte ansehen"
   },
   "services": {
     "title": "Was wir für Sie leisten",

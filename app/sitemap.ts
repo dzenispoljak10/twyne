@@ -1,4 +1,5 @@
 import type { MetadataRoute } from 'next'
+import { projects } from '@/lib/projects-data'
 
 const BASE = 'https://twyne.ch'
 
@@ -44,9 +45,9 @@ const staticRoutes: MetadataRoute.Sitemap = [
   { url: `${BASE}/produkte/desk`,     lastModified: now, changeFrequency: 'monthly', priority: 0.7 },
   { url: `${BASE}/produkte/flow`,     lastModified: now, changeFrequency: 'monthly', priority: 0.7 },
 
-  // Blog & Portfolio
+  // Blog & Projekte
   { url: `${BASE}/blog`,              lastModified: now, changeFrequency: 'weekly',  priority: 0.7 },
-  { url: `${BASE}/portfolio`,         lastModified: now, changeFrequency: 'monthly', priority: 0.7 },
+  { url: `${BASE}/projekte`,          lastModified: now, changeFrequency: 'monthly', priority: 0.8 },
   { url: `${BASE}/kurse`,             lastModified: now, changeFrequency: 'monthly', priority: 0.6 },
 
   // Blog posts (statisch)
@@ -59,6 +60,13 @@ const staticRoutes: MetadataRoute.Sitemap = [
   { url: `${BASE}/datenschutz`,  lastModified: now, changeFrequency: 'yearly', priority: 0.2 },
 ]
 
+const projectRoutes: MetadataRoute.Sitemap = projects.map((p) => ({
+  url: `${BASE}/projekte/${p.slug}`,
+  lastModified: now,
+  changeFrequency: 'monthly',
+  priority: p.featured ? 0.7 : 0.6,
+}))
+
 export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
-  return staticRoutes
+  return [...staticRoutes, ...projectRoutes]
 }

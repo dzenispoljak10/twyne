@@ -159,7 +159,7 @@ export default async function BrancheDetailPage({ params }: Props) {
           </div>
         </section>
 
-        {/* 4. Portfolio-Projekte */}
+        {/* 4. Projekte / Referenzen */}
         <section style={{ background: 'white', padding: '80px 0' }}>
           <div className="max-w-7xl mx-auto px-6 lg:px-8">
             <p style={{ fontSize: '11px', fontWeight: 700, textTransform: 'uppercase', letterSpacing: '0.12em', color: '#7C3AED', marginBottom: '12px' }}>
@@ -189,7 +189,7 @@ export default async function BrancheDetailPage({ params }: Props) {
             </div>
             <div style={{ marginTop: '32px', textAlign: 'center' }}>
               <Link
-                href="/portfolio"
+                href="/projekte"
                 style={{ display: 'inline-flex', alignItems: 'center', gap: '8px', color: '#7C3AED', fontWeight: 700, fontSize: '14px', textDecoration: 'none' }}
               >
                 Alle Projekte ansehen →

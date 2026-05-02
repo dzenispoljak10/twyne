@@ -7,7 +7,7 @@ import Hero from '@/components/public/Hero'
 import FeatureRows from '@/components/public/FeatureRows'
 import Services from '@/components/public/Services'
 import ProductsSection from '@/components/public/ProductsSection'
-import Portfolio from '@/components/public/Portfolio'
+import Projekte from '@/components/public/Projekte'
 import Process from '@/components/public/Process'
 import Faq from '@/components/public/Faq'
 import CtaSection from '@/components/public/CtaSection'
@@ -48,7 +48,7 @@ export default function HomePage() {
         <FeatureRows />
         <Services />
         <ProductsSection />
-        <Portfolio />
+        <Projekte />
         <section style={{ background: 'white', padding: '80px 0' }}>
           <div className="max-w-7xl mx-auto px-6 lg:px-8">
             <div style={{ textAlign: 'center', marginBottom: '56px' }}>
