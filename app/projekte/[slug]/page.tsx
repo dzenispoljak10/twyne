@@ -9,8 +9,8 @@ import {
   Briefcase,
   Calendar,
   Check,
-  Code2,
   Globe,
+  Layers,
   Lightbulb,
   Quote,
   Target,
@@ -20,7 +20,6 @@ import Navbar from '@/components/public/Navbar'
 import Footer from '@/components/public/Footer'
 import ProjektCard from '@/components/public/ProjektCard'
 import { projects, getProjectBySlug, getRelatedProjects } from '@/lib/projects-data'
-import { groupTechByCategory } from '@/lib/tech-meta'
 
 type Props = { params: Promise<{ slug: string }> }
 
@@ -355,7 +354,7 @@ export default async function ProjectDetailPage({ params }: Props) {
               {[
                 { Icon: Briefcase, label: 'Branche', value: project.branche },
                 { Icon: Globe, label: 'Kategorie', value: project.category },
-                { Icon: Code2, label: 'Tech-Stack', value: `${project.techStack.length} Technologien` },
+                { Icon: Layers, label: 'Status', value: isLive ? 'Live' : 'Konzept' },
                 { Icon: Calendar, label: 'Jahr', value: String(project.year) },
               ].map((f) => (
                 <div
@@ -511,176 +510,6 @@ export default async function ProjectDetailPage({ params }: Props) {
             </div>
           </section>
         )}
-
-        {/* f) Tech Stack */}
-        <section style={{ padding: '96px 0', background: 'white' }}>
-          <div className="max-w-6xl mx-auto px-6 lg:px-8">
-            <div style={{ marginBottom: '48px', maxWidth: '720px' }}>
-              <p
-                style={{
-                  fontSize: '12px',
-                  fontWeight: 700,
-                  textTransform: 'uppercase',
-                  letterSpacing: '0.12em',
-                  color: '#7C3AED',
-                  margin: '0 0 14px',
-                }}
-              >
-                Tech-Stack
-              </p>
-              <h2
-                style={{
-                  fontSize: 'clamp(28px, 3.5vw, 42px)',
-                  fontWeight: 800,
-                  color: '#111111',
-                  letterSpacing: '-1.5px',
-                  lineHeight: 1.1,
-                  margin: '0 0 16px',
-                }}
-              >
-                Verwendete Technologien
-              </h2>
-              <p style={{ fontSize: '17px', color: '#6B7280', lineHeight: 1.6, margin: 0 }}>
-                {project.techStack.length} Technologien — bewusst gewählt für Performance, Wartbarkeit und
-                klare Verantwortung im Stack.
-              </p>
-            </div>
-
-            <style>{`
-              .tech-categories {
-                display: grid;
-                grid-template-columns: 1fr;
-                gap: 28px;
-              }
-              @media (min-width: 1024px) {
-                .tech-categories { grid-template-columns: 280px 1fr; gap: 48px; align-items: start; }
-              }
-              .tech-cat-block {
-                display: grid;
-                grid-template-columns: 1fr;
-                gap: 28px;
-              }
-              .tech-items {
-                display: grid;
-                grid-template-columns: 1fr;
-                gap: 12px;
-              }
-              @media (min-width: 640px) {
-                .tech-items { grid-template-columns: repeat(2, 1fr); }
-              }
-            `}</style>
-
-            {groupTechByCategory(project.techStack).map((group) => (
-              <div
-                key={group.category}
-                className="tech-categories"
-                style={{
-                  paddingTop: '28px',
-                  paddingBottom: '28px',
-                  borderTop: '1px solid #EFEFEF',
-                }}
-              >
-                <div>
-                  <p
-                    style={{
-                      fontSize: '11px',
-                      fontWeight: 700,
-                      textTransform: 'uppercase',
-                      letterSpacing: '0.1em',
-                      color: '#7C3AED',
-                      margin: '0 0 8px',
-                    }}
-                  >
-                    Layer
-                  </p>
-                  <h3
-                    style={{
-                      fontSize: '22px',
-                      fontWeight: 800,
-                      color: '#111111',
-                      letterSpacing: '-0.5px',
-                      margin: 0,
-                    }}
-                  >
-                    {group.category}
-                  </h3>
-                  <p
-                    style={{
-                      fontSize: '13px',
-                      color: '#9CA3AF',
-                      margin: '8px 0 0',
-                      fontWeight: 500,
-                    }}
-                  >
-                    {group.items.length} {group.items.length === 1 ? 'Technologie' : 'Technologien'}
-                  </p>
-                </div>
-
-                <div className="tech-items">
-                  {group.items.map((item) => (
-                    <div
-                      key={item.name}
-                      style={{
-                        background: 'white',
-                        border: '1px solid #EFEFEF',
-                        borderRadius: '14px',
-                        padding: '20px',
-                        transition: 'border-color 0.2s ease, box-shadow 0.2s ease',
-                      }}
-                    >
-                      <div
-                        style={{
-                          display: 'flex',
-                          alignItems: 'center',
-                          gap: '10px',
-                          marginBottom: '10px',
-                        }}
-                      >
-                        <span
-                          style={{
-                            display: 'inline-flex',
-                            alignItems: 'center',
-                            justifyContent: 'center',
-                            width: '32px',
-                            height: '32px',
-                            borderRadius: '8px',
-                            background: '#F4F0FF',
-                            color: '#7C3AED',
-                            fontSize: '13px',
-                            fontWeight: 800,
-                            flexShrink: 0,
-                          }}
-                        >
-                          {item.name.replace(/[^A-Za-z0-9]/g, '').slice(0, 2).toUpperCase()}
-                        </span>
-                        <span
-                          style={{
-                            fontSize: '15px',
-                            fontWeight: 700,
-                            color: '#111111',
-                            letterSpacing: '-0.2px',
-                          }}
-                        >
-                          {item.name}
-                        </span>
-                      </div>
-                      <p
-                        style={{
-                          fontSize: '13px',
-                          color: '#6B7280',
-                          lineHeight: 1.55,
-                          margin: 0,
-                        }}
-                      >
-                        {item.description}
-                      </p>
-                    </div>
-                  ))}
-                </div>
-              </div>
-            ))}
-          </div>
-        </section>
 
         {/* g) Features */}
         <section style={{ padding: '72px 0', background: '#FAFAFA' }}>

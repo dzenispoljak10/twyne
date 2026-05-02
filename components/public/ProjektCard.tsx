@@ -143,37 +143,6 @@ export default function ProjektCard({ project }: { project: Project }) {
           {project.tagline}
         </p>
 
-        <div style={{ display: 'flex', flexWrap: 'wrap', gap: '6px', marginBottom: '14px' }}>
-          {project.techStack.slice(0, 3).map((tech) => (
-            <span
-              key={tech}
-              style={{
-                padding: '3px 9px',
-                background: '#F8F9FA',
-                color: '#374151',
-                fontSize: '11px',
-                fontWeight: 500,
-                borderRadius: '6px',
-                border: '1px solid #EFEFEF',
-              }}
-            >
-              {tech}
-            </span>
-          ))}
-          {project.techStack.length > 3 && (
-            <span
-              style={{
-                padding: '3px 9px',
-                color: '#9CA3AF',
-                fontSize: '11px',
-                fontWeight: 500,
-              }}
-            >
-              +{project.techStack.length - 3}
-            </span>
-          )}
-        </div>
-
         {/* Bottom row */}
         <div
           style={{
