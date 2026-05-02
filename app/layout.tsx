@@ -1,4 +1,4 @@
-import type { Metadata } from 'next'
+import type { Metadata, Viewport } from 'next'
 import { Manrope } from 'next/font/google'
 import './globals.css'
 import ScrollObserver from '@/components/ScrollObserver'
@@ -11,6 +11,10 @@ const manrope = Manrope({
   variable: '--font-manrope',
   display: 'swap',
 })
+
+export const viewport: Viewport = {
+  themeColor: '#13328D',
+}
 
 export const metadata: Metadata = {
   title: {

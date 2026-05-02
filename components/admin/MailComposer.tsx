@@ -101,8 +101,8 @@ export default function MailComposer({
                 onClick={() => selectVorlage(v)}
                 className={`px-3 py-1.5 rounded-lg text-xs font-medium border transition-all ${
                   vorlage.typ === v.typ
-                    ? 'border-[#7C3AED] bg-violet-50 text-[#7C3AED]'
-                    : 'border-[#E8E8ED] text-[#374151] hover:border-[#7C3AED]/40'
+                    ? 'border-[#13328D] bg-violet-50 text-[#13328D]'
+                    : 'border-[#E8E8ED] text-[#374151] hover:border-[#13328D]/40'
                 }`}
               >
                 {v.label}
@@ -135,7 +135,7 @@ export default function MailComposer({
             value={inhalt}
             onChange={(e) => setInhalt(e.target.value)}
             placeholder="E-Mail Inhalt..."
-            className="w-full px-4 py-2.5 rounded-lg border border-[#E8E8ED] text-sm text-[#374151] focus:outline-none focus:ring-2 focus:ring-[#7C3AED] focus:border-transparent resize-none"
+            className="w-full px-4 py-2.5 rounded-lg border border-[#E8E8ED] text-sm text-[#374151] focus:outline-none focus:ring-2 focus:ring-[#13328D] focus:border-transparent resize-none"
           />
         </div>
 

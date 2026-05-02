@@ -39,7 +39,7 @@ export default async function KundeDetailPage({ params }: { params: Promise<{ id
       <div>
         <Link
           href="/admin/kunden"
-          className="inline-flex items-center gap-1.5 text-sm text-[#6B7280] hover:text-[#7C3AED] mb-3 transition-colors"
+          className="inline-flex items-center gap-1.5 text-sm text-[#6B7280] hover:text-[#13328D] mb-3 transition-colors"
         >
           <ArrowLeft size={16} />
           Zurück
@@ -66,7 +66,7 @@ export default async function KundeDetailPage({ params }: { params: Promise<{ id
             <div className="space-y-3">
               <div className="flex items-center gap-2 text-sm">
                 <Mail size={14} className="text-[#9CA3AF] shrink-0" />
-                <a href={`mailto:${kunde.email}`} className="text-[#7C3AED] hover:underline truncate">
+                <a href={`mailto:${kunde.email}`} className="text-[#13328D] hover:underline truncate">
                   {kunde.email}
                 </a>
               </div>
@@ -83,7 +83,7 @@ export default async function KundeDetailPage({ params }: { params: Promise<{ id
                     href={kunde.website.startsWith('http') ? kunde.website : `https://${kunde.website}`}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="text-[#7C3AED] hover:underline truncate"
+                    className="text-[#13328D] hover:underline truncate"
                   >
                     {kunde.website}
                   </a>
@@ -114,7 +114,7 @@ export default async function KundeDetailPage({ params }: { params: Promise<{ id
               </div>
               <div className="flex justify-between text-sm">
                 <span className="text-[#6B7280]">Umsatz (bezahlt)</span>
-                <span className="font-semibold text-[#7C3AED]">{formatChf(totalUmsatz)}</span>
+                <span className="font-semibold text-[#13328D]">{formatChf(totalUmsatz)}</span>
               </div>
               <div className="flex justify-between text-sm">
                 <span className="text-[#6B7280]">Kunde seit</span>
@@ -142,7 +142,7 @@ export default async function KundeDetailPage({ params }: { params: Promise<{ id
           <div className="bg-white rounded-xl border border-[#E8E8ED] overflow-hidden">
             <div className="px-5 py-4 border-b border-[#E8E8ED] flex items-center justify-between">
               <h2 className="text-sm font-bold text-[#111111] flex items-center gap-2">
-                <FolderOpen size={15} className="text-[#7C3AED]" />
+                <FolderOpen size={15} className="text-[#13328D]" />
                 Projekte ({kunde.projekte.length})
               </h2>
             </div>
@@ -159,7 +159,7 @@ export default async function KundeDetailPage({ params }: { params: Promise<{ id
                     className="flex items-center justify-between px-5 py-4 hover:bg-[#F4F4F6] transition-colors"
                   >
                     <div>
-                      <p className="text-sm font-semibold text-[#111111] hover:text-[#7C3AED] transition-colors">
+                      <p className="text-sm font-semibold text-[#111111] hover:text-[#13328D] transition-colors">
                         {p.name}
                       </p>
                       <p className="text-xs text-[#6B7280] mt-0.5">

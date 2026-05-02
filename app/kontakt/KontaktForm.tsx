@@ -69,7 +69,7 @@ export default function KontaktForm() {
           type="text"
           autoComplete="name"
           style={inputStyle}
-          onFocus={(e) => { e.currentTarget.style.borderColor = '#7C3AED' }}
+          onFocus={(e) => { e.currentTarget.style.borderColor = '#13328D' }}
           onBlur={(e) => { e.currentTarget.style.borderColor = '#E5E7EB' }}
         />
       </div>
@@ -82,7 +82,7 @@ export default function KontaktForm() {
           type="email"
           autoComplete="email"
           style={inputStyle}
-          onFocus={(e) => { e.currentTarget.style.borderColor = '#7C3AED' }}
+          onFocus={(e) => { e.currentTarget.style.borderColor = '#13328D' }}
           onBlur={(e) => { e.currentTarget.style.borderColor = '#E5E7EB' }}
         />
       </div>
@@ -94,7 +94,7 @@ export default function KontaktForm() {
           onChange={(e) => setForm({ ...form, nachricht: e.target.value })}
           rows={4}
           style={{ ...inputStyle, resize: 'vertical', minHeight: '100px' } as React.CSSProperties}
-          onFocus={(e) => { e.currentTarget.style.borderColor = '#7C3AED' }}
+          onFocus={(e) => { e.currentTarget.style.borderColor = '#13328D' }}
           onBlur={(e) => { e.currentTarget.style.borderColor = '#E5E7EB' }}
         />
       </div>
@@ -105,7 +105,7 @@ export default function KontaktForm() {
         type="submit"
         disabled={sending}
         style={{
-          background: sending ? '#A78BFA' : '#7C3AED',
+          background: sending ? '#4F6FBF' : '#13328D',
           color: 'white',
           padding: '12px',
           borderRadius: '8px',

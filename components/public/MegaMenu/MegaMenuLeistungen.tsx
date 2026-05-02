@@ -53,7 +53,7 @@ export default function MegaMenuLeistungen({ isOpen, onMouseEnter, onMouseLeave,
 
           {/* Left column — intro box */}
           <div style={{
-            background: 'linear-gradient(135deg, #7C3AED, #5B21B6)',
+            background: 'linear-gradient(135deg, #13328D, #0E2570)',
             borderRadius: '16px',
             padding: '28px',
             display: 'flex',
@@ -111,7 +111,7 @@ export default function MegaMenuLeistungen({ isOpen, onMouseEnter, onMouseLeave,
                       padding: '16px',
                       borderRadius: '12px',
                       textDecoration: 'none',
-                      background: isActive ? 'rgba(124,58,237,0.06)' : 'transparent',
+                      background: isActive ? 'rgba(19, 50, 141,0.06)' : 'transparent',
                       transition: 'all 0.2s ease',
                     }}
                     onMouseEnter={(e) => {
@@ -119,7 +119,7 @@ export default function MegaMenuLeistungen({ isOpen, onMouseEnter, onMouseLeave,
                       e.currentTarget.style.transform = 'translateX(4px)'
                     }}
                     onMouseLeave={(e) => {
-                      e.currentTarget.style.background = isActive ? 'rgba(124,58,237,0.06)' : 'transparent'
+                      e.currentTarget.style.background = isActive ? 'rgba(19, 50, 141,0.06)' : 'transparent'
                       e.currentTarget.style.transform = 'translateX(0)'
                     }}
                   >
@@ -127,16 +127,16 @@ export default function MegaMenuLeistungen({ isOpen, onMouseEnter, onMouseLeave,
                       width: '40px',
                       height: '40px',
                       borderRadius: '10px',
-                      background: isActive ? 'rgba(124,58,237,0.15)' : 'rgba(124,58,237,0.08)',
+                      background: isActive ? 'rgba(19, 50, 141,0.15)' : 'rgba(19, 50, 141,0.08)',
                       display: 'flex',
                       alignItems: 'center',
                       justifyContent: 'center',
                       flexShrink: 0,
                     }}>
-                      <Icon size={20} style={{ color: '#7C3AED' }} />
+                      <Icon size={20} style={{ color: '#13328D' }} />
                     </div>
                     <div>
-                      <div style={{ fontSize: '14px', fontWeight: 600, color: isActive ? '#7C3AED' : '#111111', marginBottom: '2px' }}>
+                      <div style={{ fontSize: '14px', fontWeight: 600, color: isActive ? '#13328D' : '#111111', marginBottom: '2px' }}>
                         {name}
                       </div>
                       <div style={{ fontSize: '12px', color: '#9CA3AF', lineHeight: 1.4 }}>
@@ -167,7 +167,7 @@ export default function MegaMenuLeistungen({ isOpen, onMouseEnter, onMouseLeave,
                         padding: '12px 16px',
                         borderRadius: '12px',
                         textDecoration: 'none',
-                        background: isActive ? 'rgba(124,58,237,0.06)' : 'transparent',
+                        background: isActive ? 'rgba(19, 50, 141,0.06)' : 'transparent',
                         transition: 'all 0.2s ease',
                       }}
                       onMouseEnter={(e) => {
@@ -175,7 +175,7 @@ export default function MegaMenuLeistungen({ isOpen, onMouseEnter, onMouseLeave,
                         e.currentTarget.style.transform = 'translateX(4px)'
                       }}
                       onMouseLeave={(e) => {
-                        e.currentTarget.style.background = isActive ? 'rgba(124,58,237,0.06)' : 'transparent'
+                        e.currentTarget.style.background = isActive ? 'rgba(19, 50, 141,0.06)' : 'transparent'
                         e.currentTarget.style.transform = 'translateX(0)'
                       }}
                     >
@@ -183,16 +183,16 @@ export default function MegaMenuLeistungen({ isOpen, onMouseEnter, onMouseLeave,
                         width: '36px',
                         height: '36px',
                         borderRadius: '9px',
-                        background: isActive ? 'rgba(124,58,237,0.15)' : 'rgba(124,58,237,0.08)',
+                        background: isActive ? 'rgba(19, 50, 141,0.15)' : 'rgba(19, 50, 141,0.08)',
                         display: 'flex',
                         alignItems: 'center',
                         justifyContent: 'center',
                         flexShrink: 0,
                       }}>
-                        <Icon size={18} style={{ color: '#7C3AED' }} />
+                        <Icon size={18} style={{ color: '#13328D' }} />
                       </div>
                       <div>
-                        <div style={{ fontSize: '13px', fontWeight: 600, color: isActive ? '#7C3AED' : '#111111', marginBottom: '2px' }}>
+                        <div style={{ fontSize: '13px', fontWeight: 600, color: isActive ? '#13328D' : '#111111', marginBottom: '2px' }}>
                           {name}
                         </div>
                         <div style={{ fontSize: '11px', color: '#9CA3AF', lineHeight: 1.4 }}>
@@ -221,7 +221,7 @@ export default function MegaMenuLeistungen({ isOpen, onMouseEnter, onMouseLeave,
           </span>
           <Link
             href="/anfrage"
-            style={{ fontSize: '13px', fontWeight: 600, color: '#7C3AED', textDecoration: 'none' }}
+            style={{ fontSize: '13px', fontWeight: 600, color: '#13328D', textDecoration: 'none' }}
           >
             Jetzt anfragen →
           </Link>

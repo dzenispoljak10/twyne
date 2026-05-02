@@ -48,7 +48,7 @@ export default function NotizenEditor({ projektId, initialNotizen }: NotizenEdit
           value={text}
           onChange={(e) => setText(e.target.value)}
           placeholder="Notiz hinzufügen..."
-          className="w-full px-4 py-3 rounded-lg border border-[#E8E8ED] text-sm text-[#374151] focus:outline-none focus:ring-2 focus:ring-[#7C3AED] focus:border-transparent resize-none"
+          className="w-full px-4 py-3 rounded-lg border border-[#E8E8ED] text-sm text-[#374151] focus:outline-none focus:ring-2 focus:ring-[#13328D] focus:border-transparent resize-none"
         />
         <div className="mt-2 flex justify-end">
           <Button size="sm" onClick={addNotiz} loading={loading} disabled={!text.trim()}>

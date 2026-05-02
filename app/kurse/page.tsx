@@ -13,8 +13,8 @@ const kurse = [
   {
     title: 'SEO Grundlagen für KMU',
     icon: Search,
-    iconColor: '#7C3AED',
-    gradient: 'linear-gradient(135deg, #EDE9FE 0%, #DDD6FE 100%)',
+    iconColor: '#13328D',
+    gradient: 'linear-gradient(135deg, #E0E7F5 0%, #DDD6FE 100%)',
     badge: 'Anfänger',
     badgeStyle: { background: '#DCFCE7', color: '#166534' },
     description: 'Lerne wie du deine Website bei Google auf Seite 1 bringst — ohne technisches Vorwissen. Praxisnah, auf die Schweiz zugeschnitten.',
@@ -66,8 +66,8 @@ export default function KursePage() {
           100% { background-position: 40px 40px; }
         }
         .kurs-grid { animation: gridMove 10s linear infinite; }
-        .kurs-card:hover { transform: translateY(-6px); box-shadow: 0 24px 48px rgba(0,0,0,0.08); border-color: rgba(124,58,237,0.2) !important; }
-        .kurs-btn:hover { background: #6D28D9 !important; transform: translateY(-1px); }
+        .kurs-card:hover { transform: translateY(-6px); box-shadow: 0 24px 48px rgba(0,0,0,0.08); border-color: rgba(19, 50, 141,0.2) !important; }
+        .kurs-btn:hover { background: #0E2570 !important; transform: translateY(-1px); }
       `}</style>
 
       <Navbar />
@@ -85,15 +85,15 @@ export default function KursePage() {
             }}
           />
           {/* Purple glow */}
-          <div style={{ position: 'absolute', top: '-80px', left: '50%', transform: 'translateX(-50%)', width: '600px', height: '400px', background: 'radial-gradient(ellipse, rgba(124,58,237,0.15) 0%, transparent 70%)', pointerEvents: 'none' }} />
+          <div style={{ position: 'absolute', top: '-80px', left: '50%', transform: 'translateX(-50%)', width: '600px', height: '400px', background: 'radial-gradient(ellipse, rgba(19, 50, 141,0.15) 0%, transparent 70%)', pointerEvents: 'none' }} />
 
           <div style={{ position: 'relative', maxWidth: '720px', margin: '0 auto' }}>
             {/* Badge */}
             <div style={{
               display: 'inline-block',
-              background: 'rgba(124,58,237,0.15)',
-              border: '1px solid rgba(124,58,237,0.3)',
-              color: '#A78BFA',
+              background: 'rgba(19, 50, 141,0.15)',
+              border: '1px solid rgba(19, 50, 141,0.3)',
+              color: '#4F6FBF',
               borderRadius: '100px',
               padding: '8px 20px',
               fontSize: '13px',
@@ -133,7 +133,7 @@ export default function KursePage() {
         <section style={{ background: 'white', padding: '80px 24px' }}>
           <div className="max-w-7xl mx-auto">
             <div style={{ textAlign: 'center', marginBottom: '56px' }}>
-              <p style={{ fontSize: '11px', fontWeight: 700, textTransform: 'uppercase', letterSpacing: '0.1em', color: '#7C3AED', marginBottom: '12px' }}>
+              <p style={{ fontSize: '11px', fontWeight: 700, textTransform: 'uppercase', letterSpacing: '0.1em', color: '#13328D', marginBottom: '12px' }}>
                 Geplante Kurse
               </p>
               <h2 style={{ fontSize: 'clamp(28px, 4vw, 40px)', fontWeight: 800, color: '#111111', letterSpacing: '-1.5px', lineHeight: 1.1 }}>
@@ -186,7 +186,7 @@ export default function KursePage() {
                       <div style={{ display: 'flex', flexDirection: 'column', gap: '8px', margin: '16px 0' }}>
                         {kurs.module.map((m) => (
                           <div key={m} style={{ display: 'flex', alignItems: 'center', gap: '8px' }}>
-                            <Check size={14} style={{ color: '#7C3AED', flexShrink: 0 }} />
+                            <Check size={14} style={{ color: '#13328D', flexShrink: 0 }} />
                             <span style={{ fontSize: '13px', color: '#374151' }}>{m}</span>
                           </div>
                         ))}
@@ -205,7 +205,7 @@ export default function KursePage() {
                           className="kurs-btn"
                           style={{
                             display: 'block', width: '100%', textAlign: 'center', marginTop: '14px',
-                            padding: '11px', background: '#7C3AED', color: 'white',
+                            padding: '11px', background: '#13328D', color: 'white',
                             border: 'none', borderRadius: '10px', fontSize: '14px', fontWeight: 600,
                             textDecoration: 'none', transition: 'background 0.2s, transform 0.2s',
                             boxSizing: 'border-box',
@@ -233,8 +233,8 @@ export default function KursePage() {
                 const Icon = schritt.icon
                 return (
                   <div key={schritt.title} style={{ textAlign: 'center' }}>
-                    <div style={{ width: '56px', height: '56px', borderRadius: '50%', background: '#EDE9FE', display: 'flex', alignItems: 'center', justifyContent: 'center', margin: '0 auto 16px' }}>
-                      <Icon size={24} style={{ color: '#7C3AED' }} />
+                    <div style={{ width: '56px', height: '56px', borderRadius: '50%', background: '#E0E7F5', display: 'flex', alignItems: 'center', justifyContent: 'center', margin: '0 auto 16px' }}>
+                      <Icon size={24} style={{ color: '#13328D' }} />
                     </div>
                     <div style={{ fontSize: '12px', fontWeight: 700, color: '#9CA3AF', textTransform: 'uppercase', letterSpacing: '0.08em', marginBottom: '8px' }}>
                       Schritt {i + 1}
@@ -253,7 +253,7 @@ export default function KursePage() {
         </section>
 
         {/* ── CTA ───────────────────────────────────────── */}
-        <section style={{ background: 'linear-gradient(135deg, #7C3AED 0%, #5B21B6 100%)', padding: '80px 24px', textAlign: 'center' }}>
+        <section style={{ background: 'linear-gradient(135deg, #13328D 0%, #0E2570 100%)', padding: '80px 24px', textAlign: 'center' }}>
           <div style={{ maxWidth: '680px', margin: '0 auto' }}>
             <h2 style={{ color: 'white', fontSize: 'clamp(28px, 4vw, 40px)', fontWeight: 800, letterSpacing: '-1.5px', marginBottom: '16px', lineHeight: 1.1 }}>
               Sei dabei wenn wir launchen

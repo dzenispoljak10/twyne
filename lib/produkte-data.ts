@@ -118,7 +118,7 @@ export const produkteData: Record<string, ProduktData> = {
     ],
     ctaTitle: 'Bereit für einen modernen Verein?',
     produktEnum: 'CLUB',
-    color: '#7C3AED',
+    color: '#13328D',
   },
 
   table: {

@@ -16,7 +16,7 @@ const __dirname = dirname(fileURLToPath(import.meta.url))
 const ROOT = resolve(__dirname, '..')
 const OUT_DIR = resolve(ROOT, 'public', 'projekte', 'logos')
 
-const BRAND_PURPLE = '#7C3AED'
+const BRAND_PURPLE = '#13328D'
 
 async function ensureDir(path: string) {
   if (!existsSync(path)) await mkdir(path, { recursive: true })
@@ -108,11 +108,11 @@ async function generateSvgLogo(name: string, outPath: string): Promise<void> {
   <defs>
     <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
       <stop offset="0%" stop-color="#FFFFFF"/>
-      <stop offset="100%" stop-color="#F4F0FF"/>
+      <stop offset="100%" stop-color="#EEF2FA"/>
     </linearGradient>
   </defs>
   <rect width="512" height="512" rx="96" fill="url(#bg)"/>
-  <rect x="8" y="8" width="496" height="496" rx="92" fill="none" stroke="#EDE9FE" stroke-width="2"/>
+  <rect x="8" y="8" width="496" height="496" rx="92" fill="none" stroke="#E0E7F5" stroke-width="2"/>
   <text x="50%" y="50%" dy="0.05em" text-anchor="middle" dominant-baseline="middle"
         font-family="Manrope, Inter, system-ui, sans-serif" font-weight="800"
         font-size="220" fill="${BRAND_PURPLE}" letter-spacing="-8">

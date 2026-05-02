@@ -80,7 +80,7 @@ export function berechnePositionen(positionen: PosLike[]): {
 // ─── Status Konfigurationen ────────────────────────────────────────────────
 
 export const projektStatusConfig = {
-  ANGEBOT: { label: 'Angebot', color: '#7C3AED', bg: 'rgba(124,58,237,0.08)' },
+  ANGEBOT: { label: 'Angebot', color: '#13328D', bg: 'rgba(19, 50, 141,0.08)' },
   AKTIV: { label: 'Aktiv', color: '#059669', bg: 'rgba(5,150,105,0.08)' },
   ABGESCHLOSSEN: { label: 'Abgeschlossen', color: '#6B7280', bg: 'rgba(107,114,128,0.08)' },
   PAUSIERT: { label: 'Pausiert', color: '#0284C7', bg: 'rgba(2,132,199,0.08)' },

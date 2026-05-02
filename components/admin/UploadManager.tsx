@@ -57,7 +57,7 @@ export default function UploadManager({ uploads: initialUploads, projektId, anfr
       {/* Upload zone */}
       <div
         onClick={() => fileRef.current?.click()}
-        className="border-2 border-dashed border-[#E8E8ED] rounded-xl p-8 text-center hover:border-[#7C3AED]/40 hover:bg-violet-50/30 transition-all cursor-pointer"
+        className="border-2 border-dashed border-[#E8E8ED] rounded-xl p-8 text-center hover:border-[#13328D]/40 hover:bg-violet-50/30 transition-all cursor-pointer"
       >
         <Upload size={28} className="mx-auto text-[#6B7280] mb-3" />
         <p className="text-sm font-medium text-[#374151]">ZIP-Datei hochladen</p>
@@ -72,8 +72,8 @@ export default function UploadManager({ uploads: initialUploads, projektId, anfr
       </div>
 
       {uploading && (
-        <div className="flex items-center gap-2 text-sm text-[#7C3AED]">
-          <div className="w-4 h-4 border-2 border-[#7C3AED] border-t-transparent rounded-full animate-spin" />
+        <div className="flex items-center gap-2 text-sm text-[#13328D]">
+          <div className="w-4 h-4 border-2 border-[#13328D] border-t-transparent rounded-full animate-spin" />
           Datei wird hochgeladen...
         </div>
       )}
@@ -108,7 +108,7 @@ export default function UploadManager({ uploads: initialUploads, projektId, anfr
             </div>
             <a
               href={`/api/uploads/${upload.id}/download`}
-              className="flex items-center gap-1.5 px-3 py-1.5 text-xs font-medium text-[#7C3AED] border border-[#7C3AED]/30 rounded-lg hover:bg-violet-50 transition-colors"
+              className="flex items-center gap-1.5 px-3 py-1.5 text-xs font-medium text-[#13328D] border border-[#13328D]/30 rounded-lg hover:bg-violet-50 transition-colors"
             >
               <Download size={14} />
               Download

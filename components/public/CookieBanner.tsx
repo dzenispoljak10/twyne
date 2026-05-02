@@ -43,16 +43,16 @@ export default function CookieBanner() {
           animation: twyne-cookie-in 0.45s cubic-bezier(0.22, 1, 0.36, 1);
         }
         .twyne-cookie-btn-accept:hover {
-          background: #6D28D9 !important;
+          background: #0E2570 !important;
           transform: translateY(-1px);
-          box-shadow: 0 6px 20px rgba(124,58,237,0.35) !important;
+          box-shadow: 0 6px 20px rgba(19, 50, 141,0.35) !important;
         }
         .twyne-cookie-btn-reject:hover {
           background: #F4F4F6 !important;
           color: #111111 !important;
         }
         .twyne-cookie-link:hover {
-          color: #6D28D9 !important;
+          color: #0E2570 !important;
           text-decoration: underline;
         }
         .twyne-cookie-close:hover {
@@ -140,13 +140,13 @@ export default function CookieBanner() {
                 width: '32px',
                 height: '32px',
                 borderRadius: '10px',
-                background: 'linear-gradient(135deg, #7C3AED 0%, #A78BFA 100%)',
+                background: 'linear-gradient(135deg, #13328D 0%, #4F6FBF 100%)',
                 display: 'inline-flex',
                 alignItems: 'center',
                 justifyContent: 'center',
                 color: 'white',
                 flexShrink: 0,
-                boxShadow: '0 4px 12px rgba(124,58,237,0.3)',
+                boxShadow: '0 4px 12px rgba(19, 50, 141,0.3)',
               }}
             >
               <Cookie size={17} strokeWidth={2.2} />
@@ -177,7 +177,7 @@ export default function CookieBanner() {
               href="/datenschutz"
               className="twyne-cookie-link"
               style={{
-                color: '#7C3AED',
+                color: '#13328D',
                 fontWeight: 600,
                 textDecoration: 'none',
                 transition: 'color 0.2s',
@@ -219,7 +219,7 @@ export default function CookieBanner() {
               onClick={() => decide('accepted')}
               className="twyne-cookie-btn-accept"
               style={{
-                background: '#7C3AED',
+                background: '#13328D',
                 color: 'white',
                 border: 'none',
                 padding: '10px 20px',
@@ -229,7 +229,7 @@ export default function CookieBanner() {
                 cursor: 'pointer',
                 transition: 'all 0.2s ease',
                 fontFamily: 'inherit',
-                boxShadow: '0 4px 14px rgba(124,58,237,0.25)',
+                boxShadow: '0 4px 14px rgba(19, 50, 141,0.25)',
               }}
             >
               Akzeptieren

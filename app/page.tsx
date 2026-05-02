@@ -65,7 +65,7 @@ export default function HomePage() {
                 return (
                   <div key={item.title} style={{ background: '#FAFAFA', borderRadius: '20px', padding: '40px', border: '1px solid #EFEFEF' }}>
                     <div style={{ marginBottom: '20px' }}>
-                      <Icon size={32} style={{ color: '#7C3AED' }} />
+                      <Icon size={32} style={{ color: '#13328D' }} />
                     </div>
                     <h3 style={{ fontSize: '20px', fontWeight: 700, color: '#111111', marginBottom: '12px', letterSpacing: '-0.5px' }}>
                       {item.title}

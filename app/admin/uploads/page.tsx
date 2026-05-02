@@ -58,11 +58,11 @@ export default async function UploadsPage() {
                     </td>
                     <td className="px-6 py-4 hidden md:table-cell">
                       {upload.projekt ? (
-                        <Link href={`/admin/projekte/${upload.projekt.id}`} className="text-sm text-[#7C3AED] hover:underline">
+                        <Link href={`/admin/projekte/${upload.projekt.id}`} className="text-sm text-[#13328D] hover:underline">
                           {upload.projekt.name}
                         </Link>
                       ) : upload.anfrage ? (
-                        <Link href={`/admin/anfragen/${upload.anfrage.id}`} className="text-sm text-[#7C3AED] hover:underline">
+                        <Link href={`/admin/anfragen/${upload.anfrage.id}`} className="text-sm text-[#13328D] hover:underline">
                           {upload.anfrage.firma}
                         </Link>
                       ) : (
@@ -97,7 +97,7 @@ export default async function UploadsPage() {
                       {isVerfuegbar && (
                         <a
                           href={`/api/uploads/${upload.id}/download`}
-                          className="inline-flex items-center gap-1.5 px-3 py-1.5 text-xs font-medium text-[#7C3AED] border border-[#7C3AED]/30 rounded-lg hover:bg-violet-50 transition-colors"
+                          className="inline-flex items-center gap-1.5 px-3 py-1.5 text-xs font-medium text-[#13328D] border border-[#13328D]/30 rounded-lg hover:bg-violet-50 transition-colors"
                         >
                           <Download size={13} />
                           Download

@@ -72,7 +72,7 @@ function SortableRow({
   onToggle: (item: PortfolioItem) => void
 }) {
   const { attributes, listeners, setNodeRef, transform, transition, isDragging } = useSortable({ id: item.id })
-  const meta = kategorieMeta[item.kategorie] ?? { label: item.kategorie, color: '#7C3AED' }
+  const meta = kategorieMeta[item.kategorie] ?? { label: item.kategorie, color: '#13328D' }
 
   return (
     <div
@@ -214,7 +214,7 @@ function TagInput({ tags, onChange }: { tags: string[]; onChange: (tags: string[
           type="button"
           onClick={add}
           style={{
-            padding: '8px 14px', background: '#7C3AED', color: 'white', border: 'none',
+            padding: '8px 14px', background: '#13328D', color: 'white', border: 'none',
             borderRadius: '8px', fontSize: '13px', fontWeight: 500, cursor: 'pointer',
           }}
         >
@@ -369,7 +369,7 @@ export default function PortfolioManager({ initialItems }: { initialItems: Portf
           onClick={openCreate}
           style={{
             display: 'flex', alignItems: 'center', gap: '6px',
-            padding: '10px 18px', background: '#7C3AED', color: 'white',
+            padding: '10px 18px', background: '#13328D', color: 'white',
             border: 'none', borderRadius: '10px', fontSize: '14px', fontWeight: 600,
             cursor: 'pointer',
           }}
@@ -571,7 +571,7 @@ export default function PortfolioManager({ initialItems }: { initialItems: Portf
                   style={{
                     width: '40px', height: '22px', borderRadius: '11px', border: 'none',
                     cursor: 'pointer', position: 'relative', flexShrink: 0,
-                    background: form.sichtbar ? '#7C3AED' : '#D1D5DB',
+                    background: form.sichtbar ? '#13328D' : '#D1D5DB',
                     transition: 'background 0.2s',
                   }}
                 >
@@ -608,7 +608,7 @@ export default function PortfolioManager({ initialItems }: { initialItems: Portf
                   type="submit"
                   disabled={saving}
                   style={{
-                    flex: 1, padding: '11px', background: '#7C3AED', color: 'white',
+                    flex: 1, padding: '11px', background: '#13328D', color: 'white',
                     border: 'none', borderRadius: '10px', fontSize: '14px', fontWeight: 600,
                     cursor: saving ? 'not-allowed' : 'pointer', opacity: saving ? 0.7 : 1,
                     display: 'flex', alignItems: 'center', justifyContent: 'center', gap: '6px',

@@ -8,7 +8,7 @@ interface StatsCardProps {
   color?: string
 }
 
-export default function StatsCard({ title, value, icon: Icon, description, color = '#7C3AED' }: StatsCardProps) {
+export default function StatsCard({ title, value, icon: Icon, description, color = '#13328D' }: StatsCardProps) {
   return (
     <div className="bg-white rounded-xl border border-[#E8E8ED] p-5 shadow-[0_1px_3px_rgba(0,0,0,0.06)]">
       <div className="flex items-start justify-between mb-4">

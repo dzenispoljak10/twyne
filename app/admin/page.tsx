@@ -60,7 +60,7 @@ export default async function AdminDashboard() {
           value={neueAnfragen}
           icon={Inbox}
           description="Diese Woche"
-          color="#7C3AED"
+          color="#13328D"
         />
         <StatsCard
           title="Aktive Projekte"
@@ -94,7 +94,7 @@ export default async function AdminDashboard() {
             value={kundenAnzahl}
             icon={Users}
             description="Aktive Kundschaft"
-            color="#7C3AED"
+            color="#13328D"
           />
           <StatsCard
             title="Offene Rechnungen"
@@ -138,7 +138,7 @@ export default async function AdminDashboard() {
         <div className="bg-white rounded-xl border border-[#E8E8ED]">
           <div className="flex items-center justify-between px-6 py-4 border-b border-[#E8E8ED]">
             <h2 className="text-base font-bold text-[#111111]">Letzte Anfragen</h2>
-            <Link href="/admin/anfragen" className="text-xs font-medium text-[#7C3AED] hover:underline">
+            <Link href="/admin/anfragen" className="text-xs font-medium text-[#13328D] hover:underline">
               Alle anzeigen
             </Link>
           </div>
@@ -170,7 +170,7 @@ export default async function AdminDashboard() {
         <div className="bg-white rounded-xl border border-[#E8E8ED]">
           <div className="flex items-center justify-between px-6 py-4 border-b border-[#E8E8ED]">
             <h2 className="text-base font-bold text-[#111111]">Letzte Projekte</h2>
-            <Link href="/admin/projekte" className="text-xs font-medium text-[#7C3AED] hover:underline">
+            <Link href="/admin/projekte" className="text-xs font-medium text-[#13328D] hover:underline">
               Alle anzeigen
             </Link>
           </div>

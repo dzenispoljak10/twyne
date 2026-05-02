@@ -157,13 +157,13 @@ export default function ContactForm() {
                 onClick={() => toggleService(service)}
                 className={`flex items-center gap-2.5 px-4 py-2.5 rounded-lg border text-sm font-medium text-left transition-all duration-200 ${
                   isSelected
-                    ? 'border-[#7C3AED] bg-violet-50 text-[#7C3AED]'
-                    : 'border-[#E8E8ED] bg-white text-[#374151] hover:border-[#7C3AED]/40'
+                    ? 'border-[#13328D] bg-violet-50 text-[#13328D]'
+                    : 'border-[#E8E8ED] bg-white text-[#374151] hover:border-[#13328D]/40'
                 }`}
               >
                 <span
                   className={`w-4 h-4 rounded border flex-shrink-0 flex items-center justify-center transition-all ${
-                    isSelected ? 'bg-[#7C3AED] border-[#7C3AED]' : 'border-[#D1D5DB]'
+                    isSelected ? 'bg-[#13328D] border-[#13328D]' : 'border-[#D1D5DB]'
                   }`}
                 >
                   {isSelected && (
@@ -189,7 +189,7 @@ export default function ContactForm() {
         </label>
         <select
           id="budget"
-          className="w-full px-4 py-2.5 rounded-lg border border-[#E8E8ED] text-[#374151] text-sm focus:outline-none focus:ring-2 focus:ring-[#7C3AED] focus:border-transparent bg-white"
+          className="w-full px-4 py-2.5 rounded-lg border border-[#E8E8ED] text-[#374151] text-sm focus:outline-none focus:ring-2 focus:ring-[#13328D] focus:border-transparent bg-white"
           {...register('budget')}
         >
           <option value="">Budget wählen (optional)</option>
@@ -208,7 +208,7 @@ export default function ContactForm() {
           id="nachricht"
           rows={5}
           placeholder="Beschreiben Sie kurz Ihr Projekt, Ihre Ziele und Ihre Anforderungen..."
-          className={`w-full px-4 py-2.5 rounded-lg border text-[#374151] text-sm focus:outline-none focus:ring-2 focus:ring-[#7C3AED] focus:border-transparent resize-none ${
+          className={`w-full px-4 py-2.5 rounded-lg border text-[#374151] text-sm focus:outline-none focus:ring-2 focus:ring-[#13328D] focus:border-transparent resize-none ${
             errors.nachricht ? 'border-red-400 bg-red-50' : 'border-[#E8E8ED] bg-white hover:border-[#6B7280]'
           }`}
           {...register('nachricht')}
@@ -223,12 +223,12 @@ export default function ContactForm() {
         <input
           type="checkbox"
           id="datenschutz"
-          className="mt-0.5 w-4 h-4 rounded border-[#D1D5DB] text-[#7C3AED] focus:ring-[#7C3AED]"
+          className="mt-0.5 w-4 h-4 rounded border-[#D1D5DB] text-[#13328D] focus:ring-[#13328D]"
           {...register('datenschutz')}
         />
         <label htmlFor="datenschutz" className="text-sm text-[#6B7280]">
           Ich habe die{' '}
-          <a href="/datenschutz" className="text-[#7C3AED] hover:underline">
+          <a href="/datenschutz" className="text-[#13328D] hover:underline">
             Datenschutzerklärung
           </a>{' '}
           gelesen und akzeptiert. *

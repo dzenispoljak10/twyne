@@ -248,7 +248,7 @@ export default function LeadCenter({ initialLeads }: Props) {
 
             <div className="space-y-2 mb-4">
               <p className="text-xs text-[#6B7280]"><span className="font-medium text-[#374151]">Name:</span> {selectedLead.ansprechperson}</p>
-              <p className="text-xs text-[#6B7280]"><span className="font-medium text-[#374151]">E-Mail:</span> <a href={`mailto:${selectedLead.email}`} className="text-[#7C3AED]">{selectedLead.email}</a></p>
+              <p className="text-xs text-[#6B7280]"><span className="font-medium text-[#374151]">E-Mail:</span> <a href={`mailto:${selectedLead.email}`} className="text-[#13328D]">{selectedLead.email}</a></p>
               {selectedLead.telefon && <p className="text-xs text-[#6B7280]"><span className="font-medium text-[#374151]">Telefon:</span> {selectedLead.telefon}</p>}
               <p className="text-xs text-[#6B7280]"><span className="font-medium text-[#374151]">Quelle:</span> {quelleLabel[selectedLead.quelle]}</p>
               {selectedLead.produkt && <p className="text-xs text-[#6B7280]"><span className="font-medium text-[#374151]">Produkt:</span> {selectedLead.produkt}</p>}
@@ -303,7 +303,7 @@ export default function LeadCenter({ initialLeads }: Props) {
               <button
                 onClick={saveNotiz}
                 disabled={savingNotiz}
-                className="mt-1 text-xs font-medium text-[#7C3AED] hover:text-[#6D28D9] disabled:opacity-50"
+                className="mt-1 text-xs font-medium text-[#13328D] hover:text-[#0E2570] disabled:opacity-50"
               >
                 {savingNotiz ? 'Speichern...' : 'Notiz speichern'}
               </button>
@@ -334,7 +334,7 @@ export default function LeadCenter({ initialLeads }: Props) {
                   <button
                     onClick={sendMail}
                     disabled={mailSending || !mailBetreff || !mailInhalt}
-                    className="w-full text-xs font-semibold bg-[#7C3AED] text-white py-2 rounded-lg disabled:opacity-50 hover:bg-[#6D28D9] transition-colors"
+                    className="w-full text-xs font-semibold bg-[#13328D] text-white py-2 rounded-lg disabled:opacity-50 hover:bg-[#0E2570] transition-colors"
                   >
                     {mailSending ? 'Senden...' : 'E-Mail senden'}
                   </button>

@@ -13,11 +13,11 @@ async function send(params: Parameters<typeof resend.emails.send>[0]) {
 // ─── Logo (weiss für dunklen Header) ──────────────────────────────────────────
 
 const logoSvg = `<svg width="110" height="26" viewBox="0 0 140 32" xmlns="http://www.w3.org/2000/svg">
-  <circle cx="12" cy="16" r="9" fill="none" stroke="#7C3AED" stroke-width="2.5"/>
-  <circle cx="32" cy="16" r="9" fill="none" stroke="#A78BFA" stroke-width="2.5"/>
-  <line x1="21" y1="16" x2="23" y2="16" stroke="#7C3AED" stroke-width="2.5" stroke-linecap="round"/>
-  <circle cx="12" cy="16" r="3" fill="#7C3AED"/>
-  <circle cx="32" cy="16" r="3" fill="#A78BFA"/>
+  <circle cx="12" cy="16" r="9" fill="none" stroke="#13328D" stroke-width="2.5"/>
+  <circle cx="32" cy="16" r="9" fill="none" stroke="#4F6FBF" stroke-width="2.5"/>
+  <line x1="21" y1="16" x2="23" y2="16" stroke="#13328D" stroke-width="2.5" stroke-linecap="round"/>
+  <circle cx="12" cy="16" r="3" fill="#13328D"/>
+  <circle cx="32" cy="16" r="3" fill="#4F6FBF"/>
   <text x="50" y="22" font-family="Arial,sans-serif" font-weight="800" font-size="22" fill="#FFFFFF" letter-spacing="-1">twyne</text>
 </svg>`
 
@@ -27,7 +27,7 @@ function htmlTemplate(inhalt: string, ctaText?: string, ctaUrl?: string): string
   const cta = ctaText && ctaUrl
     ? `<table cellpadding="0" cellspacing="0" style="margin:32px 0 8px;">
         <tr>
-          <td style="background:#7C3AED;border-radius:8px;">
+          <td style="background:#13328D;border-radius:8px;">
             <a href="${ctaUrl}" style="display:inline-block;padding:12px 28px;color:#FFFFFF;font-size:15px;font-weight:700;text-decoration:none;font-family:Arial,sans-serif;">${ctaText}</a>
           </td>
         </tr>
@@ -144,7 +144,7 @@ export async function sendAnnahme(data: {
   const inhalt = `
     ${heading('Ihr Projekt bei Twyne — Willkommen!')}
     ${para(`Guten Tag ${data.vorname},`)}
-    ${para(`wir freuen uns, Ihr Projekt annehmen zu können! Unter dem Namen <strong style="color:#7C3AED;">${data.projektName}</strong> werden wir Ihr Vorhaben gemeinsam umsetzen.`)}
+    ${para(`wir freuen uns, Ihr Projekt annehmen zu können! Unter dem Namen <strong style="color:#13328D;">${data.projektName}</strong> werden wir Ihr Vorhaben gemeinsam umsetzen.`)}
     ${para('In Kürze melden wir uns mit den nächsten Schritten.')}
   `
   return send({

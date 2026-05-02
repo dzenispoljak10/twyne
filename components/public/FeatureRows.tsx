@@ -61,49 +61,49 @@ function CodeEditorSvg() {
 
 function NeuralNetworkSvg() {
   return (
-    <svg viewBox="0 0 440 300" fill="none" xmlns="http://www.w3.org/2000/svg" style={{ width: '100%', height: 'auto', filter: 'drop-shadow(0 20px 40px rgba(124,58,237,0.1))' }}>
+    <svg viewBox="0 0 440 300" fill="none" xmlns="http://www.w3.org/2000/svg" style={{ width: '100%', height: 'auto', filter: 'drop-shadow(0 20px 40px rgba(19, 50, 141,0.1))' }}>
       <rect width="440" height="300" rx="16" fill="white" stroke="#EFEFEF" strokeWidth="1"/>
       {/* Connections */}
-      <line x1="80" y1="90" x2="220" y2="70" stroke="#EDE9FE" strokeWidth="1.5"/>
-      <line x1="80" y1="90" x2="220" y2="120" stroke="#EDE9FE" strokeWidth="1.5"/>
+      <line x1="80" y1="90" x2="220" y2="70" stroke="#E0E7F5" strokeWidth="1.5"/>
+      <line x1="80" y1="90" x2="220" y2="120" stroke="#E0E7F5" strokeWidth="1.5"/>
       <line x1="80" y1="90" x2="220" y2="180" stroke="#DDD6FE" strokeWidth="1"/>
       <line x1="80" y1="150" x2="220" y2="70" stroke="#DDD6FE" strokeWidth="1"/>
-      <line x1="80" y1="150" x2="220" y2="120" stroke="#EDE9FE" strokeWidth="1.5"/>
-      <line x1="80" y1="150" x2="220" y2="180" stroke="#EDE9FE" strokeWidth="1.5"/>
+      <line x1="80" y1="150" x2="220" y2="120" stroke="#E0E7F5" strokeWidth="1.5"/>
+      <line x1="80" y1="150" x2="220" y2="180" stroke="#E0E7F5" strokeWidth="1.5"/>
       <line x1="80" y1="210" x2="220" y2="120" stroke="#DDD6FE" strokeWidth="1"/>
-      <line x1="80" y1="210" x2="220" y2="180" stroke="#EDE9FE" strokeWidth="1.5"/>
-      <line x1="220" y1="70" x2="360" y2="100" stroke="#C4B5FD" strokeWidth="2"/>
-      <line x1="220" y1="70" x2="360" y2="200" stroke="#EDE9FE" strokeWidth="1"/>
-      <line x1="220" y1="120" x2="360" y2="100" stroke="#A78BFA" strokeWidth="2"/>
-      <line x1="220" y1="120" x2="360" y2="200" stroke="#C4B5FD" strokeWidth="1.5"/>
-      <line x1="220" y1="180" x2="360" y2="100" stroke="#EDE9FE" strokeWidth="1"/>
-      <line x1="220" y1="180" x2="360" y2="200" stroke="#A78BFA" strokeWidth="2"/>
+      <line x1="80" y1="210" x2="220" y2="180" stroke="#E0E7F5" strokeWidth="1.5"/>
+      <line x1="220" y1="70" x2="360" y2="100" stroke="#A8B5DD" strokeWidth="2"/>
+      <line x1="220" y1="70" x2="360" y2="200" stroke="#E0E7F5" strokeWidth="1"/>
+      <line x1="220" y1="120" x2="360" y2="100" stroke="#4F6FBF" strokeWidth="2"/>
+      <line x1="220" y1="120" x2="360" y2="200" stroke="#A8B5DD" strokeWidth="1.5"/>
+      <line x1="220" y1="180" x2="360" y2="100" stroke="#E0E7F5" strokeWidth="1"/>
+      <line x1="220" y1="180" x2="360" y2="200" stroke="#4F6FBF" strokeWidth="2"/>
       {/* Layer 1 */}
-      <circle cx="80" cy="90" r="20" fill="#EDE9FE" stroke="#C4B5FD" strokeWidth="2"/>
-      <circle cx="80" cy="90" r="8" fill="#7C3AED"/>
-      <circle cx="80" cy="150" r="20" fill="#EDE9FE" stroke="#C4B5FD" strokeWidth="2"/>
-      <circle cx="80" cy="150" r="8" fill="#7C3AED"/>
-      <circle cx="80" cy="210" r="20" fill="#EDE9FE" stroke="#C4B5FD" strokeWidth="2"/>
-      <circle cx="80" cy="210" r="8" fill="#7C3AED"/>
+      <circle cx="80" cy="90" r="20" fill="#E0E7F5" stroke="#A8B5DD" strokeWidth="2"/>
+      <circle cx="80" cy="90" r="8" fill="#13328D"/>
+      <circle cx="80" cy="150" r="20" fill="#E0E7F5" stroke="#A8B5DD" strokeWidth="2"/>
+      <circle cx="80" cy="150" r="8" fill="#13328D"/>
+      <circle cx="80" cy="210" r="20" fill="#E0E7F5" stroke="#A8B5DD" strokeWidth="2"/>
+      <circle cx="80" cy="210" r="8" fill="#13328D"/>
       {/* Layer 2 */}
-      <circle cx="220" cy="70" r="20" fill="#DDD6FE" stroke="#A78BFA" strokeWidth="2"/>
-      <circle cx="220" cy="70" r="8" fill="#6D28D9"/>
-      <circle cx="220" cy="120" r="24" fill="#C4B5FD" stroke="#7C3AED" strokeWidth="2.5"/>
-      <circle cx="220" cy="120" r="10" fill="#7C3AED"/>
-      <circle cx="220" cy="180" r="20" fill="#DDD6FE" stroke="#A78BFA" strokeWidth="2"/>
-      <circle cx="220" cy="180" r="8" fill="#6D28D9"/>
+      <circle cx="220" cy="70" r="20" fill="#DDD6FE" stroke="#4F6FBF" strokeWidth="2"/>
+      <circle cx="220" cy="70" r="8" fill="#0E2570"/>
+      <circle cx="220" cy="120" r="24" fill="#A8B5DD" stroke="#13328D" strokeWidth="2.5"/>
+      <circle cx="220" cy="120" r="10" fill="#13328D"/>
+      <circle cx="220" cy="180" r="20" fill="#DDD6FE" stroke="#4F6FBF" strokeWidth="2"/>
+      <circle cx="220" cy="180" r="8" fill="#0E2570"/>
       {/* Layer 3 */}
-      <circle cx="360" cy="100" r="24" fill="#7C3AED" stroke="#5B21B6" strokeWidth="2"/>
+      <circle cx="360" cy="100" r="24" fill="#13328D" stroke="#0E2570" strokeWidth="2"/>
       <circle cx="360" cy="100" r="10" fill="white"/>
-      <circle cx="360" cy="200" r="20" fill="#A78BFA" stroke="#7C3AED" strokeWidth="2"/>
+      <circle cx="360" cy="200" r="20" fill="#4F6FBF" stroke="#13328D" strokeWidth="2"/>
       <circle cx="360" cy="200" r="8" fill="white"/>
       {/* Labels */}
       <rect x="48" y="240" width="64" height="20" rx="6" fill="#F4F4F6"/>
       <rect x="57" y="247" width="46" height="6" rx="3" fill="#9CA3AF"/>
       <rect x="188" y="240" width="64" height="20" rx="6" fill="#F4F4F6"/>
       <rect x="197" y="247" width="46" height="6" rx="3" fill="#9CA3AF"/>
-      <rect x="328" y="240" width="64" height="20" rx="6" fill="#EDE9FE"/>
-      <rect x="337" y="247" width="46" height="6" rx="3" fill="#7C3AED"/>
+      <rect x="328" y="240" width="64" height="20" rx="6" fill="#E0E7F5"/>
+      <rect x="337" y="247" width="46" height="6" rx="3" fill="#13328D"/>
     </svg>
   )
 }
@@ -127,14 +127,14 @@ function AnalyticsSvg() {
       {/* Area fill */}
       <path d="M 48 220 L 110 200 L 170 190 L 230 165 L 290 130 L 350 100 L 416 70 L 416 240 L 48 240 Z" fill="url(#purpleGrad)" opacity="0.15"/>
       {/* Line */}
-      <path d="M 48 220 L 110 200 L 170 190 L 230 165 L 290 130 L 350 100 L 416 70" stroke="#7C3AED" strokeWidth="2.5" strokeLinejoin="round" fill="none"/>
+      <path d="M 48 220 L 110 200 L 170 190 L 230 165 L 290 130 L 350 100 L 416 70" stroke="#13328D" strokeWidth="2.5" strokeLinejoin="round" fill="none"/>
       {/* Data points */}
-      <circle cx="110" cy="200" r="5" fill="white" stroke="#7C3AED" strokeWidth="2"/>
-      <circle cx="170" cy="190" r="5" fill="white" stroke="#7C3AED" strokeWidth="2"/>
-      <circle cx="230" cy="165" r="5" fill="white" stroke="#7C3AED" strokeWidth="2"/>
-      <circle cx="290" cy="130" r="5" fill="white" stroke="#7C3AED" strokeWidth="2"/>
-      <circle cx="350" cy="100" r="7" fill="#7C3AED"/>
-      <circle cx="416" cy="70" r="7" fill="#7C3AED"/>
+      <circle cx="110" cy="200" r="5" fill="white" stroke="#13328D" strokeWidth="2"/>
+      <circle cx="170" cy="190" r="5" fill="white" stroke="#13328D" strokeWidth="2"/>
+      <circle cx="230" cy="165" r="5" fill="white" stroke="#13328D" strokeWidth="2"/>
+      <circle cx="290" cy="130" r="5" fill="white" stroke="#13328D" strokeWidth="2"/>
+      <circle cx="350" cy="100" r="7" fill="#13328D"/>
+      <circle cx="416" cy="70" r="7" fill="#13328D"/>
       {/* Tooltip */}
       <rect x="326" y="44" width="90" height="48" rx="8" fill="#111111"/>
       <rect x="338" y="54" width="40" height="5" rx="2.5" fill="#9CA3AF"/>
@@ -149,8 +149,8 @@ function AnalyticsSvg() {
       <rect x="400" y="252" width="28" height="5" rx="2.5" fill="#9CA3AF"/>
       <defs>
         <linearGradient id="purpleGrad" x1="0" y1="0" x2="0" y2="1">
-          <stop offset="0%" stopColor="#7C3AED"/>
-          <stop offset="100%" stopColor="#7C3AED" stopOpacity="0"/>
+          <stop offset="0%" stopColor="#13328D"/>
+          <stop offset="100%" stopColor="#13328D" stopOpacity="0"/>
         </linearGradient>
       </defs>
     </svg>
@@ -166,8 +166,8 @@ function RoadmapSvg() {
       {/* Horizontal line */}
       <line x1="60" y1="130" x2="380" y2="130" stroke="#E8E8ED" strokeWidth="2" strokeDasharray="6 4"/>
       {/* Step 1 */}
-      <circle cx="60" cy="130" r="20" fill="#7C3AED"/>
-      <rect x="44" y="124" width="32" height="12" rx="4" fill="#7C3AED"/>
+      <circle cx="60" cy="130" r="20" fill="#13328D"/>
+      <rect x="44" y="124" width="32" height="12" rx="4" fill="#13328D"/>
       <rect x="50" y="127" width="20" height="6" rx="3" fill="white"/>
       <rect x="24" y="162" width="72" height="60" rx="10" fill="#F4F4F6"/>
       <rect x="32" y="172" width="56" height="6" rx="3" fill="#111111"/>
@@ -175,8 +175,8 @@ function RoadmapSvg() {
       <rect x="32" y="194" width="48" height="4" rx="2" fill="#9CA3AF"/>
       <rect x="32" y="204" width="32" height="4" rx="2" fill="#9CA3AF"/>
       {/* Step 2 */}
-      <circle cx="167" cy="130" r="20" fill="#A78BFA"/>
-      <rect x="151" y="124" width="32" height="12" rx="4" fill="#A78BFA"/>
+      <circle cx="167" cy="130" r="20" fill="#4F6FBF"/>
+      <rect x="151" y="124" width="32" height="12" rx="4" fill="#4F6FBF"/>
       <rect x="157" y="127" width="20" height="6" rx="3" fill="white"/>
       <rect x="131" y="162" width="72" height="60" rx="10" fill="#F4F4F6"/>
       <rect x="139" y="172" width="56" height="6" rx="3" fill="#111111"/>
@@ -184,8 +184,8 @@ function RoadmapSvg() {
       <rect x="139" y="194" width="48" height="4" rx="2" fill="#9CA3AF"/>
       <rect x="139" y="204" width="32" height="4" rx="2" fill="#9CA3AF"/>
       {/* Step 3 */}
-      <circle cx="273" cy="130" r="20" fill="#C4B5FD"/>
-      <rect x="257" y="124" width="32" height="12" rx="4" fill="#C4B5FD"/>
+      <circle cx="273" cy="130" r="20" fill="#A8B5DD"/>
+      <rect x="257" y="124" width="32" height="12" rx="4" fill="#A8B5DD"/>
       <rect x="263" y="127" width="20" height="6" rx="3" fill="white"/>
       <rect x="237" y="162" width="72" height="60" rx="10" fill="#F4F4F6"/>
       <rect x="245" y="172" width="56" height="6" rx="3" fill="#111111"/>
@@ -193,20 +193,20 @@ function RoadmapSvg() {
       <rect x="245" y="194" width="48" height="4" rx="2" fill="#9CA3AF"/>
       <rect x="245" y="204" width="32" height="4" rx="2" fill="#9CA3AF"/>
       {/* Step 4 */}
-      <circle cx="380" cy="130" r="20" fill="#EDE9FE" stroke="#C4B5FD" strokeWidth="2" strokeDasharray="4 2"/>
-      <rect x="364" y="124" width="32" height="12" rx="4" fill="#EDE9FE"/>
-      <rect x="370" y="127" width="20" height="6" rx="3" fill="#C4B5FD"/>
+      <circle cx="380" cy="130" r="20" fill="#E0E7F5" stroke="#A8B5DD" strokeWidth="2" strokeDasharray="4 2"/>
+      <rect x="364" y="124" width="32" height="12" rx="4" fill="#E0E7F5"/>
+      <rect x="370" y="127" width="20" height="6" rx="3" fill="#A8B5DD"/>
       <rect x="344" y="162" width="72" height="60" rx="10" fill="#F8F9FA" stroke="#EFEFEF" strokeWidth="1"/>
       <rect x="352" y="172" width="56" height="6" rx="3" fill="#D1D5DB"/>
       <rect x="352" y="184" width="40" height="4" rx="2" fill="#E8E8ED"/>
       <rect x="352" y="194" width="48" height="4" rx="2" fill="#E8E8ED"/>
       {/* Step labels */}
-      <rect x="32" y="96" width="56" height="16" rx="6" fill="#EDE9FE"/>
-      <rect x="40" y="102" width="40" height="4" rx="2" fill="#7C3AED"/>
-      <rect x="139" y="96" width="56" height="16" rx="6" fill="#EDE9FE"/>
-      <rect x="147" y="102" width="40" height="4" rx="2" fill="#7C3AED"/>
-      <rect x="245" y="96" width="56" height="16" rx="6" fill="#EDE9FE"/>
-      <rect x="253" y="102" width="40" height="4" rx="2" fill="#A78BFA"/>
+      <rect x="32" y="96" width="56" height="16" rx="6" fill="#E0E7F5"/>
+      <rect x="40" y="102" width="40" height="4" rx="2" fill="#13328D"/>
+      <rect x="139" y="96" width="56" height="16" rx="6" fill="#E0E7F5"/>
+      <rect x="147" y="102" width="40" height="4" rx="2" fill="#13328D"/>
+      <rect x="245" y="96" width="56" height="16" rx="6" fill="#E0E7F5"/>
+      <rect x="253" y="102" width="40" height="4" rx="2" fill="#4F6FBF"/>
       <rect x="352" y="96" width="56" height="16" rx="6" fill="#F4F4F6"/>
       <rect x="360" y="102" width="40" height="4" rx="2" fill="#D1D5DB"/>
     </svg>
@@ -266,9 +266,9 @@ export default function FeatureRows() {
       <div className="max-w-7xl mx-auto px-6 lg:px-8">
         <div className="animate-on-scroll" style={{ textAlign: 'center', marginBottom: '80px' }}>
           <div style={{ display: 'inline-flex', alignItems: 'center', gap: '16px', marginBottom: '20px' }}>
-            <div style={{ width: '40px', height: '1px', background: '#7C3AED' }} />
-            <span style={{ fontSize: '12px', fontWeight: 600, color: '#7C3AED', textTransform: 'uppercase', letterSpacing: '0.1em' }}>Was wir leisten</span>
-            <div style={{ width: '40px', height: '1px', background: '#7C3AED' }} />
+            <div style={{ width: '40px', height: '1px', background: '#13328D' }} />
+            <span style={{ fontSize: '12px', fontWeight: 600, color: '#13328D', textTransform: 'uppercase', letterSpacing: '0.1em' }}>Was wir leisten</span>
+            <div style={{ width: '40px', height: '1px', background: '#13328D' }} />
           </div>
           <h2 style={{ fontSize: 'clamp(28px, 3.5vw, 44px)', fontWeight: 800, letterSpacing: '-1.5px', color: '#111111', lineHeight: 1.1 }}>
             Vier Kernkompetenzen. Messbarer Erfolg.
@@ -284,7 +284,7 @@ export default function FeatureRows() {
               </div>
               {/* Text */}
               <div style={{ direction: 'ltr' }}>
-                <span style={{ display: 'inline-block', background: 'rgba(124,58,237,0.06)', border: '1px solid rgba(124,58,237,0.15)', color: '#7C3AED', borderRadius: '100px', padding: '4px 12px', fontSize: '12px', fontWeight: 600, marginBottom: '20px', letterSpacing: '0.05em' }}>
+                <span style={{ display: 'inline-block', background: 'rgba(19, 50, 141,0.06)', border: '1px solid rgba(19, 50, 141,0.15)', color: '#13328D', borderRadius: '100px', padding: '4px 12px', fontSize: '12px', fontWeight: 600, marginBottom: '20px', letterSpacing: '0.05em' }}>
                   {f.tag}
                 </span>
                 <h3 style={{ fontSize: 'clamp(22px, 2.5vw, 32px)', fontWeight: 800, color: '#111111', letterSpacing: '-1px', lineHeight: 1.2, marginBottom: '16px' }}>
@@ -296,12 +296,12 @@ export default function FeatureRows() {
                 <ul style={{ display: 'flex', flexDirection: 'column', gap: '10px', marginBottom: '28px' }}>
                   {f.checks.map((c) => (
                     <li key={c} style={{ display: 'flex', alignItems: 'center', gap: '10px', fontSize: '14px', color: '#374151', fontWeight: 500 }}>
-                      <CheckCircle size={16} style={{ color: '#7C3AED', flexShrink: 0 }} />
+                      <CheckCircle size={16} style={{ color: '#13328D', flexShrink: 0 }} />
                       {c}
                     </li>
                   ))}
                 </ul>
-                <Link href={f.link} style={{ display: 'inline-flex', alignItems: 'center', gap: '6px', fontSize: '14px', fontWeight: 600, color: '#7C3AED', textDecoration: 'none', borderBottom: '1px solid rgba(124,58,237,0.3)', paddingBottom: '2px' }}>
+                <Link href={f.link} style={{ display: 'inline-flex', alignItems: 'center', gap: '6px', fontSize: '14px', fontWeight: 600, color: '#13328D', textDecoration: 'none', borderBottom: '1px solid rgba(19, 50, 141,0.3)', paddingBottom: '2px' }}>
                   {f.linkText} →
                 </Link>
               </div>

@@ -111,7 +111,7 @@ export default function LeistungenPage() {
         {/* Hero */}
         <section className="bg-[#111111] py-24">
           <div className="max-w-7xl mx-auto px-6 lg:px-8">
-            <p className="text-xs font-medium uppercase tracking-[0.12em] text-[#A78BFA] mb-4">
+            <p className="text-xs font-medium uppercase tracking-[0.12em] text-[#4F6FBF] mb-4">
               Leistungen
             </p>
             <h1
@@ -143,7 +143,7 @@ export default function LeistungenPage() {
                       <div className="flex items-center gap-3 mb-4">
                         <span className="text-xs font-medium text-[#6B7280]">{service.id}</span>
                         <div className="w-8 h-8 rounded-lg bg-violet-50 flex items-center justify-center">
-                          <Icon size={18} className="text-[#7C3AED]" />
+                          <Icon size={18} className="text-[#13328D]" />
                         </div>
                       </div>
                       <h2 className="text-2xl font-bold text-[#111111] mb-4" style={{ letterSpacing: '-0.5px' }}>
@@ -155,7 +155,7 @@ export default function LeistungenPage() {
                       <ul className="space-y-2.5">
                         {service.features.map((feature) => (
                           <li key={feature} className="flex items-center gap-2.5 text-sm text-[#374151]">
-                            <CheckCircle size={16} className="text-[#7C3AED] flex-shrink-0" />
+                            <CheckCircle size={16} className="text-[#13328D] flex-shrink-0" />
                             {feature}
                           </li>
                         ))}

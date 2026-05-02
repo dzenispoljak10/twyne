@@ -29,9 +29,9 @@ export default function Faq() {
       <div className="max-w-3xl mx-auto px-6 lg:px-8">
         <div className="animate-on-scroll" style={{ textAlign: 'center', marginBottom: '56px' }}>
           <div style={{ display: 'inline-flex', alignItems: 'center', gap: '16px', marginBottom: '20px' }}>
-            <div style={{ width: '40px', height: '1px', background: '#7C3AED' }} />
-            <span style={{ fontSize: '12px', fontWeight: 600, color: '#7C3AED', textTransform: 'uppercase', letterSpacing: '0.1em' }}>FAQ</span>
-            <div style={{ width: '40px', height: '1px', background: '#7C3AED' }} />
+            <div style={{ width: '40px', height: '1px', background: '#13328D' }} />
+            <span style={{ fontSize: '12px', fontWeight: 600, color: '#13328D', textTransform: 'uppercase', letterSpacing: '0.1em' }}>FAQ</span>
+            <div style={{ width: '40px', height: '1px', background: '#13328D' }} />
           </div>
           <h2 style={{ fontSize: 'clamp(28px, 3.5vw, 40px)', fontWeight: 800, letterSpacing: '-1.5px', color: '#111111', lineHeight: 1.1, marginBottom: '12px' }}>
             Häufige Fragen

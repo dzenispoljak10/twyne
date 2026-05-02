@@ -45,7 +45,7 @@ const iconPaths: Record<string, string> = {
   Mail: 'M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2zM22 6l-10 7L2 6',
 }
 
-function InlineIcon({ name, size = 22, color = '#7C3AED' }: { name: string; size?: number; color?: string }) {
+function InlineIcon({ name, size = 22, color = '#13328D' }: { name: string; size?: number; color?: string }) {
   const path = iconPaths[name]
   if (!path) return null
   return (
@@ -86,7 +86,7 @@ export default async function BrancheDetailPage({ params }: Props) {
         {/* 1. Hero */}
         <section style={{ background: '#111111', padding: '96px 0 80px' }}>
           <div className="max-w-7xl mx-auto px-6 lg:px-8">
-            <p style={{ fontSize: '11px', fontWeight: 700, textTransform: 'uppercase', letterSpacing: '0.12em', color: '#A78BFA', marginBottom: '16px' }}>
+            <p style={{ fontSize: '11px', fontWeight: 700, textTransform: 'uppercase', letterSpacing: '0.12em', color: '#4F6FBF', marginBottom: '16px' }}>
               {data.hero.badge}
             </p>
             <h1 style={{ color: 'white', fontWeight: 800, lineHeight: 1.05, marginBottom: '24px', fontSize: 'clamp(30px, 4.5vw, 52px)', letterSpacing: '-2px', maxWidth: '700px' }}>
@@ -97,7 +97,7 @@ export default async function BrancheDetailPage({ params }: Props) {
             </p>
             <Link
               href="/anfrage"
-              style={{ display: 'inline-flex', alignItems: 'center', gap: '8px', background: '#7C3AED', color: 'white', padding: '14px 28px', borderRadius: '10px', fontSize: '15px', fontWeight: 700, textDecoration: 'none' }}
+              style={{ display: 'inline-flex', alignItems: 'center', gap: '8px', background: '#13328D', color: 'white', padding: '14px 28px', borderRadius: '10px', fontSize: '15px', fontWeight: 700, textDecoration: 'none' }}
             >
               Jetzt anfragen
               <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
@@ -108,7 +108,7 @@ export default async function BrancheDetailPage({ params }: Props) {
         {/* 2. Herausforderungen */}
         <section style={{ background: 'white', padding: '80px 0' }}>
           <div className="max-w-7xl mx-auto px-6 lg:px-8">
-            <p style={{ fontSize: '11px', fontWeight: 700, textTransform: 'uppercase', letterSpacing: '0.12em', color: '#7C3AED', marginBottom: '12px' }}>
+            <p style={{ fontSize: '11px', fontWeight: 700, textTransform: 'uppercase', letterSpacing: '0.12em', color: '#13328D', marginBottom: '12px' }}>
               Die Realität
             </p>
             <h2 style={{ fontSize: 'clamp(24px, 3vw, 36px)', fontWeight: 800, color: '#111111', letterSpacing: '-1px', marginBottom: '48px' }}>
@@ -117,7 +117,7 @@ export default async function BrancheDetailPage({ params }: Props) {
             <div className="branche-cards-3">
               {data.herausforderungen.map((item) => (
                 <div key={item.title} style={{ background: '#F8F9FA', borderRadius: '20px', padding: '36px', border: '1px solid #EFEFEF' }}>
-                  <div style={{ width: '48px', height: '48px', borderRadius: '14px', background: '#EDE9FE', display: 'flex', alignItems: 'center', justifyContent: 'center', marginBottom: '20px' }}>
+                  <div style={{ width: '48px', height: '48px', borderRadius: '14px', background: '#E0E7F5', display: 'flex', alignItems: 'center', justifyContent: 'center', marginBottom: '20px' }}>
                     <InlineIcon name={item.icon} />
                   </div>
                   <h3 style={{ fontSize: '16px', fontWeight: 700, color: '#111111', marginBottom: '10px', lineHeight: 1.3 }}>
@@ -135,7 +135,7 @@ export default async function BrancheDetailPage({ params }: Props) {
         {/* 3. Was Twyne liefert */}
         <section style={{ background: '#F4F4F6', padding: '80px 0' }}>
           <div className="max-w-7xl mx-auto px-6 lg:px-8">
-            <p style={{ fontSize: '11px', fontWeight: 700, textTransform: 'uppercase', letterSpacing: '0.12em', color: '#7C3AED', marginBottom: '12px' }}>
+            <p style={{ fontSize: '11px', fontWeight: 700, textTransform: 'uppercase', letterSpacing: '0.12em', color: '#13328D', marginBottom: '12px' }}>
               Unsere Leistungen
             </p>
             <h2 style={{ fontSize: 'clamp(24px, 3vw, 36px)', fontWeight: 800, color: '#111111', letterSpacing: '-1px', marginBottom: '48px' }}>
@@ -144,7 +144,7 @@ export default async function BrancheDetailPage({ params }: Props) {
             <div className={data.leistungen.length === 4 ? 'branche-cards-4' : 'branche-cards-3'}>
               {data.leistungen.map((item) => (
                 <div key={item.title} style={{ background: 'white', borderRadius: '20px', padding: '36px', border: '1px solid #EFEFEF' }}>
-                  <div style={{ width: '48px', height: '48px', borderRadius: '14px', background: '#EDE9FE', display: 'flex', alignItems: 'center', justifyContent: 'center', marginBottom: '20px' }}>
+                  <div style={{ width: '48px', height: '48px', borderRadius: '14px', background: '#E0E7F5', display: 'flex', alignItems: 'center', justifyContent: 'center', marginBottom: '20px' }}>
                     <InlineIcon name={item.icon} />
                   </div>
                   <h3 style={{ fontSize: '15px', fontWeight: 700, color: '#111111', marginBottom: '10px', lineHeight: 1.3 }}>
@@ -162,7 +162,7 @@ export default async function BrancheDetailPage({ params }: Props) {
         {/* 4. Projekte / Referenzen */}
         <section style={{ background: 'white', padding: '80px 0' }}>
           <div className="max-w-7xl mx-auto px-6 lg:px-8">
-            <p style={{ fontSize: '11px', fontWeight: 700, textTransform: 'uppercase', letterSpacing: '0.12em', color: '#7C3AED', marginBottom: '12px' }}>
+            <p style={{ fontSize: '11px', fontWeight: 700, textTransform: 'uppercase', letterSpacing: '0.12em', color: '#13328D', marginBottom: '12px' }}>
               Referenzen
             </p>
             <h2 style={{ fontSize: 'clamp(24px, 3vw, 36px)', fontWeight: 800, color: '#111111', letterSpacing: '-1px', marginBottom: '48px' }}>
@@ -178,7 +178,7 @@ export default async function BrancheDetailPage({ params }: Props) {
                     </span>
                   </div>
                   <div style={{ padding: '28px', background: '#F8F9FA', border: '1px solid #EFEFEF', borderTop: 'none' }}>
-                    <span style={{ fontSize: '10px', fontWeight: 700, textTransform: 'uppercase', letterSpacing: '0.1em', color: '#7C3AED', background: '#EDE9FE', padding: '3px 8px', borderRadius: '5px', display: 'inline-block', marginBottom: '12px' }}>
+                    <span style={{ fontSize: '10px', fontWeight: 700, textTransform: 'uppercase', letterSpacing: '0.1em', color: '#13328D', background: '#E0E7F5', padding: '3px 8px', borderRadius: '5px', display: 'inline-block', marginBottom: '12px' }}>
                       {projekt.kategoriLabel}
                     </span>
                     <h3 style={{ fontSize: '18px', fontWeight: 800, color: '#111111', marginBottom: '8px' }}>{projekt.name}</h3>
@@ -190,7 +190,7 @@ export default async function BrancheDetailPage({ params }: Props) {
             <div style={{ marginTop: '32px', textAlign: 'center' }}>
               <Link
                 href="/projekte"
-                style={{ display: 'inline-flex', alignItems: 'center', gap: '8px', color: '#7C3AED', fontWeight: 700, fontSize: '14px', textDecoration: 'none' }}
+                style={{ display: 'inline-flex', alignItems: 'center', gap: '8px', color: '#13328D', fontWeight: 700, fontSize: '14px', textDecoration: 'none' }}
               >
                 Alle Projekte ansehen →
               </Link>
@@ -201,7 +201,7 @@ export default async function BrancheDetailPage({ params }: Props) {
         {/* 5. FAQ */}
         <section style={{ background: '#F4F4F6', padding: '80px 0' }}>
           <div className="max-w-7xl mx-auto px-6 lg:px-8">
-            <p style={{ fontSize: '11px', fontWeight: 700, textTransform: 'uppercase', letterSpacing: '0.12em', color: '#7C3AED', marginBottom: '12px' }}>
+            <p style={{ fontSize: '11px', fontWeight: 700, textTransform: 'uppercase', letterSpacing: '0.12em', color: '#13328D', marginBottom: '12px' }}>
               FAQ
             </p>
             <h2 style={{ fontSize: 'clamp(24px, 3vw, 36px)', fontWeight: 800, color: '#111111', letterSpacing: '-1px', marginBottom: '48px' }}>
@@ -223,7 +223,7 @@ export default async function BrancheDetailPage({ params }: Props) {
         </section>
 
         {/* 6. CTA */}
-        <section style={{ background: 'linear-gradient(135deg, #7C3AED 0%, #5B21B6 100%)', padding: '80px 0' }}>
+        <section style={{ background: 'linear-gradient(135deg, #13328D 0%, #0E2570 100%)', padding: '80px 0' }}>
           <div className="max-w-7xl mx-auto px-6 lg:px-8" style={{ textAlign: 'center' }}>
             <h2 style={{ fontSize: 'clamp(28px, 4vw, 44px)', fontWeight: 800, color: 'white', letterSpacing: '-1.5px', marginBottom: '16px', lineHeight: 1.1 }}>
               {data.ctaTitle}
@@ -234,7 +234,7 @@ export default async function BrancheDetailPage({ params }: Props) {
             <div style={{ display: 'flex', gap: '16px', justifyContent: 'center', flexWrap: 'wrap' }}>
               <Link
                 href="/anfrage"
-                style={{ display: 'inline-flex', alignItems: 'center', gap: '8px', background: 'white', color: '#7C3AED', padding: '14px 28px', borderRadius: '10px', fontSize: '15px', fontWeight: 700, textDecoration: 'none' }}
+                style={{ display: 'inline-flex', alignItems: 'center', gap: '8px', background: 'white', color: '#13328D', padding: '14px 28px', borderRadius: '10px', fontSize: '15px', fontWeight: 700, textDecoration: 'none' }}
               >
                 Jetzt anfragen
                 <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round"><path d="M5 12h14M12 5l7 7-7 7"/></svg>

@@ -39,7 +39,7 @@ export default async function ProjektDetailPage({ params }: { params: Promise<{ 
       <div>
         <Link
           href="/admin/projekte"
-          className="inline-flex items-center gap-1.5 text-sm text-[#6B7280] hover:text-[#7C3AED] mb-3 transition-colors"
+          className="inline-flex items-center gap-1.5 text-sm text-[#6B7280] hover:text-[#13328D] mb-3 transition-colors"
         >
           <ArrowLeft size={16} />
           Zurück zu Projekten
@@ -52,7 +52,7 @@ export default async function ProjektDetailPage({ params }: { params: Promise<{ 
               </h1>
               <ProjektStatusBadge status={projekt.status as any} />
               {ausAnfrage && (
-                <span className="text-xs font-semibold px-2 py-0.5 rounded-full bg-violet-50 text-[#7C3AED] border border-violet-200">
+                <span className="text-xs font-semibold px-2 py-0.5 rounded-full bg-violet-50 text-[#13328D] border border-violet-200">
                   Aus Anfrage
                 </span>
               )}
@@ -60,7 +60,7 @@ export default async function ProjektDetailPage({ params }: { params: Promise<{ 
             {projekt.kunde ? (
               <Link
                 href={`/admin/kunden/${projekt.kunde.id}`}
-                className="text-sm text-[#7C3AED] hover:underline mt-0.5 inline-block"
+                className="text-sm text-[#13328D] hover:underline mt-0.5 inline-block"
               >
                 {projekt.kunde.firma} — {projekt.kunde.vorname} {projekt.kunde.nachname}
               </Link>
@@ -72,7 +72,7 @@ export default async function ProjektDetailPage({ params }: { params: Promise<{ 
             {ausAnfrage && (
               <Link
                 href={`/admin/anfragen/${projekt.anfrage!.id}`}
-                className="text-xs text-[#9CA3AF] hover:text-[#7C3AED] mt-0.5 inline-block transition-colors"
+                className="text-xs text-[#9CA3AF] hover:text-[#13328D] mt-0.5 inline-block transition-colors"
               >
                 → Ursprüngliche Anfrage anzeigen
               </Link>

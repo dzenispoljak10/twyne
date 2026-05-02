@@ -37,7 +37,7 @@ export default function BlogPreview() {
       <div className="max-w-7xl mx-auto px-6 lg:px-8">
         <div className="flex items-end justify-between mb-12">
           <div>
-            <p className="text-xs font-medium uppercase tracking-[0.12em] text-[#7C3AED] mb-3">
+            <p className="text-xs font-medium uppercase tracking-[0.12em] text-[#13328D] mb-3">
               Blog
             </p>
             <h2
@@ -49,7 +49,7 @@ export default function BlogPreview() {
           </div>
           <Link
             href="/blog"
-            className="hidden md:flex items-center gap-2 text-sm font-medium text-[#7C3AED] hover:gap-3 transition-all duration-200"
+            className="hidden md:flex items-center gap-2 text-sm font-medium text-[#13328D] hover:gap-3 transition-all duration-200"
           >
             Alle Artikel
             <ArrowRight size={16} />
@@ -76,7 +76,7 @@ export default function BlogPreview() {
                 <div className="absolute top-3 left-3">
                   <span
                     className="text-[10px] font-medium uppercase tracking-widest px-2.5 py-1 rounded-full backdrop-blur-sm text-white border border-white/20"
-                    style={{ background: 'rgba(124,58,237,0.75)' }}
+                    style={{ background: 'rgba(19, 50, 141,0.75)' }}
                   >
                     {post.kategorie}
                   </span>
@@ -86,7 +86,7 @@ export default function BlogPreview() {
               {/* Content */}
               <div className="p-5">
                 <h3
-                  className="text-base font-bold mt-1 mb-2.5 leading-snug group-hover:text-[#7C3AED] transition-colors"
+                  className="text-base font-bold mt-1 mb-2.5 leading-snug group-hover:text-[#13328D] transition-colors"
                   style={{ color: '#111111' }}
                 >
                   {post.titel}

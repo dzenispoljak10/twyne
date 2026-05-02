@@ -16,8 +16,8 @@ export default function Process() {
     <section style={{ background: '#111111', padding: '120px 0' }}>
       <div className="max-w-7xl mx-auto px-6 lg:px-8">
         <div style={{ display: 'flex', alignItems: 'center', gap: '16px', marginBottom: '24px' }} className="animate-on-scroll">
-          <div style={{ width: '40px', height: '1px', background: '#7C3AED' }} />
-          <span style={{ fontSize: '12px', fontWeight: 600, color: '#7C3AED', textTransform: 'uppercase', letterSpacing: '0.1em' }}>
+          <div style={{ width: '40px', height: '1px', background: '#13328D' }} />
+          <span style={{ fontSize: '12px', fontWeight: 600, color: '#13328D', textTransform: 'uppercase', letterSpacing: '0.1em' }}>
             Prozess
           </span>
         </div>
@@ -42,8 +42,8 @@ export default function Process() {
                   position: 'relative',
                   padding: '32px 24px',
                   borderRadius: '16px',
-                  border: hovered ? '1px solid rgba(124,58,237,0.3)' : '1px solid rgba(255,255,255,0.06)',
-                  background: hovered ? 'rgba(124,58,237,0.05)' : 'transparent',
+                  border: hovered ? '1px solid rgba(19, 50, 141,0.3)' : '1px solid rgba(255,255,255,0.06)',
+                  background: hovered ? 'rgba(19, 50, 141,0.05)' : 'transparent',
                   transition: 'all 0.3s ease',
                   transform: hovered ? 'translateY(-4px)' : 'translateY(0)',
                 }}
@@ -51,11 +51,11 @@ export default function Process() {
                 {i < steps.length - 1 && (
                   <div style={{ display: 'none', position: 'absolute', top: '40px', left: 'calc(100% + 12px)', right: '-12px', height: '1px', borderTop: '1px dashed rgba(255,255,255,0.1)', zIndex: 0 }} className="lg:block" />
                 )}
-                <div style={{ fontSize: '64px', fontWeight: 800, lineHeight: 1, marginBottom: '16px', color: hovered ? 'rgba(124,58,237,0.6)' : 'rgba(124,58,237,0.15)', transition: 'color 0.3s ease', userSelect: 'none' }}>
+                <div style={{ fontSize: '64px', fontWeight: 800, lineHeight: 1, marginBottom: '16px', color: hovered ? 'rgba(19, 50, 141,0.6)' : 'rgba(19, 50, 141,0.15)', transition: 'color 0.3s ease', userSelect: 'none' }}>
                   {step.number}
                 </div>
                 <div style={{ marginBottom: '16px' }}>
-                  <Icon size={22} style={{ color: hovered ? '#A78BFA' : '#7C3AED', transition: 'color 0.3s ease' }} />
+                  <Icon size={22} style={{ color: hovered ? '#4F6FBF' : '#13328D', transition: 'color 0.3s ease' }} />
                 </div>
                 <h3 style={{ fontSize: '16px', fontWeight: 700, color: '#FFFFFF', marginBottom: '12px', letterSpacing: '-0.3px', lineHeight: 1.3 }}>
                   {step.title}

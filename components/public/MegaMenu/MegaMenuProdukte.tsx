@@ -16,8 +16,8 @@ const webApps = [
     name: 'Twyne Club',
     typ: 'Webapplikation',
     desc: 'Für Vereine & Verbände',
-    iconBg: '#EDE9FE',
-    iconColor: '#7C3AED',
+    iconBg: '#E0E7F5',
+    iconColor: '#13328D',
   },
   {
     href: '/produkte/table',
@@ -72,7 +72,7 @@ function ProduktLink({ href, Icon, name, typ, desc, iconBg, iconColor, isActive 
         borderRadius: '12px',
         border: '1px solid transparent',
         textDecoration: 'none',
-        background: isActive ? 'rgba(124,58,237,0.04)' : 'transparent',
+        background: isActive ? 'rgba(19, 50, 141,0.04)' : 'transparent',
         transition: 'all 0.2s ease',
       }}
       onMouseEnter={(e) => {
@@ -81,7 +81,7 @@ function ProduktLink({ href, Icon, name, typ, desc, iconBg, iconColor, isActive 
         e.currentTarget.style.transform = 'translateX(4px)'
       }}
       onMouseLeave={(e) => {
-        e.currentTarget.style.background = isActive ? 'rgba(124,58,237,0.04)' : 'transparent'
+        e.currentTarget.style.background = isActive ? 'rgba(19, 50, 141,0.04)' : 'transparent'
         e.currentTarget.style.borderColor = 'transparent'
         e.currentTarget.style.transform = 'translateX(0)'
       }}
@@ -99,7 +99,7 @@ function ProduktLink({ href, Icon, name, typ, desc, iconBg, iconColor, isActive 
         <Icon size={20} style={{ color: iconColor }} />
       </div>
       <div>
-        <div style={{ fontSize: '15px', fontWeight: 700, color: isActive ? '#7C3AED' : '#111111', marginBottom: '2px' }}>
+        <div style={{ fontSize: '15px', fontWeight: 700, color: isActive ? '#13328D' : '#111111', marginBottom: '2px' }}>
           {name}
         </div>
         <div style={{ fontSize: '10px', fontWeight: 600, color: '#9CA3AF', marginBottom: '3px', textTransform: 'uppercase', letterSpacing: '0.05em' }}>
@@ -156,7 +156,7 @@ export default function MegaMenuProdukte({ isOpen, onMouseEnter, onMouseLeave, p
               Fertige Webapplikationen & Software — sofort einsatzbereit, Swiss-Made.
             </p>
             <div style={{ marginTop: '16px', display: 'flex', flexDirection: 'column', gap: '6px' }}>
-              <span style={{ display: 'inline-block', background: 'rgba(124,58,237,0.3)', color: '#A78BFA', borderRadius: '100px', padding: '4px 12px', fontSize: '11px', fontWeight: 600, width: 'fit-content' }}>
+              <span style={{ display: 'inline-block', background: 'rgba(19, 50, 141,0.3)', color: '#4F6FBF', borderRadius: '100px', padding: '4px 12px', fontSize: '11px', fontWeight: 600, width: 'fit-content' }}>
                 Webapplikationen
               </span>
               <span style={{ display: 'inline-block', background: 'rgba(255,255,255,0.1)', color: 'rgba(255,255,255,0.7)', borderRadius: '100px', padding: '4px 12px', fontSize: '11px', fontWeight: 600, width: 'fit-content' }}>
@@ -236,7 +236,7 @@ export default function MegaMenuProdukte({ isOpen, onMouseEnter, onMouseLeave, p
           </span>
           <Link
             href="/anfrage"
-            style={{ fontSize: '13px', fontWeight: 600, color: '#7C3AED', textDecoration: 'none' }}
+            style={{ fontSize: '13px', fontWeight: 600, color: '#13328D', textDecoration: 'none' }}
           >
             Demo anfragen →
           </Link>

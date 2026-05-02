@@ -2,9 +2,12 @@
 
 @theme {
   --color-tw-ink: #111111;
-  --color-tw-electric: #7C3AED;
-  --color-tw-electric-dark: #6D28D9;
-  --color-tw-electric-soft: #A78BFA;
+  --color-tw-electric: #13328D;
+  --color-tw-electric-dark: #0E2570;
+  --color-tw-electric-soft: #4F6FBF;
+  --color-primary: #13328D;
+  --color-primary-dark: #0E2570;
+  --color-primary-light: #4F6FBF;
   --color-tw-surface: #F4F4F6;
   --color-tw-border: #E8E8ED;
   --color-tw-body: #374151;

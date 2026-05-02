@@ -19,8 +19,8 @@ export default function FaqAccordion({ items }: { items: FaqItem[] }) {
             style={{
               background: 'white',
               borderRadius: '12px',
-              border: isOpen ? '1px solid rgba(124,58,237,0.2)' : '1px solid #EFEFEF',
-              borderLeft: isOpen ? '3px solid #7C3AED' : '1px solid #EFEFEF',
+              border: isOpen ? '1px solid rgba(19, 50, 141,0.2)' : '1px solid #EFEFEF',
+              borderLeft: isOpen ? '3px solid #13328D' : '1px solid #EFEFEF',
               overflow: 'hidden',
               transition: 'border-color 0.2s ease',
             }}
@@ -51,7 +51,7 @@ export default function FaqAccordion({ items }: { items: FaqItem[] }) {
               <span style={{
                 flexShrink: 0,
                 fontSize: '20px',
-                color: '#7C3AED',
+                color: '#13328D',
                 transform: isOpen ? 'rotate(180deg)' : 'rotate(0deg)',
                 transition: 'transform 0.25s ease',
                 lineHeight: 1,

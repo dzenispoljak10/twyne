@@ -25,14 +25,14 @@ function ServiceCard({ service }: { service: typeof services[0] }) {
       style={{
         display: 'block',
         background: '#FFFFFF',
-        border: hovered ? '1px solid rgba(124,58,237,0.2)' : '1px solid #EFEFEF',
+        border: hovered ? '1px solid rgba(19, 50, 141,0.2)' : '1px solid #EFEFEF',
         borderRadius: '16px',
         padding: '32px',
         transition: 'all 0.3s ease',
         cursor: 'pointer',
         transform: hovered ? 'translateY(-6px)' : 'translateY(0)',
         boxShadow: hovered
-          ? '0 20px 40px rgba(0,0,0,0.08), 0 0 0 1px rgba(124,58,237,0.1)'
+          ? '0 20px 40px rgba(0,0,0,0.08), 0 0 0 1px rgba(19, 50, 141,0.1)'
           : '0 1px 3px rgba(0,0,0,0.04)',
         position: 'relative',
         textDecoration: 'none',
@@ -42,7 +42,7 @@ function ServiceCard({ service }: { service: typeof services[0] }) {
         {service.id}
       </div>
       <div style={{ marginBottom: '16px' }}>
-        <Icon size={28} style={{ color: '#7C3AED' }} />
+        <Icon size={28} style={{ color: '#13328D' }} />
       </div>
       <h3 style={{ fontSize: '18px', fontWeight: 700, color: '#111111', marginBottom: '10px', letterSpacing: '-0.3px', lineHeight: 1.3 }}>
         {service.title}
@@ -50,7 +50,7 @@ function ServiceCard({ service }: { service: typeof services[0] }) {
       <p style={{ fontSize: '14px', color: '#6B7280', lineHeight: 1.6 }}>
         {service.description}
       </p>
-      <div style={{ position: 'absolute', bottom: '28px', right: '28px', fontSize: '18px', color: '#7C3AED', opacity: hovered ? 1 : 0, transform: hovered ? 'translate(0, 0)' : 'translate(-4px, 4px)', transition: 'all 0.3s ease' }}>
+      <div style={{ position: 'absolute', bottom: '28px', right: '28px', fontSize: '18px', color: '#13328D', opacity: hovered ? 1 : 0, transform: hovered ? 'translate(0, 0)' : 'translate(-4px, 4px)', transition: 'all 0.3s ease' }}>
         →
       </div>
     </Link>
@@ -62,8 +62,8 @@ export default function Services() {
     <section style={{ background: '#F8F9FA', padding: '120px 0' }}>
       <div className="max-w-7xl mx-auto px-6 lg:px-8">
         <div className="animate-on-scroll" style={{ display: 'flex', alignItems: 'center', gap: '16px', marginBottom: '24px' }}>
-          <div style={{ width: '40px', height: '1px', background: '#7C3AED' }} />
-          <span style={{ fontSize: '12px', fontWeight: 600, color: '#7C3AED', textTransform: 'uppercase', letterSpacing: '0.1em' }}>
+          <div style={{ width: '40px', height: '1px', background: '#13328D' }} />
+          <span style={{ fontSize: '12px', fontWeight: 600, color: '#13328D', textTransform: 'uppercase', letterSpacing: '0.1em' }}>
             Alle Leistungen
           </span>
         </div>

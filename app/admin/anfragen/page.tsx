@@ -75,7 +75,7 @@ export default async function AnfragenPage({
                 <tr key={a.id} className="hover:bg-[#F4F4F6] transition-colors">
                   <td className="px-6 py-4">
                     <Link href={`/admin/anfragen/${a.id}`} className="block">
-                      <p className="text-sm font-semibold text-[#111111] hover:text-[#7C3AED] transition-colors">
+                      <p className="text-sm font-semibold text-[#111111] hover:text-[#13328D] transition-colors">
                         {a.firma}
                       </p>
                       <p className="text-xs text-[#6B7280]">

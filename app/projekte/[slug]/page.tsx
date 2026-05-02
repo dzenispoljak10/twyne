@@ -108,7 +108,7 @@ export default async function ProjectDetailPage({ params }: Props) {
         {/* b) Hero */}
         <section
           style={{
-            background: 'linear-gradient(180deg, #FAFAFA 0%, #F4F0FF 100%)',
+            background: 'linear-gradient(180deg, #FAFAFA 0%, #EEF2FA 100%)',
             padding: '64px 0 96px',
             position: 'relative',
             overflow: 'hidden',
@@ -121,7 +121,7 @@ export default async function ProjectDetailPage({ params }: Props) {
               right: '-200px',
               width: '500px',
               height: '500px',
-              background: 'radial-gradient(circle, rgba(124,58,237,0.08) 0%, transparent 70%)',
+              background: 'radial-gradient(circle, rgba(19, 50, 141,0.08) 0%, transparent 70%)',
               pointerEvents: 'none',
             }}
           />
@@ -174,7 +174,7 @@ export default async function ProjectDetailPage({ params }: Props) {
                     display: 'inline-block',
                     padding: '6px 14px',
                     borderRadius: '100px',
-                    background: '#7C3AED',
+                    background: '#13328D',
                     color: 'white',
                     fontSize: '12px',
                     fontWeight: 600,
@@ -256,7 +256,7 @@ export default async function ProjectDetailPage({ params }: Props) {
                         gap: '8px',
                         padding: '10px 18px',
                         borderRadius: '100px',
-                        background: '#7C3AED',
+                        background: '#13328D',
                         color: 'white',
                         fontSize: '13px',
                         fontWeight: 600,
@@ -307,15 +307,15 @@ export default async function ProjectDetailPage({ params }: Props) {
                 ) : (
                   <div
                     style={{
-                      background: 'linear-gradient(135deg, #FFFFFF 0%, #F4F0FF 100%)',
+                      background: 'linear-gradient(135deg, #FFFFFF 0%, #EEF2FA 100%)',
                       borderRadius: '20px',
-                      border: '1px solid #EDE9FE',
+                      border: '1px solid #E0E7F5',
                       padding: '64px',
                       display: 'flex',
                       alignItems: 'center',
                       justifyContent: 'center',
                       aspectRatio: '16 / 10',
-                      boxShadow: '0 30px 60px rgba(124,58,237,0.12)',
+                      boxShadow: '0 30px 60px rgba(19, 50, 141,0.12)',
                     }}
                   >
                     <Image
@@ -366,7 +366,7 @@ export default async function ProjectDetailPage({ params }: Props) {
                     padding: '20px',
                   }}
                 >
-                  <f.Icon size={20} style={{ color: '#7C3AED', marginBottom: '12px' }} />
+                  <f.Icon size={20} style={{ color: '#13328D', marginBottom: '12px' }} />
                   <p
                     style={{
                       fontSize: '11px',
@@ -421,14 +421,14 @@ export default async function ProjectDetailPage({ params }: Props) {
                       width: '52px',
                       height: '52px',
                       borderRadius: '14px',
-                      background: '#F4F0FF',
+                      background: '#EEF2FA',
                       display: 'flex',
                       alignItems: 'center',
                       justifyContent: 'center',
                       marginBottom: '20px',
                     }}
                   >
-                    <s.Icon size={26} style={{ color: '#7C3AED' }} />
+                    <s.Icon size={26} style={{ color: '#13328D' }} />
                   </div>
                   <h3
                     style={{
@@ -554,7 +554,7 @@ export default async function ProjectDetailPage({ params }: Props) {
                       width: '24px',
                       height: '24px',
                       borderRadius: '50%',
-                      background: '#7C3AED',
+                      background: '#13328D',
                       display: 'flex',
                       alignItems: 'center',
                       justifyContent: 'center',
@@ -578,11 +578,11 @@ export default async function ProjectDetailPage({ params }: Props) {
           <section
             style={{
               padding: '96px 0',
-              background: 'linear-gradient(135deg, #F4F0FF 0%, #FFFFFF 100%)',
+              background: 'linear-gradient(135deg, #EEF2FA 0%, #FFFFFF 100%)',
             }}
           >
             <div className="max-w-3xl mx-auto px-6 lg:px-8" style={{ textAlign: 'center' }}>
-              <Quote size={48} style={{ color: '#7C3AED', margin: '0 auto 24px' }} />
+              <Quote size={48} style={{ color: '#13328D', margin: '0 auto 24px' }} />
               <p
                 style={{
                   fontSize: 'clamp(20px, 3vw, 28px)',
@@ -609,7 +609,7 @@ export default async function ProjectDetailPage({ params }: Props) {
         {/* i) CTA */}
         <section
           style={{
-            background: '#7C3AED',
+            background: '#13328D',
             padding: '96px 0',
             textAlign: 'center',
             color: 'white',
@@ -658,7 +658,7 @@ export default async function ProjectDetailPage({ params }: Props) {
                 alignItems: 'center',
                 gap: '8px',
                 background: 'white',
-                color: '#7C3AED',
+                color: '#13328D',
                 padding: '16px 32px',
                 borderRadius: '12px',
                 fontSize: '15px',

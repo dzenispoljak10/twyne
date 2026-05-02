@@ -57,9 +57,9 @@ export default function ImpressumPage() {
           <h2 style={h2Style}>Kontakt</h2>
           <p style={textStyle}>
             <strong style={{ fontWeight: 600, color: '#111111' }}>E-Mail:</strong>{' '}
-            <a href={`mailto:${FIRMA.email}`} style={{ color: '#7C3AED', textDecoration: 'none' }}>{FIRMA.email}</a><br />
+            <a href={`mailto:${FIRMA.email}`} style={{ color: '#13328D', textDecoration: 'none' }}>{FIRMA.email}</a><br />
             <strong style={{ fontWeight: 600, color: '#111111' }}>Website:</strong>{' '}
-            <a href={`https://${FIRMA.web}`} style={{ color: '#7C3AED', textDecoration: 'none' }}>{FIRMA.web}</a>
+            <a href={`https://${FIRMA.web}`} style={{ color: '#13328D', textDecoration: 'none' }}>{FIRMA.web}</a>
           </p>
 
           <h2 style={h2Style}>Haftungsausschluss</h2>

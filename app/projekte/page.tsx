@@ -28,9 +28,9 @@ export default function ProjektePage() {
         {/* Hero */}
         <section
           style={{
-            background: 'linear-gradient(180deg, #FAFAFA 0%, #F4F0FF 100%)',
+            background: 'linear-gradient(180deg, #FAFAFA 0%, #EEF2FA 100%)',
             padding: '96px 0 64px',
-            borderBottom: '1px solid #EDE9FE',
+            borderBottom: '1px solid #E0E7F5',
           }}
         >
           <div className="max-w-7xl mx-auto px-6 lg:px-8">
@@ -42,12 +42,12 @@ export default function ProjektePage() {
                 marginBottom: '20px',
               }}
             >
-              <div style={{ width: '40px', height: '1px', background: '#7C3AED' }} />
+              <div style={{ width: '40px', height: '1px', background: '#13328D' }} />
               <span
                 style={{
                   fontSize: '12px',
                   fontWeight: 600,
-                  color: '#7C3AED',
+                  color: '#13328D',
                   textTransform: 'uppercase',
                   letterSpacing: '0.1em',
                 }}
@@ -71,7 +71,7 @@ export default function ProjektePage() {
             <p
               style={{
                 fontSize: '19px',
-                color: '#6D28D9',
+                color: '#0E2570',
                 lineHeight: 1.6,
                 maxWidth: '640px',
                 margin: 0,
@@ -106,7 +106,7 @@ export default function ProjektePage() {
               right: '-100px',
               width: '400px',
               height: '400px',
-              background: 'radial-gradient(circle, rgba(124,58,237,0.18) 0%, transparent 70%)',
+              background: 'radial-gradient(circle, rgba(19, 50, 141,0.18) 0%, transparent 70%)',
               pointerEvents: 'none',
             }}
           />
@@ -118,7 +118,7 @@ export default function ProjektePage() {
                   fontWeight: 700,
                   textTransform: 'uppercase',
                   letterSpacing: '0.12em',
-                  color: '#A78BFA',
+                  color: '#4F6FBF',
                   marginBottom: '16px',
                 }}
               >
@@ -153,7 +153,7 @@ export default function ProjektePage() {
                   display: 'inline-flex',
                   alignItems: 'center',
                   gap: '8px',
-                  background: '#7C3AED',
+                  background: '#13328D',
                   color: 'white',
                   padding: '16px 32px',
                   borderRadius: '12px',

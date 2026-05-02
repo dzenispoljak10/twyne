@@ -116,8 +116,8 @@ export default function UploadClient({ token, projektName }: { token: string; pr
         onClick={() => !selectedFile && inputRef.current?.click()}
         className="border-2 border-dashed rounded-xl p-10 text-center transition-colors cursor-pointer"
         style={{
-          borderColor: isDragging ? '#7C3AED' : selectedFile ? '#059669' : '#D1D5DB',
-          background: isDragging ? 'rgba(124,58,237,0.04)' : selectedFile ? 'rgba(5,150,105,0.04)' : '#FAFAFA',
+          borderColor: isDragging ? '#13328D' : selectedFile ? '#059669' : '#D1D5DB',
+          background: isDragging ? 'rgba(19, 50, 141,0.04)' : selectedFile ? 'rgba(5,150,105,0.04)' : '#FAFAFA',
         }}
       >
         <input
@@ -158,7 +158,7 @@ export default function UploadClient({ token, projektName }: { token: string; pr
           </div>
           <div className="h-2 bg-[#E5E7EB] rounded-full overflow-hidden">
             <div
-              className="h-full bg-[#7C3AED] rounded-full transition-all duration-200"
+              className="h-full bg-[#13328D] rounded-full transition-all duration-200"
               style={{ width: `${progress}%` }}
             />
           </div>
@@ -183,7 +183,7 @@ export default function UploadClient({ token, projektName }: { token: string; pr
         onClick={handleUpload}
         disabled={!selectedFile || state === 'uploading'}
         className="mt-5 w-full py-3 rounded-xl font-semibold text-white text-sm transition-colors disabled:opacity-40 disabled:cursor-not-allowed flex items-center justify-center gap-2"
-        style={{ background: '#7C3AED' }}
+        style={{ background: '#13328D' }}
         type="button"
       >
         <CheckCircle size={16} />

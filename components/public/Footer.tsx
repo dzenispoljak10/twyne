@@ -5,7 +5,7 @@ import Link from 'next/link'
 function Logo() {
   return (
     <Image
-      src="/twyne-logo.png"
+      src="/twyne-logo-white.png"
       alt="Twyne"
       width={1521}
       height={471}
@@ -67,9 +67,9 @@ export default function Footer() {
             </p>
             <a
               href="mailto:info@twyne.ch"
-              style={{ fontSize: '13px', color: '#A78BFA', textDecoration: 'none', transition: 'color 0.2s', display: 'block', marginBottom: '8px' }}
+              style={{ fontSize: '13px', color: '#4F6FBF', textDecoration: 'none', transition: 'color 0.2s', display: 'block', marginBottom: '8px' }}
               onMouseEnter={(e) => { e.currentTarget.style.color = 'white' }}
-              onMouseLeave={(e) => { e.currentTarget.style.color = '#A78BFA' }}
+              onMouseLeave={(e) => { e.currentTarget.style.color = '#4F6FBF' }}
             >
               info@twyne.ch
             </a>

@@ -27,14 +27,14 @@ export default function ProduktePage() {
       <main>
         {/* Hero */}
         <section style={{ background: '#111111', padding: '96px 0', position: 'relative', overflow: 'hidden' }}>
-          <div style={{ position: 'absolute', top: '-100px', left: '50%', transform: 'translateX(-50%)', width: '600px', height: '600px', background: 'radial-gradient(circle, rgba(124,58,237,0.08) 0%, transparent 70%)', borderRadius: '50%', pointerEvents: 'none' }} />
+          <div style={{ position: 'absolute', top: '-100px', left: '50%', transform: 'translateX(-50%)', width: '600px', height: '600px', background: 'radial-gradient(circle, rgba(19, 50, 141,0.08) 0%, transparent 70%)', borderRadius: '50%', pointerEvents: 'none' }} />
           <div className="max-w-4xl mx-auto px-6 lg:px-8 text-center" style={{ position: 'relative' }}>
-            <span style={{ display: 'inline-block', background: 'rgba(124,58,237,0.1)', border: '1px solid rgba(124,58,237,0.2)', color: '#A78BFA', borderRadius: '100px', padding: '5px 14px', fontSize: '12px', fontWeight: 500, marginBottom: '24px', letterSpacing: '0.05em' }}>
+            <span style={{ display: 'inline-block', background: 'rgba(19, 50, 141,0.1)', border: '1px solid rgba(19, 50, 141,0.2)', color: '#4F6FBF', borderRadius: '100px', padding: '5px 14px', fontSize: '12px', fontWeight: 500, marginBottom: '24px', letterSpacing: '0.05em' }}>
               Unsere Produkte
             </span>
             <h1 style={{ fontSize: 'clamp(36px, 5vw, 64px)', fontWeight: 800, letterSpacing: '-3px', lineHeight: 1.05, color: '#FFFFFF', marginBottom: '20px' }}>
               Software, die<br />
-              <span style={{ color: '#7C3AED' }}>einfach funktioniert</span>
+              <span style={{ color: '#13328D' }}>einfach funktioniert</span>
             </h1>
             <p style={{ fontSize: '18px', color: '#9CA3AF', lineHeight: 1.7, maxWidth: '560px', margin: '0 auto' }}>
               Vier fokussierte Produkte für die häufigsten Herausforderungen in Schweizer KMU. Kein Overkill — nur das, was Sie wirklich brauchen.
@@ -92,7 +92,7 @@ export default function ProduktePage() {
         </section>
 
         {/* CTA */}
-        <section style={{ background: 'linear-gradient(135deg, #7C3AED 0%, #5B21B6 100%)', padding: '80px 0', textAlign: 'center' }}>
+        <section style={{ background: 'linear-gradient(135deg, #13328D 0%, #0E2570 100%)', padding: '80px 0', textAlign: 'center' }}>
           <div className="max-w-2xl mx-auto px-6">
             <h2 style={{ fontSize: 'clamp(28px, 4vw, 44px)', fontWeight: 800, letterSpacing: '-2px', color: '#FFFFFF', marginBottom: '16px', lineHeight: 1.1 }}>
               Nicht sicher, welches Produkt passt?
@@ -102,7 +102,7 @@ export default function ProduktePage() {
             </p>
             <Link
               href="/anfrage"
-              style={{ display: 'inline-flex', alignItems: 'center', background: '#FFFFFF', color: '#7C3AED', padding: '14px 32px', borderRadius: '10px', fontSize: '15px', fontWeight: 700, textDecoration: 'none' }}
+              style={{ display: 'inline-flex', alignItems: 'center', background: '#FFFFFF', color: '#13328D', padding: '14px 32px', borderRadius: '10px', fontSize: '15px', fontWeight: 700, textDecoration: 'none' }}
             >
               Kostenloses Gespräch →
             </Link>

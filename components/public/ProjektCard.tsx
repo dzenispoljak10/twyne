@@ -19,9 +19,9 @@ export default function ProjektCard({ project }: { project: Project }) {
         flexDirection: 'column',
         background: 'white',
         borderRadius: '20px',
-        border: `1px solid ${hovered ? '#A78BFA' : '#EFEFEF'}`,
+        border: `1px solid ${hovered ? '#4F6FBF' : '#EFEFEF'}`,
         overflow: 'hidden',
-        boxShadow: hovered ? '0 24px 48px rgba(124,58,237,0.12)' : '0 1px 3px rgba(0,0,0,0.04)',
+        boxShadow: hovered ? '0 24px 48px rgba(19, 50, 141,0.12)' : '0 1px 3px rgba(0,0,0,0.04)',
         transform: hovered ? 'translateY(-4px)' : 'translateY(0)',
         transition: 'all 0.3s ease',
         cursor: 'pointer',
@@ -34,7 +34,7 @@ export default function ProjektCard({ project }: { project: Project }) {
         style={{
           position: 'relative',
           height: '200px',
-          background: showScreenshot ? '#111' : 'linear-gradient(135deg, #FAFAFA 0%, #F4F0FF 100%)',
+          background: showScreenshot ? '#111' : 'linear-gradient(135deg, #FAFAFA 0%, #EEF2FA 100%)',
           overflow: 'hidden',
           flexShrink: 0,
           display: 'flex',
@@ -86,7 +86,7 @@ export default function ProjektCard({ project }: { project: Project }) {
             fontSize: '11px',
             fontWeight: 600,
             letterSpacing: '0.02em',
-            background: project.status === 'live' ? 'rgba(16,185,129,0.95)' : 'rgba(124,58,237,0.95)',
+            background: project.status === 'live' ? 'rgba(16,185,129,0.95)' : 'rgba(19, 50, 141,0.95)',
             color: 'white',
             backdropFilter: 'blur(8px)',
           }}
@@ -111,7 +111,7 @@ export default function ProjektCard({ project }: { project: Project }) {
             fontWeight: 700,
             letterSpacing: '0.1em',
             textTransform: 'uppercase',
-            color: '#7C3AED',
+            color: '#13328D',
             margin: '0 0 8px',
           }}
         >
@@ -163,7 +163,7 @@ export default function ProjektCard({ project }: { project: Project }) {
               gap: '4px',
               fontSize: '13px',
               fontWeight: 600,
-              color: '#7C3AED',
+              color: '#13328D',
               opacity: hovered ? 1 : 0,
               transform: hovered ? 'translateX(0)' : 'translateX(-4px)',
               transition: 'all 0.25s ease',

@@ -14,7 +14,7 @@ export default function NotFound() {
           alignItems: 'center',
           justifyContent: 'center',
           padding: '96px 24px',
-          background: 'linear-gradient(180deg, #FAFAFA 0%, #F4F0FF 100%)',
+          background: 'linear-gradient(180deg, #FAFAFA 0%, #EEF2FA 100%)',
         }}
       >
         <div style={{ textAlign: 'center', maxWidth: '480px' }}>
@@ -24,7 +24,7 @@ export default function NotFound() {
               fontWeight: 700,
               textTransform: 'uppercase',
               letterSpacing: '0.12em',
-              color: '#7C3AED',
+              color: '#13328D',
               marginBottom: '12px',
             }}
           >
@@ -52,7 +52,7 @@ export default function NotFound() {
               gap: '8px',
               padding: '12px 24px',
               borderRadius: '10px',
-              background: '#7C3AED',
+              background: '#13328D',
               color: 'white',
               fontSize: '14px',
               fontWeight: 600,

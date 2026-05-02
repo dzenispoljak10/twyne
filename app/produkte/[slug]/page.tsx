@@ -121,7 +121,7 @@ export default async function ProduktPage({
       <style dangerouslySetInnerHTML={{ __html: `
         /* Feature cards */
         .p-card { transition: transform 0.25s ease, border-color 0.25s ease, box-shadow 0.25s ease; cursor: default; }
-        .p-card:hover { transform: translateY(-5px); border-color: rgba(124,58,237,0.15) !important; box-shadow: 0 16px 40px rgba(0,0,0,0.08), 0 4px 12px rgba(0,0,0,0.04); }
+        .p-card:hover { transform: translateY(-5px); border-color: rgba(19, 50, 141,0.15) !important; box-shadow: 0 16px 40px rgba(0,0,0,0.08), 0 4px 12px rgba(0,0,0,0.04); }
         .p-card:hover .p-icon { transform: scale(1.08); filter: brightness(1.1); }
         .p-icon { transition: transform 0.25s ease, filter 0.25s ease; }
 
@@ -157,7 +157,7 @@ export default async function ProduktPage({
                 <div style={{ display: 'flex', alignItems: 'center', gap: '8px', marginBottom: '24px', fontSize: '13px', color: '#6B7280' }}>
                   <Link href="/produkte" style={{ color: '#6B7280', textDecoration: 'none' }}>Produkte</Link>
                   <span>→</span>
-                  <span style={{ color: '#A78BFA' }}>twyne {slug.charAt(0).toUpperCase() + slug.slice(1)}</span>
+                  <span style={{ color: '#4F6FBF' }}>twyne {slug.charAt(0).toUpperCase() + slug.slice(1)}</span>
                 </div>
                 <span style={{ display: 'inline-block', background: `${produkt.color}18`, border: `1px solid ${produkt.color}30`, color: produkt.color, borderRadius: '100px', padding: '5px 14px', fontSize: '12px', fontWeight: 500, marginBottom: '20px', letterSpacing: '0.05em' }}>
                   {produkt.hero.badge}
@@ -271,7 +271,7 @@ export default async function ProduktPage({
           <section style={{ background: '#F8F9FA', padding: '80px 0' }}>
             <div className="max-w-7xl mx-auto px-6 lg:px-8">
               <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
-                <div style={{ background: `linear-gradient(135deg, ${produkt.color} 0%, #5B21B6 100%)`, borderRadius: '20px', padding: '48px 40px', display: 'flex', flexDirection: 'column', gap: '24px', minHeight: '280px', justifyContent: 'center' }}>
+                <div style={{ background: `linear-gradient(135deg, ${produkt.color} 0%, #0E2570 100%)`, borderRadius: '20px', padding: '48px 40px', display: 'flex', flexDirection: 'column', gap: '24px', minHeight: '280px', justifyContent: 'center' }}>
                   <div>{splitIconMap[produkt.splitHighlight.icon] ?? <Zap size={64} style={{ color: 'white' }} />}</div>
                   <p style={{ fontSize: 'clamp(20px, 2.2vw, 28px)', fontWeight: 800, color: 'white', lineHeight: 1.25, letterSpacing: '-0.5px', margin: 0 }}>
                     {produkt.splitHighlight.quote}
@@ -309,7 +309,7 @@ export default async function ProduktPage({
         </section>
 
         {/* ⑥ DEMO FORM */}
-        <section id="demo" style={{ background: 'linear-gradient(135deg, #7C3AED 0%, #5B21B6 100%)', padding: '80px 0', position: 'relative', overflow: 'hidden' }}>
+        <section id="demo" style={{ background: 'linear-gradient(135deg, #13328D 0%, #0E2570 100%)', padding: '80px 0', position: 'relative', overflow: 'hidden' }}>
           <div style={{ position: 'absolute', top: '50%', left: '50%', transform: 'translate(-50%, -50%)', width: '700px', height: '500px', background: 'radial-gradient(ellipse, rgba(255,255,255,0.06) 0%, transparent 70%)', pointerEvents: 'none' }} />
           <div className="max-w-7xl mx-auto px-6 lg:px-8" style={{ position: 'relative' }}>
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-start">

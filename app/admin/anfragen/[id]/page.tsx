@@ -27,7 +27,7 @@ export default async function AnfrageDetailPage({ params }: { params: Promise<{ 
         <div>
           <Link
             href="/admin/anfragen"
-            className="inline-flex items-center gap-1.5 text-sm text-[#6B7280] hover:text-[#7C3AED] mb-3 transition-colors"
+            className="inline-flex items-center gap-1.5 text-sm text-[#6B7280] hover:text-[#13328D] mb-3 transition-colors"
           >
             <ArrowLeft size={16} />
             Zurück
@@ -63,7 +63,7 @@ export default async function AnfrageDetailPage({ params }: { params: Promise<{ 
                 <Mail size={16} className="text-[#6B7280] flex-shrink-0" />
                 <div>
                   <p className="text-xs text-[#6B7280]">E-Mail</p>
-                  <a href={`mailto:${anfrage.email}`} className="font-medium text-[#7C3AED] hover:underline">
+                  <a href={`mailto:${anfrage.email}`} className="font-medium text-[#13328D] hover:underline">
                     {anfrage.email}
                   </a>
                 </div>
@@ -80,7 +80,7 @@ export default async function AnfrageDetailPage({ params }: { params: Promise<{ 
                   <Globe size={16} className="text-[#6B7280] flex-shrink-0" />
                   <div>
                     <p className="text-xs text-[#6B7280]">Website</p>
-                    <a href={anfrage.website} target="_blank" rel="noopener noreferrer" className="font-medium text-[#7C3AED] hover:underline">
+                    <a href={anfrage.website} target="_blank" rel="noopener noreferrer" className="font-medium text-[#13328D] hover:underline">
                       {anfrage.website}
                     </a>
                   </div>
@@ -99,7 +99,7 @@ export default async function AnfrageDetailPage({ params }: { params: Promise<{ 
                   {anfrage.dienstleistung.map((d: string) => (
                     <span
                       key={d}
-                      className="px-3 py-1 bg-violet-50 text-[#7C3AED] text-xs font-medium rounded-full border border-violet-200"
+                      className="px-3 py-1 bg-violet-50 text-[#13328D] text-xs font-medium rounded-full border border-violet-200"
                     >
                       {d}
                     </span>

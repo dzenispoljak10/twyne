@@ -28,11 +28,11 @@ export default function UeberUnsContent() {
       <section style={{ background: '#111111', padding: '120px 0 100px' }}>
         <div style={{ maxWidth: '900px', margin: '0 auto', padding: '0 24px', textAlign: 'center' }}>
           <div style={{ display: 'inline-flex', alignItems: 'center', gap: '16px', marginBottom: '24px' }}>
-            <div style={{ width: '40px', height: '1px', background: '#7C3AED' }} />
-            <span style={{ fontSize: '12px', fontWeight: 600, color: '#7C3AED', textTransform: 'uppercase', letterSpacing: '0.1em' }}>
+            <div style={{ width: '40px', height: '1px', background: '#13328D' }} />
+            <span style={{ fontSize: '12px', fontWeight: 600, color: '#13328D', textTransform: 'uppercase', letterSpacing: '0.1em' }}>
               Das Team hinter Twyne
             </span>
-            <div style={{ width: '40px', height: '1px', background: '#7C3AED' }} />
+            <div style={{ width: '40px', height: '1px', background: '#13328D' }} />
           </div>
           <h1 style={{
             fontSize: 'clamp(36px, 6vw, 72px)',
@@ -96,7 +96,7 @@ export default function UeberUnsContent() {
             align-items: center;
             gap: 8px;
             background: white;
-            color: #7C3AED;
+            color: #13328D;
             padding: 14px 32px;
             border-radius: 10px;
             font-size: 15px;
@@ -128,7 +128,7 @@ export default function UeberUnsContent() {
 
           {/* Text */}
           <div>
-            <p style={{ fontSize: '12px', fontWeight: 700, color: '#7C3AED', textTransform: 'uppercase', letterSpacing: '0.1em', marginBottom: '8px' }}>
+            <p style={{ fontSize: '12px', fontWeight: 700, color: '#13328D', textTransform: 'uppercase', letterSpacing: '0.1em', marginBottom: '8px' }}>
               Gründer & Geschäftsführer
             </p>
             <h2 style={{ fontSize: 'clamp(28px, 3.5vw, 40px)', fontWeight: 800, letterSpacing: '-1.5px', color: '#111111', lineHeight: 1.1, marginBottom: '24px' }}>
@@ -168,9 +168,9 @@ export default function UeberUnsContent() {
         <div style={{ maxWidth: '1100px', margin: '0 auto', padding: '0 24px' }}>
           <div style={{ textAlign: 'center', marginBottom: '56px' }}>
             <div style={{ display: 'inline-flex', alignItems: 'center', gap: '16px', marginBottom: '20px' }}>
-              <div style={{ width: '40px', height: '1px', background: '#7C3AED' }} />
-              <span style={{ fontSize: '12px', fontWeight: 600, color: '#7C3AED', textTransform: 'uppercase', letterSpacing: '0.1em' }}>Unsere Werte</span>
-              <div style={{ width: '40px', height: '1px', background: '#7C3AED' }} />
+              <div style={{ width: '40px', height: '1px', background: '#13328D' }} />
+              <span style={{ fontSize: '12px', fontWeight: 600, color: '#13328D', textTransform: 'uppercase', letterSpacing: '0.1em' }}>Unsere Werte</span>
+              <div style={{ width: '40px', height: '1px', background: '#13328D' }} />
             </div>
             <h2 style={{ fontSize: 'clamp(28px, 3.5vw, 40px)', fontWeight: 800, letterSpacing: '-1.5px', color: '#111111', lineHeight: 1.1, margin: 0 }}>
               Wofür wir stehen
@@ -187,7 +187,7 @@ export default function UeberUnsContent() {
                   border: '1px solid rgba(0,0,0,0.06)',
                 }}
               >
-                <div style={{ width: '40px', height: '4px', background: '#7C3AED', borderRadius: '2px', marginBottom: '24px' }} />
+                <div style={{ width: '40px', height: '4px', background: '#13328D', borderRadius: '2px', marginBottom: '24px' }} />
                 <h3 style={{ fontSize: '20px', fontWeight: 700, color: '#111111', marginBottom: '12px', letterSpacing: '-0.5px' }}>
                   {w.titel}
                 </h3>
@@ -202,7 +202,7 @@ export default function UeberUnsContent() {
 
       {/* ── CTA ───────────────────────────────────────────────── */}
       <section style={{
-        background: 'linear-gradient(135deg, #7C3AED 0%, #5B21B6 100%)',
+        background: 'linear-gradient(135deg, #13328D 0%, #0E2570 100%)',
         padding: '100px 0',
         textAlign: 'center',
       }}>

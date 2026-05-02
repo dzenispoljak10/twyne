@@ -35,7 +35,7 @@ export default function NeuesProjektButton({ kundeId, kundeName }: { kundeId: st
       <button
         onClick={() => setOpen(true)}
         className="inline-flex items-center gap-2 px-4 py-2 rounded-lg text-sm font-semibold text-white"
-        style={{ background: '#7C3AED' }}
+        style={{ background: '#13328D' }}
       >
         <Plus size={16} />
         Neues Projekt
@@ -63,7 +63,7 @@ export default function NeuesProjektButton({ kundeId, kundeName }: { kundeId: st
                   value={form.name}
                   onChange={(e) => setForm({ ...form, name: e.target.value })}
                   placeholder="z.B. Website Redesign 2026"
-                  className="w-full border border-[#E5E7EB] rounded-lg px-3 py-2 text-sm focus:outline-none focus:border-[#7C3AED]"
+                  className="w-full border border-[#E5E7EB] rounded-lg px-3 py-2 text-sm focus:outline-none focus:border-[#13328D]"
                 />
               </div>
               <div>
@@ -72,7 +72,7 @@ export default function NeuesProjektButton({ kundeId, kundeName }: { kundeId: st
                   value={form.beschreibung}
                   onChange={(e) => setForm({ ...form, beschreibung: e.target.value })}
                   rows={3}
-                  className="w-full border border-[#E5E7EB] rounded-lg px-3 py-2 text-sm focus:outline-none focus:border-[#7C3AED] resize-none"
+                  className="w-full border border-[#E5E7EB] rounded-lg px-3 py-2 text-sm focus:outline-none focus:border-[#13328D] resize-none"
                 />
               </div>
               <div className="flex gap-3 pt-2">
@@ -87,7 +87,7 @@ export default function NeuesProjektButton({ kundeId, kundeName }: { kundeId: st
                   type="submit"
                   disabled={loading}
                   className="flex-1 px-4 py-2 rounded-lg text-sm font-semibold text-white disabled:opacity-50"
-                  style={{ background: '#7C3AED' }}
+                  style={{ background: '#13328D' }}
                 >
                   {loading ? 'Erstelle...' : 'Erstellen'}
                 </button>

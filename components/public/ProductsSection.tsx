@@ -16,25 +16,25 @@ export default function ProductsSection() {
   return (
     <section style={{ background: '#111111', padding: '96px 0', position: 'relative', overflow: 'hidden' }}>
       {/* Background decoration */}
-      <div style={{ position: 'absolute', top: '-200px', right: '-200px', width: '600px', height: '600px', background: 'radial-gradient(circle, rgba(124,58,237,0.06) 0%, transparent 70%)', borderRadius: '50%', pointerEvents: 'none' }} />
-      <div style={{ position: 'absolute', bottom: '-200px', left: '-200px', width: '600px', height: '600px', background: 'radial-gradient(circle, rgba(124,58,237,0.04) 0%, transparent 70%)', borderRadius: '50%', pointerEvents: 'none' }} />
+      <div style={{ position: 'absolute', top: '-200px', right: '-200px', width: '600px', height: '600px', background: 'radial-gradient(circle, rgba(19, 50, 141,0.06) 0%, transparent 70%)', borderRadius: '50%', pointerEvents: 'none' }} />
+      <div style={{ position: 'absolute', bottom: '-200px', left: '-200px', width: '600px', height: '600px', background: 'radial-gradient(circle, rgba(19, 50, 141,0.04) 0%, transparent 70%)', borderRadius: '50%', pointerEvents: 'none' }} />
 
       <div className="max-w-7xl mx-auto px-6 lg:px-8" style={{ position: 'relative' }}>
         {/* Header */}
         <div style={{ display: 'flex', alignItems: 'flex-end', justifyContent: 'space-between', marginBottom: '56px', flexWrap: 'wrap', gap: '24px' }}>
           <div>
             <div style={{ display: 'flex', alignItems: 'center', gap: '16px', marginBottom: '16px' }}>
-              <div style={{ width: '40px', height: '1px', background: '#7C3AED' }} />
-              <span style={{ fontSize: '12px', fontWeight: 600, color: '#7C3AED', textTransform: 'uppercase', letterSpacing: '0.1em' }}>Unsere Produkte</span>
+              <div style={{ width: '40px', height: '1px', background: '#13328D' }} />
+              <span style={{ fontSize: '12px', fontWeight: 600, color: '#13328D', textTransform: 'uppercase', letterSpacing: '0.1em' }}>Unsere Produkte</span>
             </div>
             <h2 style={{ fontSize: 'clamp(28px, 4vw, 48px)', fontWeight: 800, color: '#FFFFFF', letterSpacing: '-2px', lineHeight: 1.1, maxWidth: '480px' }}>
               Software, die einfach<br />
-              <span style={{ color: '#7C3AED' }}>funktioniert</span>
+              <span style={{ color: '#13328D' }}>funktioniert</span>
             </h2>
           </div>
           <Link
             href="/produkte"
-            style={{ display: 'inline-flex', alignItems: 'center', gap: '6px', fontSize: '14px', fontWeight: 600, color: '#A78BFA', textDecoration: 'none', flexShrink: 0 }}
+            style={{ display: 'inline-flex', alignItems: 'center', gap: '6px', fontSize: '14px', fontWeight: 600, color: '#4F6FBF', textDecoration: 'none', flexShrink: 0 }}
           >
             Alle Produkte ansehen →
           </Link>

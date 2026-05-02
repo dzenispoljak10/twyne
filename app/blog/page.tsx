@@ -43,7 +43,7 @@ export default function BlogPage() {
       <main className="pt-16">
         <section className="bg-[#111111] py-24">
           <div className="max-w-7xl mx-auto px-6 lg:px-8">
-            <p className="text-xs font-medium uppercase tracking-[0.12em] text-[#A78BFA] mb-4">
+            <p className="text-xs font-medium uppercase tracking-[0.12em] text-[#4F6FBF] mb-4">
               Blog
             </p>
             <h1
@@ -68,13 +68,13 @@ export default function BlogPage() {
                   className="group block bg-white rounded-xl border border-[#E8E8ED] p-8 hover:shadow-[0_4px_20px_rgba(0,0,0,0.08)] hover:-translate-y-0.5 transition-all duration-200"
                 >
                   <div className="flex items-center gap-3 mb-3">
-                    <span className="text-xs font-medium uppercase tracking-widest text-[#7C3AED]">
+                    <span className="text-xs font-medium uppercase tracking-widest text-[#13328D]">
                       {post.kategorie}
                     </span>
                     <span className="text-[#E8E8ED]">·</span>
                     <span className="text-xs text-[#6B7280]">{post.lesezeit} Lesezeit</span>
                   </div>
-                  <h2 className="text-xl font-bold text-[#111111] mb-3 leading-snug group-hover:text-[#7C3AED] transition-colors">
+                  <h2 className="text-xl font-bold text-[#111111] mb-3 leading-snug group-hover:text-[#13328D] transition-colors">
                     {post.titel}
                   </h2>
                   <p className="text-[#6B7280] leading-relaxed mb-4">{post.excerpt}</p>
@@ -83,7 +83,7 @@ export default function BlogPage() {
                       <Calendar size={12} />
                       {post.datum}
                     </div>
-                    <span className="flex items-center gap-1 text-sm font-medium text-[#7C3AED] group-hover:gap-2 transition-all">
+                    <span className="flex items-center gap-1 text-sm font-medium text-[#13328D] group-hover:gap-2 transition-all">
                       Lesen <ArrowRight size={14} />
                     </span>
                   </div>

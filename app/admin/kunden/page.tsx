@@ -49,7 +49,7 @@ export default async function KundenPage() {
                 <tr key={k.id} className="hover:bg-[#F4F4F6] transition-colors">
                   <td className="px-6 py-4">
                     <Link href={`/admin/kunden/${k.id}`} className="block">
-                      <p className="text-sm font-semibold text-[#111111] hover:text-[#7C3AED] transition-colors">
+                      <p className="text-sm font-semibold text-[#111111] hover:text-[#13328D] transition-colors">
                         {k.firma}
                       </p>
                       <p className="text-xs text-[#6B7280]">
@@ -68,14 +68,14 @@ export default async function KundenPage() {
                   </td>
                   <td className="px-6 py-4">
                     <div className="flex items-center gap-1.5 text-sm text-[#374151]">
-                      <FolderOpen size={14} className="text-[#7C3AED]" />
+                      <FolderOpen size={14} className="text-[#13328D]" />
                       {k._count.projekte}
                     </div>
                   </td>
                   <td className="px-6 py-4 text-right">
                     <Link
                       href={`/admin/kunden/${k.id}`}
-                      className="text-xs text-[#7C3AED] hover:underline font-medium"
+                      className="text-xs text-[#13328D] hover:underline font-medium"
                     >
                       Öffnen →
                     </Link>

@@ -115,24 +115,24 @@ function StepIndicator({ step }: { step: number }) {
                 width: '36px', height: '36px', borderRadius: '50%',
                 display: 'flex', alignItems: 'center', justifyContent: 'center',
                 fontSize: '13px', fontWeight: 700,
-                background: done || active ? '#7C3AED' : 'white',
-                border: `2px solid ${done || active ? '#7C3AED' : '#D1D5DB'}`,
+                background: done || active ? '#13328D' : 'white',
+                border: `2px solid ${done || active ? '#13328D' : '#D1D5DB'}`,
                 color: done || active ? 'white' : '#9CA3AF',
                 transition: 'all 0.3s ease',
-                boxShadow: active ? '0 0 0 4px rgba(124,58,237,0.15)' : 'none',
+                boxShadow: active ? '0 0 0 4px rgba(19, 50, 141,0.15)' : 'none',
               }}>
                 {done
                   ? <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="white" strokeWidth="3" strokeLinecap="round" strokeLinejoin="round"><polyline points="20 6 9 17 4 12" /></svg>
                   : n}
               </div>
-              <span style={{ fontSize: '11px', fontWeight: 600, color: active ? '#7C3AED' : done ? '#6B7280' : '#9CA3AF', whiteSpace: 'nowrap' }} className="step-label">
+              <span style={{ fontSize: '11px', fontWeight: 600, color: active ? '#13328D' : done ? '#6B7280' : '#9CA3AF', whiteSpace: 'nowrap' }} className="step-label">
                 {label}
               </span>
             </div>
             {i < steps.length - 1 && (
               <div style={{
                 width: '80px', height: '2px',
-                background: n < step ? '#7C3AED' : '#E5E7EB',
+                background: n < step ? '#13328D' : '#E5E7EB',
                 margin: '0 4px', marginBottom: '22px',
                 transition: 'background 0.3s ease',
               }} className="step-line" />
@@ -195,7 +195,7 @@ function Input({ field, values, errors, shakeSet, onChange, type = 'text', place
       placeholder={placeholder}
       autoComplete={autoComplete}
       style={inputStyle(err, shake)}
-      onFocus={(e) => { e.currentTarget.style.borderColor = '#7C3AED'; e.currentTarget.style.boxShadow = '0 0 0 3px rgba(124,58,237,0.12)' }}
+      onFocus={(e) => { e.currentTarget.style.borderColor = '#13328D'; e.currentTarget.style.boxShadow = '0 0 0 3px rgba(19, 50, 141,0.12)' }}
       onBlur={(e) => { e.currentTarget.style.borderColor = err ? '#EF4444' : '#E5E7EB'; e.currentTarget.style.boxShadow = 'none' }}
     />
   )
@@ -216,7 +216,7 @@ function Select({ field, values, errors, shakeSet, onChange, children }: {
       value={values[field] as string}
       onChange={onChange(field) as React.ChangeEventHandler<HTMLSelectElement>}
       style={{ ...inputStyle(err, shake), appearance: 'auto' } as React.CSSProperties}
-      onFocus={(e) => { e.currentTarget.style.borderColor = '#7C3AED'; e.currentTarget.style.boxShadow = '0 0 0 3px rgba(124,58,237,0.12)' }}
+      onFocus={(e) => { e.currentTarget.style.borderColor = '#13328D'; e.currentTarget.style.boxShadow = '0 0 0 3px rgba(19, 50, 141,0.12)' }}
       onBlur={(e) => { e.currentTarget.style.borderColor = err ? '#EF4444' : '#E5E7EB'; e.currentTarget.style.boxShadow = 'none' }}
     >
       {children}
@@ -305,7 +305,7 @@ function Step2({ values, errors, shakeSet, onChange }: StepProps) {
           maxLength={1000}
           placeholder="Beschreiben Sie kurz Ihr Projekt, Ihre Ziele und was Sie sich wünschen…"
           style={{ ...inputStyle(!!errors.nachricht, shakeSet.has('nachricht')), resize: 'vertical', minHeight: '100px' } as React.CSSProperties}
-          onFocus={(e) => { e.currentTarget.style.borderColor = '#7C3AED'; e.currentTarget.style.boxShadow = '0 0 0 3px rgba(124,58,237,0.12)' }}
+          onFocus={(e) => { e.currentTarget.style.borderColor = '#13328D'; e.currentTarget.style.boxShadow = '0 0 0 3px rgba(19, 50, 141,0.12)' }}
           onBlur={(e) => { e.currentTarget.style.borderColor = errors.nachricht ? '#EF4444' : '#E5E7EB'; e.currentTarget.style.boxShadow = 'none' }}
         />
       </Field>
@@ -361,11 +361,11 @@ function Step3({ values, errors, shakeSet, onChange, serverError }: StepProps & 
             type="checkbox"
             checked={values.datenschutz}
             onChange={onChange('datenschutz') as React.ChangeEventHandler<HTMLInputElement>}
-            style={{ width: '16px', height: '16px', marginTop: '2px', flexShrink: 0, accentColor: '#7C3AED', cursor: 'pointer' }}
+            style={{ width: '16px', height: '16px', marginTop: '2px', flexShrink: 0, accentColor: '#13328D', cursor: 'pointer' }}
           />
           <label htmlFor="datenschutz" style={{ fontSize: '13px', color: '#6B7280', lineHeight: 1.55, cursor: 'pointer' }}>
             Ich habe die{' '}
-            <a href="/datenschutz" target="_blank" rel="noopener" style={{ color: '#7C3AED', textDecoration: 'none' }}>
+            <a href="/datenschutz" target="_blank" rel="noopener" style={{ color: '#13328D', textDecoration: 'none' }}>
               Datenschutzerklärung
             </a>{' '}
             gelesen und stimme der Verarbeitung meiner Daten zu. *
@@ -411,13 +411,13 @@ function SuccessScreen({ vorname, onReset }: { vorname: string; onReset: () => v
       <p style={{ fontSize: '14px', color: '#6B7280', lineHeight: 1.7, maxWidth: '360px', margin: '0 auto 12px' }}>
         Wir melden uns in der Regel innerhalb von 24 Stunden bei Ihnen. Schauen Sie auch in Ihren Spam-Ordner.
       </p>
-      <p style={{ fontSize: '14px', color: '#7C3AED', fontWeight: 600, marginBottom: '28px' }}>
+      <p style={{ fontSize: '14px', color: '#13328D', fontWeight: 600, marginBottom: '28px' }}>
         Danke, {vorname}! Wir freuen uns auf das Gespräch.
       </p>
       <div style={{ display: 'flex', gap: '12px', justifyContent: 'center', flexWrap: 'wrap' }}>
         <Link
           href="/"
-          style={{ padding: '11px 22px', background: '#7C3AED', color: 'white', borderRadius: '10px', fontSize: '14px', fontWeight: 700, textDecoration: 'none' }}
+          style={{ padding: '11px 22px', background: '#13328D', color: 'white', borderRadius: '10px', fontSize: '14px', fontWeight: 700, textDecoration: 'none' }}
         >
           Zur Startseite
         </Link>
@@ -620,7 +620,7 @@ export default function AnfrageForm() {
               disabled={isTransitioning}
               style={{
                 flex: 1, padding: '13px 20px',
-                background: '#7C3AED', color: 'white',
+                background: '#13328D', color: 'white',
                 border: 'none', borderRadius: '10px',
                 fontSize: '15px', fontWeight: 700, cursor: 'pointer',
                 fontFamily: 'inherit', display: 'flex', alignItems: 'center', justifyContent: 'center', gap: '8px',
@@ -636,7 +636,7 @@ export default function AnfrageForm() {
               disabled={submitting}
               style={{
                 flex: 1, padding: '13px 20px',
-                background: submitting ? '#A78BFA' : '#7C3AED', color: 'white',
+                background: submitting ? '#4F6FBF' : '#13328D', color: 'white',
                 border: 'none', borderRadius: '10px',
                 fontSize: '15px', fontWeight: 700,
                 cursor: submitting ? 'not-allowed' : 'pointer',

@@ -66,7 +66,7 @@ export default async function ProjektePage({
               className="px-4 py-1.5 rounded-lg text-sm font-medium transition-colors"
               style={{
                 background: isActive ? 'white' : 'transparent',
-                color: isActive ? '#7C3AED' : '#6B7280',
+                color: isActive ? '#13328D' : '#6B7280',
                 boxShadow: isActive ? '0 1px 3px rgba(0,0,0,0.08)' : 'none',
               }}
             >
@@ -107,11 +107,11 @@ export default async function ProjektePage({
                     <td className="px-6 py-4">
                       <Link href={`/admin/projekte/${p.id}`} className="block">
                         <div className="flex items-center gap-2">
-                          <p className="text-sm font-semibold text-[#111111] hover:text-[#7C3AED] transition-colors">
+                          <p className="text-sm font-semibold text-[#111111] hover:text-[#13328D] transition-colors">
                             {p.name}
                           </p>
                           {ausAnfrage && (
-                            <span className="text-[10px] font-semibold px-1.5 py-0.5 rounded-full bg-violet-50 text-[#7C3AED] border border-violet-200">
+                            <span className="text-[10px] font-semibold px-1.5 py-0.5 rounded-full bg-violet-50 text-[#13328D] border border-violet-200">
                               Aus Anfrage
                             </span>
                           )}

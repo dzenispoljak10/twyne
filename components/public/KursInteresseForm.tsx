@@ -38,7 +38,7 @@ export default function KursInteresseForm({ id = 'kurs-form' }: { id?: string })
       <div id={id} style={{ display: 'flex', flexDirection: 'column', alignItems: 'center', gap: '12px' }}>
         <div style={{ display: 'flex', alignItems: 'center', gap: '10px' }}>
           <CheckCircle size={22} style={{ color: '#10B981', flexShrink: 0 }} />
-          <span style={{ fontSize: '16px', fontWeight: 600, color: '#A78BFA' }}>
+          <span style={{ fontSize: '16px', fontWeight: 600, color: '#4F6FBF' }}>
             Perfekt — wir melden uns beim Launch!
           </span>
         </div>
@@ -61,12 +61,12 @@ export default function KursInteresseForm({ id = 'kurs-form' }: { id?: string })
             width: '320px',
             padding: '14px 20px',
             background: 'rgba(255,255,255,0.08)',
-            border: `1px solid ${focused ? '#7C3AED' : 'rgba(255,255,255,0.15)'}`,
+            border: `1px solid ${focused ? '#13328D' : 'rgba(255,255,255,0.15)'}`,
             borderRadius: '10px',
             color: 'white',
             fontSize: '15px',
             outline: 'none',
-            boxShadow: focused ? '0 0 0 3px rgba(124,58,237,0.2)' : 'none',
+            boxShadow: focused ? '0 0 0 3px rgba(19, 50, 141,0.2)' : 'none',
             transition: 'border-color 0.2s, box-shadow 0.2s',
           }}
         />
@@ -75,7 +75,7 @@ export default function KursInteresseForm({ id = 'kurs-form' }: { id?: string })
           disabled={loading}
           style={{
             padding: '14px 24px',
-            background: loading ? '#6D28D9' : '#7C3AED',
+            background: loading ? '#0E2570' : '#13328D',
             color: 'white',
             border: 'none',
             borderRadius: '10px',
@@ -87,8 +87,8 @@ export default function KursInteresseForm({ id = 'kurs-form' }: { id?: string })
             gap: '8px',
             transition: 'background 0.2s, transform 0.2s',
           }}
-          onMouseEnter={(e) => { if (!loading) { e.currentTarget.style.background = '#6D28D9'; e.currentTarget.style.transform = 'translateY(-1px)' } }}
-          onMouseLeave={(e) => { e.currentTarget.style.background = loading ? '#6D28D9' : '#7C3AED'; e.currentTarget.style.transform = 'translateY(0)' }}
+          onMouseEnter={(e) => { if (!loading) { e.currentTarget.style.background = '#0E2570'; e.currentTarget.style.transform = 'translateY(-1px)' } }}
+          onMouseLeave={(e) => { e.currentTarget.style.background = loading ? '#0E2570' : '#13328D'; e.currentTarget.style.transform = 'translateY(0)' }}
         >
           {loading && <Loader2 size={16} className="animate-spin" />}
           Vormerken lassen

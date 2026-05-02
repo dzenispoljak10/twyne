@@ -70,7 +70,7 @@ const S = StyleSheet.create({
   summenValue: { fontSize: 9, color: '#374151' },
   summenDivider: { borderTopWidth: 1, borderTopColor: '#E5E7EB', marginVertical: 6 },
   totalLabel: { fontSize: 11, fontFamily: 'Helvetica-Bold', color: '#111111' },
-  totalValue: { fontSize: 11, fontFamily: 'Helvetica-Bold', color: '#7C3AED' },
+  totalValue: { fontSize: 11, fontFamily: 'Helvetica-Bold', color: '#13328D' },
 
   // Hinweis
   hinweis: { fontSize: 9, color: '#6B7280', lineHeight: 1.6, marginTop: 28 },

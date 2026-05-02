@@ -44,7 +44,7 @@ export default function DatenschutzPage() {
             Galliweg 3<br />
             4852 Rothrist<br />
             Schweiz<br />
-            <a href="mailto:info@twyne.ch" style={{ color: '#7C3AED', textDecoration: 'none' }}>info@twyne.ch</a>
+            <a href="mailto:info@twyne.ch" style={{ color: '#13328D', textDecoration: 'none' }}>info@twyne.ch</a>
           </p>
 
           <h2 style={h2Style}>2. Grundsätze der Datenverarbeitung</h2>
@@ -93,7 +93,7 @@ export default function DatenschutzPage() {
           </ul>
           <p style={{ ...textStyle, marginTop: '12px' }}>
             Für Anfragen wenden Sie sich an:{' '}
-            <a href="mailto:info@twyne.ch" style={{ color: '#7C3AED', textDecoration: 'none' }}>info@twyne.ch</a>
+            <a href="mailto:info@twyne.ch" style={{ color: '#13328D', textDecoration: 'none' }}>info@twyne.ch</a>
           </p>
 
           <h2 style={h2Style}>8. Änderungen</h2>

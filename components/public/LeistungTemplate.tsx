@@ -7,25 +7,25 @@ import type { LeistungData } from '@/lib/leistungen-data'
 import { leistungenData } from '@/lib/leistungen-data'
 
 const iconMap: Record<string, React.ReactNode> = {
-  Palette: <Palette size={28} style={{ color: '#7C3AED' }} />,
-  Zap: <Zap size={28} style={{ color: '#7C3AED' }} />,
-  Search: <Search size={28} style={{ color: '#7C3AED' }} />,
-  Code2: <Code2 size={28} style={{ color: '#7C3AED' }} />,
-  Shield: <Shield size={28} style={{ color: '#7C3AED' }} />,
-  BarChart2: <BarChart2 size={28} style={{ color: '#7C3AED' }} />,
-  Brain: <Brain size={28} style={{ color: '#7C3AED' }} />,
-  Layers: <Layers size={28} style={{ color: '#7C3AED' }} />,
-  FileText: <FileText size={28} style={{ color: '#7C3AED' }} />,
-  Globe: <Globe size={28} style={{ color: '#7C3AED' }} />,
-  Smartphone: <Smartphone size={28} style={{ color: '#7C3AED' }} />,
-  Pencil: <Pencil size={28} style={{ color: '#7C3AED' }} />,
-  Server: <Server size={28} style={{ color: '#7C3AED' }} />,
-  Settings: <Settings size={28} style={{ color: '#7C3AED' }} />,
-  MapPin: <MapPin size={28} style={{ color: '#7C3AED' }} />,
-  TrendingUp: <TrendingUp size={28} style={{ color: '#7C3AED' }} />,
-  Monitor: <Monitor size={28} style={{ color: '#7C3AED' }} />,
-  Users: <Users size={28} style={{ color: '#7C3AED' }} />,
-  Sparkles: <Sparkles size={28} style={{ color: '#7C3AED' }} />,
+  Palette: <Palette size={28} style={{ color: '#13328D' }} />,
+  Zap: <Zap size={28} style={{ color: '#13328D' }} />,
+  Search: <Search size={28} style={{ color: '#13328D' }} />,
+  Code2: <Code2 size={28} style={{ color: '#13328D' }} />,
+  Shield: <Shield size={28} style={{ color: '#13328D' }} />,
+  BarChart2: <BarChart2 size={28} style={{ color: '#13328D' }} />,
+  Brain: <Brain size={28} style={{ color: '#13328D' }} />,
+  Layers: <Layers size={28} style={{ color: '#13328D' }} />,
+  FileText: <FileText size={28} style={{ color: '#13328D' }} />,
+  Globe: <Globe size={28} style={{ color: '#13328D' }} />,
+  Smartphone: <Smartphone size={28} style={{ color: '#13328D' }} />,
+  Pencil: <Pencil size={28} style={{ color: '#13328D' }} />,
+  Server: <Server size={28} style={{ color: '#13328D' }} />,
+  Settings: <Settings size={28} style={{ color: '#13328D' }} />,
+  MapPin: <MapPin size={28} style={{ color: '#13328D' }} />,
+  TrendingUp: <TrendingUp size={28} style={{ color: '#13328D' }} />,
+  Monitor: <Monitor size={28} style={{ color: '#13328D' }} />,
+  Users: <Users size={28} style={{ color: '#13328D' }} />,
+  Sparkles: <Sparkles size={28} style={{ color: '#13328D' }} />,
 }
 
 const splitIconMap: Record<string, React.ReactNode> = {
@@ -107,25 +107,25 @@ export default function LeistungTemplate({ data, slug }: { data: LeistungData; s
       <style dangerouslySetInnerHTML={{ __html: `
         /* Feature cards */
         .l-card { transition: transform 0.25s ease, border-color 0.25s ease, box-shadow 0.25s ease; cursor: default; }
-        .l-card:hover { transform: translateY(-5px); border-color: rgba(124,58,237,0.25) !important; box-shadow: 0 16px 40px rgba(124,58,237,0.08), 0 4px 12px rgba(0,0,0,0.04); }
-        .l-card:hover .l-icon { background: rgba(124,58,237,0.14) !important; transform: scale(1.08); }
+        .l-card:hover { transform: translateY(-5px); border-color: rgba(19, 50, 141,0.25) !important; box-shadow: 0 16px 40px rgba(19, 50, 141,0.08), 0 4px 12px rgba(0,0,0,0.04); }
+        .l-card:hover .l-icon { background: rgba(19, 50, 141,0.14) !important; transform: scale(1.08); }
         .l-icon { transition: background 0.25s ease, transform 0.25s ease; }
 
         /* Process steps */
         .l-step { transition: transform 0.25s ease, box-shadow 0.25s ease; }
         .l-step:hover { transform: translateY(-4px); box-shadow: 0 12px 32px rgba(0,0,0,0.07); }
-        .l-step:hover .l-step-num { background: #6D28D9 !important; }
+        .l-step:hover .l-step-num { background: #0E2570 !important; }
         .l-step-num { transition: background 0.25s ease; }
 
         /* Stat banner */
         .l-stat { transition: background 0.2s ease; cursor: default; }
         .l-stat:hover { background: rgba(255,255,255,0.03); }
-        .l-stat:hover .l-stat-val { color: #A78BFA !important; }
+        .l-stat:hover .l-stat-val { color: #4F6FBF !important; }
         .l-stat-val { transition: color 0.2s ease; }
 
         /* Hero CTA */
         .l-hero-btn { transition: all 0.25s ease; }
-        .l-hero-btn:hover { background: #6D28D9 !important; transform: translateY(-2px); box-shadow: 0 8px 24px rgba(124,58,237,0.45); }
+        .l-hero-btn:hover { background: #0E2570 !important; transform: translateY(-2px); box-shadow: 0 8px 24px rgba(19, 50, 141,0.45); }
 
         /* Related cards */
         .l-related { transition: transform 0.25s ease, box-shadow 0.25s ease; }
@@ -150,21 +150,21 @@ export default function LeistungTemplate({ data, slug }: { data: LeistungData; s
 
         {/* ① HERO — dark */}
         <section style={{ background: '#111111', padding: '96px 0', position: 'relative', overflow: 'hidden' }}>
-          <div style={{ position: 'absolute', top: '-100px', right: '-100px', width: '500px', height: '500px', background: 'radial-gradient(circle, rgba(124,58,237,0.1) 0%, transparent 70%)', borderRadius: '50%', pointerEvents: 'none' }} />
+          <div style={{ position: 'absolute', top: '-100px', right: '-100px', width: '500px', height: '500px', background: 'radial-gradient(circle, rgba(19, 50, 141,0.1) 0%, transparent 70%)', borderRadius: '50%', pointerEvents: 'none' }} />
           <div className="max-w-7xl mx-auto px-6 lg:px-8">
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
               <div>
                 <div style={{ display: 'flex', alignItems: 'center', gap: '8px', marginBottom: '24px', fontSize: '13px', color: '#6B7280' }}>
                   <Link href="/leistungen" style={{ color: '#6B7280', textDecoration: 'none' }}>Leistungen</Link>
                   <span>→</span>
-                  <span style={{ color: '#A78BFA' }}>{data.hero.breadcrumb}</span>
+                  <span style={{ color: '#4F6FBF' }}>{data.hero.breadcrumb}</span>
                 </div>
-                <span style={{ display: 'inline-block', background: 'rgba(124,58,237,0.1)', border: '1px solid rgba(124,58,237,0.2)', color: '#A78BFA', borderRadius: '100px', padding: '5px 14px', fontSize: '12px', fontWeight: 500, marginBottom: '20px', letterSpacing: '0.05em' }}>
+                <span style={{ display: 'inline-block', background: 'rgba(19, 50, 141,0.1)', border: '1px solid rgba(19, 50, 141,0.2)', color: '#4F6FBF', borderRadius: '100px', padding: '5px 14px', fontSize: '12px', fontWeight: 500, marginBottom: '20px', letterSpacing: '0.05em' }}>
                   {data.hero.badge}
                 </span>
                 <h1 style={{ fontSize: 'clamp(32px, 4.5vw, 56px)', fontWeight: 800, letterSpacing: '-2px', lineHeight: 1.1, color: '#FFFFFF', marginBottom: '20px' }}>
                   {data.hero.h1}<br />
-                  <span style={{ color: '#7C3AED' }}>{data.hero.h1Purple}</span>
+                  <span style={{ color: '#13328D' }}>{data.hero.h1Purple}</span>
                 </h1>
                 <p style={{ fontSize: '17px', color: '#9CA3AF', lineHeight: 1.7, marginBottom: '32px', maxWidth: '480px' }}>
                   {data.hero.description}
@@ -172,7 +172,7 @@ export default function LeistungTemplate({ data, slug }: { data: LeistungData; s
                 <Link
                   href="/anfrage"
                   className="l-hero-btn"
-                  style={{ display: 'inline-flex', alignItems: 'center', background: '#7C3AED', color: 'white', padding: '14px 28px', borderRadius: '10px', fontSize: '15px', fontWeight: 600, textDecoration: 'none' }}
+                  style={{ display: 'inline-flex', alignItems: 'center', background: '#13328D', color: 'white', padding: '14px 28px', borderRadius: '10px', fontSize: '15px', fontWeight: 600, textDecoration: 'none' }}
                 >
                   Jetzt anfragen →
                 </Link>
@@ -186,7 +186,7 @@ export default function LeistungTemplate({ data, slug }: { data: LeistungData; s
                     loading="eager"
                     style={{ width: '100%', height: '100%', objectFit: 'cover' }}
                   />
-                  <div style={{ position: 'absolute', inset: 0, background: 'rgba(124,58,237,0.15)' }} />
+                  <div style={{ position: 'absolute', inset: 0, background: 'rgba(19, 50, 141,0.15)' }} />
                 </div>
               </div>
             </div>
@@ -209,7 +209,7 @@ export default function LeistungTemplate({ data, slug }: { data: LeistungData; s
                       borderRadius: '8px',
                     }}
                   >
-                    <div className="l-stat-val" style={{ fontSize: 'clamp(32px, 4vw, 48px)', fontWeight: 800, color: '#7C3AED', lineHeight: 1, marginBottom: '8px', letterSpacing: '-1px' }}>
+                    <div className="l-stat-val" style={{ fontSize: 'clamp(32px, 4vw, 48px)', fontWeight: 800, color: '#13328D', lineHeight: 1, marginBottom: '8px', letterSpacing: '-1px' }}>
                       {stat.value}
                     </div>
                     <div style={{ fontSize: '12px', color: '#9CA3AF', textTransform: 'uppercase', letterSpacing: '0.08em', fontWeight: 500, lineHeight: 1.4 }}>
@@ -238,14 +238,14 @@ export default function LeistungTemplate({ data, slug }: { data: LeistungData; s
                   </div>
                 </div>
                 <div style={{ background: '#F8F9FA', borderRadius: '16px', padding: '32px', border: '1px solid #EFEFEF' }}>
-                  <p style={{ fontSize: '11px', fontWeight: 700, color: '#7C3AED', textTransform: 'uppercase', letterSpacing: '0.1em', marginBottom: '20px' }}>
+                  <p style={{ fontSize: '11px', fontWeight: 700, color: '#13328D', textTransform: 'uppercase', letterSpacing: '0.1em', marginBottom: '20px' }}>
                     Was das bedeutet für Sie
                   </p>
                   <div style={{ display: 'flex', flexDirection: 'column', gap: '14px' }}>
                     {data.introChecks?.map((check, i) => (
                       <div key={i} className="l-intro-check" style={{ display: 'flex', gap: '12px', alignItems: 'flex-start' }}>
-                        <div style={{ flexShrink: 0, width: '28px', height: '28px', borderRadius: '8px', background: 'rgba(124,58,237,0.08)', display: 'flex', alignItems: 'center', justifyContent: 'center', marginTop: '2px' }}>
-                          <CheckCircle size={15} style={{ color: '#7C3AED' }} />
+                        <div style={{ flexShrink: 0, width: '28px', height: '28px', borderRadius: '8px', background: 'rgba(19, 50, 141,0.08)', display: 'flex', alignItems: 'center', justifyContent: 'center', marginTop: '2px' }}>
+                          <CheckCircle size={15} style={{ color: '#13328D' }} />
                         </div>
                         <span style={{ fontSize: '14px', color: '#374151', lineHeight: 1.55, fontWeight: 500 }}>{check}</span>
                       </div>
@@ -262,9 +262,9 @@ export default function LeistungTemplate({ data, slug }: { data: LeistungData; s
           <div className="max-w-7xl mx-auto px-6 lg:px-8">
             <div style={{ textAlign: 'center', marginBottom: '48px' }}>
               <div style={{ display: 'inline-flex', alignItems: 'center', gap: '16px', marginBottom: '16px' }}>
-                <div style={{ width: '40px', height: '1px', background: '#7C3AED' }} />
-                <span style={{ fontSize: '12px', fontWeight: 600, color: '#7C3AED', textTransform: 'uppercase', letterSpacing: '0.1em' }}>Leistungen</span>
-                <div style={{ width: '40px', height: '1px', background: '#7C3AED' }} />
+                <div style={{ width: '40px', height: '1px', background: '#13328D' }} />
+                <span style={{ fontSize: '12px', fontWeight: 600, color: '#13328D', textTransform: 'uppercase', letterSpacing: '0.1em' }}>Leistungen</span>
+                <div style={{ width: '40px', height: '1px', background: '#13328D' }} />
               </div>
               <h2 style={{ fontSize: 'clamp(22px, 3vw, 36px)', fontWeight: 800, color: '#111111', letterSpacing: '-1px' }}>
                 Was Sie davon haben
@@ -273,8 +273,8 @@ export default function LeistungTemplate({ data, slug }: { data: LeistungData; s
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5">
               {data.benefits.map((b, i) => (
                 <div key={i} className="l-card" style={{ background: 'white', padding: '28px', borderRadius: '16px', border: '1px solid #EFEFEF' }}>
-                  <div className="l-icon" style={{ width: '48px', height: '48px', borderRadius: '12px', background: 'rgba(124,58,237,0.08)', display: 'flex', alignItems: 'center', justifyContent: 'center', marginBottom: '16px' }}>
-                    {iconMap[b.iconName] ?? <Zap size={28} style={{ color: '#7C3AED' }} />}
+                  <div className="l-icon" style={{ width: '48px', height: '48px', borderRadius: '12px', background: 'rgba(19, 50, 141,0.08)', display: 'flex', alignItems: 'center', justifyContent: 'center', marginBottom: '16px' }}>
+                    {iconMap[b.iconName] ?? <Zap size={28} style={{ color: '#13328D' }} />}
                   </div>
                   <h3 style={{ fontSize: '16px', fontWeight: 700, color: '#111111', marginBottom: '10px', letterSpacing: '-0.3px' }}>{b.title}</h3>
                   <p style={{ fontSize: '14px', color: '#6B7280', lineHeight: 1.65 }}>{b.text}</p>
@@ -290,7 +290,7 @@ export default function LeistungTemplate({ data, slug }: { data: LeistungData; s
             <div className="max-w-7xl mx-auto px-6 lg:px-8">
               <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
                 {/* Gradient box */}
-                <div style={{ background: 'linear-gradient(135deg, #7C3AED 0%, #5B21B6 100%)', borderRadius: '20px', padding: '48px 40px', display: 'flex', flexDirection: 'column', gap: '24px', minHeight: '280px', justifyContent: 'center' }}>
+                <div style={{ background: 'linear-gradient(135deg, #13328D 0%, #0E2570 100%)', borderRadius: '20px', padding: '48px 40px', display: 'flex', flexDirection: 'column', gap: '24px', minHeight: '280px', justifyContent: 'center' }}>
                   <div>{splitIconMap[data.splitHighlight.icon] ?? <Zap size={64} style={{ color: 'white' }} />}</div>
                   <p style={{ fontSize: 'clamp(20px, 2.2vw, 28px)', fontWeight: 800, color: 'white', lineHeight: 1.25, letterSpacing: '-0.5px', margin: 0 }}>
                     {data.splitHighlight.quote}
@@ -307,7 +307,7 @@ export default function LeistungTemplate({ data, slug }: { data: LeistungData; s
                   <div style={{ display: 'flex', flexDirection: 'column', gap: '12px' }}>
                     {data.splitHighlight.checks.map((c, i) => (
                       <div key={i} className="l-check" style={{ display: 'flex', alignItems: 'center', gap: '10px', fontSize: '14px', color: '#374151', fontWeight: 500 }}>
-                        <CheckCircle size={16} style={{ color: '#7C3AED', flexShrink: 0 }} />
+                        <CheckCircle size={16} style={{ color: '#13328D', flexShrink: 0 }} />
                         {c}
                       </div>
                     ))}
@@ -323,9 +323,9 @@ export default function LeistungTemplate({ data, slug }: { data: LeistungData; s
           <div className="max-w-7xl mx-auto px-6 lg:px-8">
             <div style={{ textAlign: 'center', marginBottom: '56px' }}>
               <div style={{ display: 'inline-flex', alignItems: 'center', gap: '16px', marginBottom: '16px' }}>
-                <div style={{ width: '40px', height: '1px', background: '#7C3AED' }} />
-                <span style={{ fontSize: '12px', fontWeight: 600, color: '#7C3AED', textTransform: 'uppercase', letterSpacing: '0.1em' }}>Unser Prozess</span>
-                <div style={{ width: '40px', height: '1px', background: '#7C3AED' }} />
+                <div style={{ width: '40px', height: '1px', background: '#13328D' }} />
+                <span style={{ fontSize: '12px', fontWeight: 600, color: '#13328D', textTransform: 'uppercase', letterSpacing: '0.1em' }}>Unser Prozess</span>
+                <div style={{ width: '40px', height: '1px', background: '#13328D' }} />
               </div>
               <h2 style={{ fontSize: 'clamp(22px, 3vw, 36px)', fontWeight: 800, color: '#111111', letterSpacing: '-1px' }}>
                 So arbeiten wir
@@ -335,7 +335,7 @@ export default function LeistungTemplate({ data, slug }: { data: LeistungData; s
               {data.process.map((step, i) => (
                 <div key={i} style={{ position: 'relative' }}>
                   <div className="l-step" style={{ background: 'white', borderRadius: '16px', padding: '28px 24px', border: '1px solid #EFEFEF', height: '100%' }}>
-                    <div className="l-step-num" style={{ width: '48px', height: '48px', borderRadius: '50%', background: '#7C3AED', display: 'flex', alignItems: 'center', justifyContent: 'center', marginBottom: '20px', flexShrink: 0 }}>
+                    <div className="l-step-num" style={{ width: '48px', height: '48px', borderRadius: '50%', background: '#13328D', display: 'flex', alignItems: 'center', justifyContent: 'center', marginBottom: '20px', flexShrink: 0 }}>
                       <span style={{ color: 'white', fontSize: '15px', fontWeight: 800 }}>{step.num}</span>
                     </div>
                     <h3 style={{ fontSize: '16px', fontWeight: 700, color: '#111111', marginBottom: '10px', letterSpacing: '-0.3px', lineHeight: 1.3 }}>{step.title}</h3>
@@ -367,7 +367,7 @@ export default function LeistungTemplate({ data, slug }: { data: LeistungData; s
         {relatedSlugs.length > 0 && (
           <section style={{ background: '#F8F9FA', padding: '64px 0' }}>
             <div className="max-w-7xl mx-auto px-6 lg:px-8">
-              <p style={{ fontSize: '11px', fontWeight: 700, textTransform: 'uppercase', letterSpacing: '0.1em', color: '#7C3AED', marginBottom: '8px' }}>
+              <p style={{ fontSize: '11px', fontWeight: 700, textTransform: 'uppercase', letterSpacing: '0.1em', color: '#13328D', marginBottom: '8px' }}>
                 Das könnte Sie auch interessieren
               </p>
               <h2 style={{ fontSize: 'clamp(20px, 2.5vw, 28px)', fontWeight: 800, color: '#111111', letterSpacing: '-0.8px', marginBottom: '32px' }}>
@@ -380,7 +380,7 @@ export default function LeistungTemplate({ data, slug }: { data: LeistungData; s
                   return (
                     <Link key={rSlug} href={`/leistungen/${rSlug}`} style={{ textDecoration: 'none', display: 'block' }}>
                       <div className="l-related" style={{ padding: '28px', borderRadius: '16px', border: '1px solid #EFEFEF', background: 'white' }}>
-                        <span style={{ display: 'inline-block', background: 'rgba(124,58,237,0.08)', color: '#7C3AED', fontSize: '11px', fontWeight: 600, padding: '3px 10px', borderRadius: '100px', marginBottom: '12px' }}>
+                        <span style={{ display: 'inline-block', background: 'rgba(19, 50, 141,0.08)', color: '#13328D', fontSize: '11px', fontWeight: 600, padding: '3px 10px', borderRadius: '100px', marginBottom: '12px' }}>
                           {rel.hero.badge}
                         </span>
                         <h3 style={{ fontSize: '16px', fontWeight: 700, color: '#111111', marginBottom: '8px', letterSpacing: '-0.3px' }}>
@@ -389,7 +389,7 @@ export default function LeistungTemplate({ data, slug }: { data: LeistungData; s
                         <p style={{ fontSize: '13px', color: '#6B7280', lineHeight: 1.5, marginBottom: '14px' }}>
                           {rel.hero.description.slice(0, 100)}…
                         </p>
-                        <span style={{ fontSize: '13px', fontWeight: 600, color: '#7C3AED' }}>
+                        <span style={{ fontSize: '13px', fontWeight: 600, color: '#13328D' }}>
                           Mehr erfahren <span className="l-related-arrow">→</span>
                         </span>
                       </div>
@@ -402,7 +402,7 @@ export default function LeistungTemplate({ data, slug }: { data: LeistungData; s
         )}
 
         {/* ⑨ CTA CARD — gradient */}
-        <section style={{ background: 'linear-gradient(135deg, #7C3AED 0%, #5B21B6 100%)', padding: '80px 0', textAlign: 'center', position: 'relative', overflow: 'hidden' }}>
+        <section style={{ background: 'linear-gradient(135deg, #13328D 0%, #0E2570 100%)', padding: '80px 0', textAlign: 'center', position: 'relative', overflow: 'hidden' }}>
           <div style={{ position: 'absolute', top: '50%', left: '50%', transform: 'translate(-50%, -50%)', width: '600px', height: '400px', background: 'radial-gradient(ellipse, rgba(255,255,255,0.07) 0%, transparent 70%)', pointerEvents: 'none' }} />
           <div className="max-w-3xl mx-auto px-6 lg:px-8" style={{ position: 'relative' }}>
             <h2 style={{ fontSize: 'clamp(28px, 4vw, 48px)', fontWeight: 800, color: 'white', letterSpacing: '-1.5px', lineHeight: 1.1, marginBottom: '16px' }}>
@@ -414,7 +414,7 @@ export default function LeistungTemplate({ data, slug }: { data: LeistungData; s
             <Link
               href="/anfrage"
               className="l-cta-btn"
-              style={{ display: 'inline-flex', alignItems: 'center', background: 'white', color: '#7C3AED', padding: '16px 40px', borderRadius: '12px', fontSize: '16px', fontWeight: 700, textDecoration: 'none', letterSpacing: '-0.2px' }}
+              style={{ display: 'inline-flex', alignItems: 'center', background: 'white', color: '#13328D', padding: '16px 40px', borderRadius: '12px', fontSize: '16px', fontWeight: 700, textDecoration: 'none', letterSpacing: '-0.2px' }}
             >
               Jetzt anfragen →
             </Link>

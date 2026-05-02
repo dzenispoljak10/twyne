@@ -25,12 +25,12 @@ export default function Projekte() {
               className="animate-on-scroll"
               style={{ display: 'flex', alignItems: 'center', gap: '16px', marginBottom: '16px' }}
             >
-              <div style={{ width: '40px', height: '1px', background: '#7C3AED' }} />
+              <div style={{ width: '40px', height: '1px', background: '#13328D' }} />
               <span
                 style={{
                   fontSize: '12px',
                   fontWeight: 600,
-                  color: '#7C3AED',
+                  color: '#13328D',
                   textTransform: 'uppercase',
                   letterSpacing: '0.1em',
                 }}
@@ -60,7 +60,7 @@ export default function Projekte() {
               gap: '6px',
               fontSize: '14px',
               fontWeight: 600,
-              color: '#7C3AED',
+              color: '#13328D',
               textDecoration: 'none',
             }}
             className="hidden md:inline-flex"

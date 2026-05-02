@@ -162,7 +162,7 @@ export default function Navbar() {
                 gap: '4px',
                 fontSize: '14px',
                 fontWeight: isLeistungenActive ? 600 : 500,
-                color: isLeistungenActive ? '#7C3AED' : leistungenOpen ? '#111111' : '#374151',
+                color: isLeistungenActive ? '#13328D' : leistungenOpen ? '#111111' : '#374151',
                 padding: '8px 16px',
                 borderRadius: '8px',
                 background: leistungenOpen ? '#F8F9FA' : 'transparent',
@@ -177,7 +177,7 @@ export default function Navbar() {
                 style={{
                   transform: leistungenOpen ? 'rotate(180deg)' : 'rotate(0deg)',
                   transition: 'transform 0.3s ease',
-                  color: isLeistungenActive ? '#7C3AED' : '#9CA3AF',
+                  color: isLeistungenActive ? '#13328D' : '#9CA3AF',
                 }}
               />
             </button>
@@ -193,7 +193,7 @@ export default function Navbar() {
                 gap: '4px',
                 fontSize: '14px',
                 fontWeight: isProdukteActive ? 600 : 500,
-                color: isProdukteActive ? '#7C3AED' : produkteOpen ? '#111111' : '#374151',
+                color: isProdukteActive ? '#13328D' : produkteOpen ? '#111111' : '#374151',
                 padding: '8px 16px',
                 borderRadius: '8px',
                 background: produkteOpen ? '#F8F9FA' : 'transparent',
@@ -208,7 +208,7 @@ export default function Navbar() {
                 style={{
                   transform: produkteOpen ? 'rotate(180deg)' : 'rotate(0deg)',
                   transition: 'transform 0.3s ease',
-                  color: isProdukteActive ? '#7C3AED' : '#9CA3AF',
+                  color: isProdukteActive ? '#13328D' : '#9CA3AF',
                 }}
               />
             </button>
@@ -223,7 +223,7 @@ export default function Navbar() {
                   style={{
                     fontSize: '14px',
                     fontWeight: isActive ? 600 : 500,
-                    color: isActive ? '#7C3AED' : '#374151',
+                    color: isActive ? '#13328D' : '#374151',
                     padding: '8px 16px',
                     borderRadius: '8px',
                     textDecoration: 'none',
@@ -238,7 +238,7 @@ export default function Navbar() {
                     }
                   }}
                   onMouseLeave={(e) => {
-                    e.currentTarget.style.color = isActive ? '#7C3AED' : '#374151'
+                    e.currentTarget.style.color = isActive ? '#13328D' : '#374151'
                     e.currentTarget.style.background = 'transparent'
                   }}
                 >
@@ -254,7 +254,7 @@ export default function Navbar() {
               href="/anfrage"
               className="hidden md:inline-flex items-center"
               style={{
-                background: '#7C3AED',
+                background: '#13328D',
                 color: 'white',
                 padding: '9px 20px',
                 borderRadius: '8px',
@@ -264,12 +264,12 @@ export default function Navbar() {
                 transition: 'all 0.2s ease',
               }}
               onMouseEnter={(e) => {
-                e.currentTarget.style.background = '#6D28D9'
+                e.currentTarget.style.background = '#0E2570'
                 e.currentTarget.style.transform = 'translateY(-1px)'
-                e.currentTarget.style.boxShadow = '0 4px 14px rgba(124,58,237,0.35)'
+                e.currentTarget.style.boxShadow = '0 4px 14px rgba(19, 50, 141,0.35)'
               }}
               onMouseLeave={(e) => {
-                e.currentTarget.style.background = '#7C3AED'
+                e.currentTarget.style.background = '#13328D'
                 e.currentTarget.style.transform = 'translateY(0)'
                 e.currentTarget.style.boxShadow = 'none'
               }}

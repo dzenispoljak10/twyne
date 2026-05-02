@@ -59,7 +59,7 @@ export default async function KursInteressePage() {
                   style={{ borderBottom: idx < items.length - 1 ? '1px solid #F0F0F5' : 'none' }}
                 >
                   <td style={{ padding: '14px 20px', fontSize: '14px', color: '#111111', fontWeight: 500 }}>
-                    <a href={`mailto:${item.email}`} style={{ color: '#7C3AED', textDecoration: 'none' }}>
+                    <a href={`mailto:${item.email}`} style={{ color: '#13328D', textDecoration: 'none' }}>
                       {item.email}
                     </a>
                   </td>

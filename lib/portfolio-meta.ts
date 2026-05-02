@@ -1,7 +1,7 @@
 export const kategorieMeta: Record<string, { label: string; color: string; fallback: string }> = {
   WEBSEITEN: {
     label: 'Webseite',
-    color: '#7C3AED',
+    color: '#13328D',
     fallback: 'https://images.unsplash.com/photo-1467232004584-a241de8bcf5d?w=800&h=500&fit=crop&auto=format',
   },
   WEBAPPLIKATIONEN: {

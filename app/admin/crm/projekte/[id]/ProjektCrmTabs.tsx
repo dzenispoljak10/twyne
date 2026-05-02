@@ -115,7 +115,7 @@ function ConfirmModal({
 
 // ─── Input helpers ────────────────────────────────────────────────────────────
 
-const inputCls = 'w-full border border-[#E5E7EB] rounded-lg px-3 py-2 text-sm focus:outline-none focus:border-[#7C3AED]'
+const inputCls = 'w-full border border-[#E5E7EB] rounded-lg px-3 py-2 text-sm focus:outline-none focus:border-[#13328D]'
 const labelCls = 'block text-xs font-semibold text-[#374151] mb-1'
 
 // ─── Download helper ──────────────────────────────────────────────────────────
@@ -204,7 +204,7 @@ function MailSendenModal({
           Abbrechen
         </button>
         <button onClick={handleSend} disabled={sending || !an || !betreff || !inhalt} type="button"
-          style={{ padding: '9px 20px', borderRadius: '8px', border: 'none', fontSize: '14px', fontWeight: 600, color: 'white', background: sending ? '#A78BFA' : '#7C3AED', cursor: sending ? 'not-allowed' : 'pointer', display: 'inline-flex', alignItems: 'center', gap: '6px' }}>
+          style={{ padding: '9px 20px', borderRadius: '8px', border: 'none', fontSize: '14px', fontWeight: 600, color: 'white', background: sending ? '#4F6FBF' : '#13328D', cursor: sending ? 'not-allowed' : 'pointer', display: 'inline-flex', alignItems: 'center', gap: '6px' }}>
           <Mail size={14} />
           {sending ? 'Sende...' : 'Senden'}
         </button>
@@ -339,7 +339,7 @@ function CreateOfferteModal({ projektId, onClose, onCreated }: { projektId: stri
           Abbrechen
         </button>
         <button onClick={handleCreate} disabled={saving || !gueltigBis} type="button"
-          style={{ padding: '9px 20px', borderRadius: '8px', border: 'none', fontSize: '14px', fontWeight: 600, color: 'white', background: saving ? '#A78BFA' : '#7C3AED', cursor: saving ? 'not-allowed' : 'pointer' }}>
+          style={{ padding: '9px 20px', borderRadius: '8px', border: 'none', fontSize: '14px', fontWeight: 600, color: 'white', background: saving ? '#4F6FBF' : '#13328D', cursor: saving ? 'not-allowed' : 'pointer' }}>
           {saving ? 'Erstelle...' : 'Offerte erstellen'}
         </button>
       </div>
@@ -471,7 +471,7 @@ function OfferteDetailModal({
             </button>
             {['ENTWURF', 'VERSENDET', 'ANGENOMMEN'].includes(st) && (
               <button onClick={alsRechnungUebernehmen} disabled={alsRechnung} type="button"
-                style={{ display: 'inline-flex', alignItems: 'center', gap: '6px', padding: '7px 14px', borderRadius: '8px', fontSize: '13px', fontWeight: 600, color: 'white', background: alsRechnung ? '#A78BFA' : '#7C3AED', border: 'none', cursor: alsRechnung ? 'not-allowed' : 'pointer' }}>
+                style={{ display: 'inline-flex', alignItems: 'center', gap: '6px', padding: '7px 14px', borderRadius: '8px', fontSize: '13px', fontWeight: 600, color: 'white', background: alsRechnung ? '#4F6FBF' : '#13328D', border: 'none', cursor: alsRechnung ? 'not-allowed' : 'pointer' }}>
                 <RefreshCw size={13} /> Als Rechnung übernehmen
               </button>
             )}
@@ -494,7 +494,7 @@ function OfferteDetailModal({
               Schliessen
             </button>
             <button onClick={savePositionen} disabled={saving} type="button"
-              style={{ padding: '9px 20px', borderRadius: '8px', border: 'none', fontSize: '14px', fontWeight: 600, color: 'white', background: saving ? '#A78BFA' : '#7C3AED', cursor: saving ? 'not-allowed' : 'pointer' }}>
+              style={{ padding: '9px 20px', borderRadius: '8px', border: 'none', fontSize: '14px', fontWeight: 600, color: 'white', background: saving ? '#4F6FBF' : '#13328D', cursor: saving ? 'not-allowed' : 'pointer' }}>
               {saving ? 'Speichert...' : 'Positionen speichern'}
             </button>
           </div>
@@ -601,7 +601,7 @@ function CreateRechnungModal({
           Abbrechen
         </button>
         <button onClick={handleCreate} disabled={saving || !faelligBis} type="button"
-          style={{ padding: '9px 20px', borderRadius: '8px', border: 'none', fontSize: '14px', fontWeight: 600, color: 'white', background: saving ? '#A78BFA' : '#7C3AED', cursor: saving ? 'not-allowed' : 'pointer' }}>
+          style={{ padding: '9px 20px', borderRadius: '8px', border: 'none', fontSize: '14px', fontWeight: 600, color: 'white', background: saving ? '#4F6FBF' : '#13328D', cursor: saving ? 'not-allowed' : 'pointer' }}>
           {saving ? 'Erstelle...' : 'Rechnung erstellen'}
         </button>
       </div>
@@ -793,7 +793,7 @@ function RechnungDetailModal({
                   />
                 </div>
                 <button onClick={saveZahlung} disabled={savingZahlung} type="button"
-                  style={{ padding: '8px 16px', borderRadius: '8px', border: 'none', fontSize: '13px', fontWeight: 600, color: 'white', background: savingZahlung ? '#A78BFA' : '#059669', cursor: savingZahlung ? 'not-allowed' : 'pointer', whiteSpace: 'nowrap' }}>
+                  style={{ padding: '8px 16px', borderRadius: '8px', border: 'none', fontSize: '13px', fontWeight: 600, color: 'white', background: savingZahlung ? '#4F6FBF' : '#059669', cursor: savingZahlung ? 'not-allowed' : 'pointer', whiteSpace: 'nowrap' }}>
                   <CheckCircle size={14} style={{ display: 'inline', marginRight: '4px' }} />
                   Speichern
                 </button>
@@ -812,7 +812,7 @@ function RechnungDetailModal({
               Schliessen
             </button>
             <button onClick={savePositionen} disabled={saving} type="button"
-              style={{ padding: '9px 20px', borderRadius: '8px', border: 'none', fontSize: '14px', fontWeight: 600, color: 'white', background: saving ? '#A78BFA' : '#7C3AED', cursor: saving ? 'not-allowed' : 'pointer' }}>
+              style={{ padding: '9px 20px', borderRadius: '8px', border: 'none', fontSize: '14px', fontWeight: 600, color: 'white', background: saving ? '#4F6FBF' : '#13328D', cursor: saving ? 'not-allowed' : 'pointer' }}>
               {saving ? 'Speichert...' : 'Positionen speichern'}
             </button>
           </div>
@@ -891,7 +891,7 @@ function EditProjektModal({
           Abbrechen
         </button>
         <button onClick={handleSave} disabled={saving || !name.trim()} type="button"
-          style={{ padding: '9px 20px', borderRadius: '8px', border: 'none', fontSize: '14px', fontWeight: 600, color: 'white', background: saving ? '#A78BFA' : '#7C3AED', cursor: saving ? 'not-allowed' : 'pointer' }}>
+          style={{ padding: '9px 20px', borderRadius: '8px', border: 'none', fontSize: '14px', fontWeight: 600, color: 'white', background: saving ? '#4F6FBF' : '#13328D', cursor: saving ? 'not-allowed' : 'pointer' }}>
           {saving ? 'Speichert...' : 'Speichern'}
         </button>
       </div>
@@ -929,7 +929,7 @@ function OffertenTab({ projekt, onRefresh }: { projekt: ProjektFull; onRefresh: 
         <h3 className="text-sm font-bold text-[#111111]">Offerten ({offerten.length})</h3>
         <button
           onClick={() => setShowCreate(true)}
-          style={{ display: 'inline-flex', alignItems: 'center', gap: '6px', padding: '8px 16px', borderRadius: '8px', fontSize: '13px', fontWeight: 600, color: 'white', background: '#7C3AED', border: 'none', cursor: 'pointer' }}
+          style={{ display: 'inline-flex', alignItems: 'center', gap: '6px', padding: '8px 16px', borderRadius: '8px', fontSize: '13px', fontWeight: 600, color: 'white', background: '#13328D', border: 'none', cursor: 'pointer' }}
           type="button"
         >
           <Plus size={14} /> Neue Offerte
@@ -962,7 +962,7 @@ function OffertenTab({ projekt, onRefresh }: { projekt: ProjektFull; onRefresh: 
                     <td style={{ padding: '12px 16px', textAlign: 'right' }}>
                       <button
                         onClick={() => setSelected(o)}
-                        style={{ fontSize: '12px', fontWeight: 600, color: '#7C3AED', background: 'none', border: 'none', cursor: 'pointer' }}
+                        style={{ fontSize: '12px', fontWeight: 600, color: '#13328D', background: 'none', border: 'none', cursor: 'pointer' }}
                         type="button"
                       >
                         Öffnen →
@@ -1010,7 +1010,7 @@ function RechnungenTab({ projekt, onRefresh }: { projekt: ProjektFull; onRefresh
         <h3 className="text-sm font-bold text-[#111111]">Rechnungen ({rechnungen.length})</h3>
         <button
           onClick={() => setShowCreate(true)}
-          style={{ display: 'inline-flex', alignItems: 'center', gap: '6px', padding: '8px 16px', borderRadius: '8px', fontSize: '13px', fontWeight: 600, color: 'white', background: '#7C3AED', border: 'none', cursor: 'pointer' }}
+          style={{ display: 'inline-flex', alignItems: 'center', gap: '6px', padding: '8px 16px', borderRadius: '8px', fontSize: '13px', fontWeight: 600, color: 'white', background: '#13328D', border: 'none', cursor: 'pointer' }}
           type="button"
         >
           <Plus size={14} /> Neue Rechnung
@@ -1061,7 +1061,7 @@ function RechnungenTab({ projekt, onRefresh }: { projekt: ProjektFull; onRefresh
                     <td style={{ padding: '12px 16px', textAlign: 'right' }}>
                       <button
                         onClick={() => setSelected(r)}
-                        style={{ fontSize: '12px', fontWeight: 600, color: '#7C3AED', background: 'none', border: 'none', cursor: 'pointer' }}
+                        style={{ fontSize: '12px', fontWeight: 600, color: '#13328D', background: 'none', border: 'none', cursor: 'pointer' }}
                         type="button"
                       >
                         Öffnen →
@@ -1160,12 +1160,12 @@ function MailsTab({ projekt, router }: { projekt: ProjektFull; router: ReturnTyp
             <div>
               <label className="block text-xs font-semibold text-[#374151] mb-1">An</label>
               <input required value={form.an} onChange={(e) => setForm({ ...form, an: e.target.value })}
-                className="w-full border border-[#E5E7EB] rounded-lg px-3 py-2 text-sm focus:outline-none focus:border-[#7C3AED]" />
+                className="w-full border border-[#E5E7EB] rounded-lg px-3 py-2 text-sm focus:outline-none focus:border-[#13328D]" />
             </div>
             <div>
               <label className="block text-xs font-semibold text-[#374151] mb-1">Typ</label>
               <select value={form.typ} onChange={(e) => setForm({ ...form, typ: e.target.value })}
-                className="w-full border border-[#E5E7EB] rounded-lg px-3 py-2 text-sm focus:outline-none focus:border-[#7C3AED]">
+                className="w-full border border-[#E5E7EB] rounded-lg px-3 py-2 text-sm focus:outline-none focus:border-[#13328D]">
                 <option value="INDIVIDUELL">Individuell</option>
                 <option value="OFFERTE">Offerte</option>
                 <option value="AUFTRAGSBESTAETIGUNG">Auftragsbestätigung</option>
@@ -1180,16 +1180,16 @@ function MailsTab({ projekt, router }: { projekt: ProjektFull; router: ReturnTyp
           <div>
             <label className="block text-xs font-semibold text-[#374151] mb-1">Betreff</label>
             <input required value={form.betreff} onChange={(e) => setForm({ ...form, betreff: e.target.value })}
-              className="w-full border border-[#E5E7EB] rounded-lg px-3 py-2 text-sm focus:outline-none focus:border-[#7C3AED]" />
+              className="w-full border border-[#E5E7EB] rounded-lg px-3 py-2 text-sm focus:outline-none focus:border-[#13328D]" />
           </div>
           <div>
             <label className="block text-xs font-semibold text-[#374151] mb-1">Inhalt</label>
             <textarea required value={form.inhalt} onChange={(e) => setForm({ ...form, inhalt: e.target.value })}
-              rows={6} className="w-full border border-[#E5E7EB] rounded-lg px-3 py-2 text-sm focus:outline-none focus:border-[#7C3AED] resize-none font-mono" />
+              rows={6} className="w-full border border-[#E5E7EB] rounded-lg px-3 py-2 text-sm focus:outline-none focus:border-[#13328D] resize-none font-mono" />
           </div>
           <button type="submit" disabled={sending}
             className="inline-flex items-center gap-2 px-4 py-2 rounded-lg text-sm font-semibold text-white disabled:opacity-50"
-            style={{ background: '#7C3AED' }}>
+            style={{ background: '#13328D' }}>
             <Send size={14} />
             {sending ? 'Sende...' : 'Senden'}
           </button>
@@ -1246,10 +1246,10 @@ function NotizenTab({ projekt, router }: { projekt: ProjektFull; router: ReturnT
         <form onSubmit={addNotiz} className="space-y-3">
           <textarea value={inhalt} onChange={(e) => setInhalt(e.target.value)}
             placeholder="Notiz schreiben..." rows={4}
-            className="w-full border border-[#E5E7EB] rounded-lg px-3 py-2 text-sm focus:outline-none focus:border-[#7C3AED] resize-none" />
+            className="w-full border border-[#E5E7EB] rounded-lg px-3 py-2 text-sm focus:outline-none focus:border-[#13328D] resize-none" />
           <button type="submit" disabled={saving || !inhalt.trim()}
             className="inline-flex items-center gap-2 px-4 py-2 rounded-lg text-sm font-semibold text-white disabled:opacity-50"
-            style={{ background: '#7C3AED' }}>
+            style={{ background: '#13328D' }}>
             <StickyNote size={14} />
             {saving ? 'Speichert...' : 'Notiz speichern'}
           </button>
@@ -1348,7 +1348,7 @@ function UploadLinkModal({
               Abbrechen
             </button>
             <button onClick={handleSend} disabled={sending || !an || !nachricht} type="button"
-              style={{ padding: '9px 20px', borderRadius: '8px', border: 'none', fontSize: '14px', fontWeight: 600, color: 'white', background: sending ? '#A78BFA' : '#7C3AED', cursor: sending ? 'not-allowed' : 'pointer', display: 'inline-flex', alignItems: 'center', gap: '6px' }}>
+              style={{ padding: '9px 20px', borderRadius: '8px', border: 'none', fontSize: '14px', fontWeight: 600, color: 'white', background: sending ? '#4F6FBF' : '#13328D', cursor: sending ? 'not-allowed' : 'pointer', display: 'inline-flex', alignItems: 'center', gap: '6px' }}>
               <LinkIcon size={14} />
               {sending ? 'Sende...' : 'Link senden'}
             </button>
@@ -1383,7 +1383,7 @@ function UploadsTab({ projekt, onRefresh }: { projekt: ProjektFull; onRefresh: (
         <h3 className="text-sm font-bold text-[#111111]">Uploads ({uploads.length})</h3>
         <button
           onClick={() => setShowModal(true)}
-          style={{ display: 'inline-flex', alignItems: 'center', gap: '6px', padding: '8px 16px', borderRadius: '8px', fontSize: '13px', fontWeight: 600, color: 'white', background: '#7C3AED', border: 'none', cursor: 'pointer' }}
+          style={{ display: 'inline-flex', alignItems: 'center', gap: '6px', padding: '8px 16px', borderRadius: '8px', fontSize: '13px', fontWeight: 600, color: 'white', background: '#13328D', border: 'none', cursor: 'pointer' }}
           type="button"
         >
           <LinkIcon size={14} /> Upload-Link senden
@@ -1440,7 +1440,7 @@ function UploadsTab({ projekt, onRefresh }: { projekt: ProjektFull; onRefresh: (
                       {isVerfuegbar && (
                         <a
                           href={`/api/uploads/${u.id}/download`}
-                          style={{ display: 'inline-flex', alignItems: 'center', gap: '5px', fontSize: '12px', fontWeight: 600, color: '#7C3AED', textDecoration: 'none', padding: '5px 10px', border: '1px solid rgba(124,58,237,0.3)', borderRadius: '6px' }}
+                          style={{ display: 'inline-flex', alignItems: 'center', gap: '5px', fontSize: '12px', fontWeight: 600, color: '#13328D', textDecoration: 'none', padding: '5px 10px', border: '1px solid rgba(19, 50, 141,0.3)', borderRadius: '6px' }}
                           onClick={onRefresh}
                         >
                           <Download size={12} /> Download
@@ -1526,7 +1526,7 @@ export default function ProjektCrmTabs({ projekt }: { projekt: ProjektFull }) {
             className="flex items-center gap-1.5 px-4 py-1.5 rounded-lg text-sm font-medium transition-colors"
             style={{
               background: tab === t.key ? 'white' : 'transparent',
-              color: tab === t.key ? '#7C3AED' : '#6B7280',
+              color: tab === t.key ? '#13328D' : '#6B7280',
               boxShadow: tab === t.key ? '0 1px 3px rgba(0,0,0,0.08)' : 'none',
             }}
           >

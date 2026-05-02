@@ -68,7 +68,7 @@ export default function Sidebar({ newAnfragen = 0, newUploads = 0, newLeads = 0,
         href={item.href}
         className={`flex items-center justify-between px-3 py-2 rounded-lg text-sm font-medium transition-all duration-150 ${
           isActive
-            ? 'bg-violet-50 text-[#7C3AED]'
+            ? 'bg-violet-50 text-[#13328D]'
             : 'text-[#374151] hover:bg-[#F4F4F6] hover:text-[#111111]'
         }`}
       >
@@ -77,7 +77,7 @@ export default function Sidebar({ newAnfragen = 0, newUploads = 0, newLeads = 0,
           {item.label}
         </div>
         {item.badge !== undefined && item.badge > 0 && (
-          <span className="text-[10px] font-bold bg-[#7C3AED] text-white px-1.5 py-0.5 rounded-full min-w-[18px] text-center">
+          <span className="text-[10px] font-bold bg-[#13328D] text-white px-1.5 py-0.5 rounded-full min-w-[18px] text-center">
             {item.badge}
           </span>
         )}

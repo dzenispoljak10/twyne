@@ -33,7 +33,7 @@ function Logo() {
 }
 
 const produktLinks = [
-  { href: '/produkte/club', Icon: Users, name: 'twyne Club', color: '#7C3AED' },
+  { href: '/produkte/club', Icon: Users, name: 'twyne Club', color: '#13328D' },
   { href: '/produkte/table', Icon: Calendar, name: 'twyne Table', color: '#059669' },
   { href: '/produkte/desk', Icon: Inbox, name: 'twyne Desk', color: '#0EA5E9' },
   { href: '/produkte/flow', Icon: Zap, name: 'twyne Flow', color: '#F59E0B' },
@@ -47,7 +47,7 @@ export default function MobileMenu({ isOpen, onClose, pathname }: Props) {
     display: 'block',
     fontSize: '18px',
     fontWeight: 600,
-    color: pathname === href || pathname.startsWith(href + '/') ? '#7C3AED' : '#111111',
+    color: pathname === href || pathname.startsWith(href + '/') ? '#13328D' : '#111111',
     padding: '16px 0',
     borderBottom: '1px solid #F4F4F4',
     textDecoration: 'none',
@@ -115,7 +115,7 @@ export default function MobileMenu({ isOpen, onClose, pathname }: Props) {
                 justifyContent: 'space-between',
                 fontSize: '18px',
                 fontWeight: 600,
-                color: pathname.startsWith('/leistungen') ? '#7C3AED' : '#111111',
+                color: pathname.startsWith('/leistungen') ? '#13328D' : '#111111',
                 padding: '16px 0',
                 background: 'none',
                 border: 'none',
@@ -152,12 +152,12 @@ export default function MobileMenu({ isOpen, onClose, pathname }: Props) {
                       paddingTop: '10px',
                       paddingBottom: '10px',
                       fontSize: '15px',
-                      color: pathname.startsWith(href) ? '#7C3AED' : '#6B7280',
+                      color: pathname.startsWith(href) ? '#13328D' : '#6B7280',
                       textDecoration: 'none',
                       fontWeight: 500,
                     }}
                   >
-                    <Icon size={16} style={{ color: pathname.startsWith(href) ? '#7C3AED' : '#9CA3AF', flexShrink: 0 }} />
+                    <Icon size={16} style={{ color: pathname.startsWith(href) ? '#13328D' : '#9CA3AF', flexShrink: 0 }} />
                     {name}
                   </Link>
                 ))}
@@ -170,7 +170,7 @@ export default function MobileMenu({ isOpen, onClose, pathname }: Props) {
                     paddingTop: '10px',
                     paddingBottom: '10px',
                     fontSize: '13px',
-                    color: '#7C3AED',
+                    color: '#13328D',
                     textDecoration: 'none',
                     fontWeight: 600,
                   }}
@@ -192,7 +192,7 @@ export default function MobileMenu({ isOpen, onClose, pathname }: Props) {
                 justifyContent: 'space-between',
                 fontSize: '18px',
                 fontWeight: 600,
-                color: pathname.startsWith('/produkte') ? '#7C3AED' : '#111111',
+                color: pathname.startsWith('/produkte') ? '#13328D' : '#111111',
                 padding: '16px 0',
                 background: 'none',
                 border: 'none',
@@ -237,7 +237,7 @@ export default function MobileMenu({ isOpen, onClose, pathname }: Props) {
                 <Link
                   href="/produkte"
                   onClick={onClose}
-                  style={{ display: 'block', paddingLeft: '20px', paddingTop: '10px', paddingBottom: '10px', fontSize: '13px', color: '#7C3AED', textDecoration: 'none', fontWeight: 600 }}
+                  style={{ display: 'block', paddingLeft: '20px', paddingTop: '10px', paddingBottom: '10px', fontSize: '13px', color: '#13328D', textDecoration: 'none', fontWeight: 600 }}
                 >
                   Alle Produkte ansehen →
                 </Link>
@@ -259,7 +259,7 @@ export default function MobileMenu({ isOpen, onClose, pathname }: Props) {
               display: 'block',
               width: '100%',
               textAlign: 'center',
-              background: '#7C3AED',
+              background: '#13328D',
               color: 'white',
               padding: '16px',
               borderRadius: '12px',

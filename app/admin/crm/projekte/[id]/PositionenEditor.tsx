@@ -297,7 +297,7 @@ function PresetsDropdown({ onSelect, onCustom }: { onSelect: (b: string) => void
       <div style={{ borderTop: '1px solid #EFEFEF' }}>
         <div style={groupLabelStyle}>Freie Eingabe</div>
         <div
-          style={{ ...itemStyle, color: '#7C3AED', display: 'flex', alignItems: 'center', gap: '8px' }}
+          style={{ ...itemStyle, color: '#13328D', display: 'flex', alignItems: 'center', gap: '8px' }}
           onClick={onCustom}
           onMouseEnter={(e) => (e.currentTarget.style.background = '#F8F9FA')}
           onMouseLeave={(e) => (e.currentTarget.style.background = 'transparent')}
@@ -460,11 +460,11 @@ function PositionenTable({
             borderRadius: '8px',
             fontSize: '13px',
             fontWeight: 600,
-            color: '#7C3AED',
+            color: '#13328D',
             background: 'transparent',
             cursor: 'pointer',
           }}
-          onMouseEnter={(e) => (e.currentTarget.style.borderColor = '#7C3AED')}
+          onMouseEnter={(e) => (e.currentTarget.style.borderColor = '#13328D')}
           onMouseLeave={(e) => (e.currentTarget.style.borderColor = '#D1D5DB')}
         >
           <Plus size={14} />
@@ -580,7 +580,7 @@ export default function PositionenEditor({ apiPath, initialPositionen, onSaved }
             fontSize: '14px',
             fontWeight: 600,
             color: 'white',
-            background: saving ? '#A78BFA' : '#7C3AED',
+            background: saving ? '#4F6FBF' : '#13328D',
             border: 'none',
             cursor: saving || rows.length === 0 ? 'not-allowed' : 'pointer',
             opacity: rows.length === 0 ? 0.4 : 1,

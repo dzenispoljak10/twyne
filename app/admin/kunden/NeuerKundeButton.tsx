@@ -42,7 +42,7 @@ export default function NeuerKundeButton() {
       <button
         onClick={() => setOpen(true)}
         className="inline-flex items-center gap-2 px-4 py-2 rounded-lg text-sm font-semibold text-white transition-colors"
-        style={{ background: '#7C3AED' }}
+        style={{ background: '#13328D' }}
       >
         <Plus size={16} />
         Neuer Kunde
@@ -67,7 +67,7 @@ export default function NeuerKundeButton() {
                   required
                   value={form.firma}
                   onChange={(e) => setForm({ ...form, firma: e.target.value })}
-                  className="w-full border border-[#E5E7EB] rounded-lg px-3 py-2 text-sm focus:outline-none focus:border-[#7C3AED]"
+                  className="w-full border border-[#E5E7EB] rounded-lg px-3 py-2 text-sm focus:outline-none focus:border-[#13328D]"
                 />
               </div>
               <div className="grid grid-cols-2 gap-3">
@@ -77,7 +77,7 @@ export default function NeuerKundeButton() {
                     required
                     value={form.vorname}
                     onChange={(e) => setForm({ ...form, vorname: e.target.value })}
-                    className="w-full border border-[#E5E7EB] rounded-lg px-3 py-2 text-sm focus:outline-none focus:border-[#7C3AED]"
+                    className="w-full border border-[#E5E7EB] rounded-lg px-3 py-2 text-sm focus:outline-none focus:border-[#13328D]"
                   />
                 </div>
                 <div>
@@ -86,7 +86,7 @@ export default function NeuerKundeButton() {
                     required
                     value={form.nachname}
                     onChange={(e) => setForm({ ...form, nachname: e.target.value })}
-                    className="w-full border border-[#E5E7EB] rounded-lg px-3 py-2 text-sm focus:outline-none focus:border-[#7C3AED]"
+                    className="w-full border border-[#E5E7EB] rounded-lg px-3 py-2 text-sm focus:outline-none focus:border-[#13328D]"
                   />
                 </div>
               </div>
@@ -97,7 +97,7 @@ export default function NeuerKundeButton() {
                   type="email"
                   value={form.email}
                   onChange={(e) => setForm({ ...form, email: e.target.value })}
-                  className="w-full border border-[#E5E7EB] rounded-lg px-3 py-2 text-sm focus:outline-none focus:border-[#7C3AED]"
+                  className="w-full border border-[#E5E7EB] rounded-lg px-3 py-2 text-sm focus:outline-none focus:border-[#13328D]"
                 />
               </div>
               <div className="grid grid-cols-2 gap-3">
@@ -106,7 +106,7 @@ export default function NeuerKundeButton() {
                   <input
                     value={form.telefon}
                     onChange={(e) => setForm({ ...form, telefon: e.target.value })}
-                    className="w-full border border-[#E5E7EB] rounded-lg px-3 py-2 text-sm focus:outline-none focus:border-[#7C3AED]"
+                    className="w-full border border-[#E5E7EB] rounded-lg px-3 py-2 text-sm focus:outline-none focus:border-[#13328D]"
                   />
                 </div>
                 <div>
@@ -114,7 +114,7 @@ export default function NeuerKundeButton() {
                   <input
                     value={form.website}
                     onChange={(e) => setForm({ ...form, website: e.target.value })}
-                    className="w-full border border-[#E5E7EB] rounded-lg px-3 py-2 text-sm focus:outline-none focus:border-[#7C3AED]"
+                    className="w-full border border-[#E5E7EB] rounded-lg px-3 py-2 text-sm focus:outline-none focus:border-[#13328D]"
                   />
                 </div>
               </div>
@@ -131,7 +131,7 @@ export default function NeuerKundeButton() {
                   type="submit"
                   disabled={loading}
                   className="flex-1 px-4 py-2 rounded-lg text-sm font-semibold text-white transition-colors disabled:opacity-50"
-                  style={{ background: '#7C3AED' }}
+                  style={{ background: '#13328D' }}
                 >
                   {loading ? 'Erstelle...' : 'Erstellen'}
                 </button>

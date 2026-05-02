@@ -79,7 +79,7 @@ export default function DemoAnfrageForm({ quelle, produkt, dienstleistung, titel
     return (
       <div style={{ textAlign: 'center', padding: '48px 32px', background: '#F8F9FA', borderRadius: '16px' }}>
         <div style={{ display: 'flex', justifyContent: 'center', marginBottom: '16px' }}>
-          <CheckCircle size={48} style={{ color: '#7C3AED' }} />
+          <CheckCircle size={48} style={{ color: '#13328D' }} />
         </div>
         <h3 style={{ fontSize: '22px', fontWeight: 700, color: '#111111', marginBottom: '12px', letterSpacing: '-0.5px' }}>
           Anfrage erhalten!
@@ -144,7 +144,7 @@ export default function DemoAnfrageForm({ quelle, produkt, dienstleistung, titel
         disabled={isSubmitting}
         style={{
           width: '100%',
-          background: isSubmitting ? '#A78BFA' : '#7C3AED',
+          background: isSubmitting ? '#4F6FBF' : '#13328D',
           color: 'white',
           border: 'none',
           borderRadius: '8px',

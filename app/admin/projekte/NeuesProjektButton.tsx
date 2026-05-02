@@ -47,7 +47,7 @@ export default function NeuesProjektButton({ kunden }: { kunden: Kunde[] }) {
     <>
       <button
         onClick={() => setOpen(true)}
-        className="flex items-center gap-2 px-4 py-2 bg-[#7C3AED] text-white text-sm font-semibold rounded-lg hover:bg-[#6D28D9] transition-colors"
+        className="flex items-center gap-2 px-4 py-2 bg-[#13328D] text-white text-sm font-semibold rounded-lg hover:bg-[#0E2570] transition-colors"
       >
         <Plus size={16} />
         Neues Projekt
@@ -75,7 +75,7 @@ export default function NeuesProjektButton({ kunden }: { kunden: Kunde[] }) {
                   value={name}
                   onChange={(e) => setName(e.target.value)}
                   placeholder="z.B. Website Redesign"
-                  className="w-full px-4 py-2.5 rounded-lg border border-[#E8E8ED] text-sm focus:outline-none focus:ring-2 focus:ring-[#7C3AED]"
+                  className="w-full px-4 py-2.5 rounded-lg border border-[#E8E8ED] text-sm focus:outline-none focus:ring-2 focus:ring-[#13328D]"
                   required
                   autoFocus
                 />
@@ -87,7 +87,7 @@ export default function NeuesProjektButton({ kunden }: { kunden: Kunde[] }) {
                   onChange={(e) => setBeschreibung(e.target.value)}
                   rows={2}
                   placeholder="Optional..."
-                  className="w-full px-4 py-2.5 rounded-lg border border-[#E8E8ED] text-sm focus:outline-none focus:ring-2 focus:ring-[#7C3AED] resize-none"
+                  className="w-full px-4 py-2.5 rounded-lg border border-[#E8E8ED] text-sm focus:outline-none focus:ring-2 focus:ring-[#13328D] resize-none"
                 />
               </div>
               {kunden.length > 0 && (
@@ -96,7 +96,7 @@ export default function NeuesProjektButton({ kunden }: { kunden: Kunde[] }) {
                   <select
                     value={kundeId}
                     onChange={(e) => setKundeId(e.target.value)}
-                    className="w-full px-4 py-2.5 rounded-lg border border-[#E8E8ED] text-sm focus:outline-none focus:ring-2 focus:ring-[#7C3AED]"
+                    className="w-full px-4 py-2.5 rounded-lg border border-[#E8E8ED] text-sm focus:outline-none focus:ring-2 focus:ring-[#13328D]"
                   >
                     <option value="">Kein Kunde ausgewählt</option>
                     {kunden.map((k) => (
@@ -119,7 +119,7 @@ export default function NeuesProjektButton({ kunden }: { kunden: Kunde[] }) {
                 <button
                   type="submit"
                   disabled={loading || !name.trim()}
-                  className="px-4 py-2 text-sm font-semibold text-white bg-[#7C3AED] rounded-lg hover:bg-[#6D28D9] disabled:opacity-50"
+                  className="px-4 py-2 text-sm font-semibold text-white bg-[#13328D] rounded-lg hover:bg-[#0E2570] disabled:opacity-50"
                 >
                   {loading ? 'Erstelle...' : 'Erstellen'}
                 </button>

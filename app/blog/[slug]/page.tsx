@@ -136,12 +136,12 @@ export default async function BlogPostPage({ params }: { params: Promise<{ slug:
           <div className="max-w-3xl mx-auto px-6 lg:px-8">
             <Link
               href="/blog"
-              className="inline-flex items-center gap-2 text-sm text-[#A78BFA] hover:text-white transition-colors mb-6"
+              className="inline-flex items-center gap-2 text-sm text-[#4F6FBF] hover:text-white transition-colors mb-6"
             >
               <ArrowLeft size={16} />
               Zurück zum Blog
             </Link>
-            <span className="text-xs font-medium uppercase tracking-widest text-[#A78BFA]">
+            <span className="text-xs font-medium uppercase tracking-widest text-[#4F6FBF]">
               {post.kategorie}
             </span>
             <h1

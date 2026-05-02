@@ -23,7 +23,7 @@ export default function AdminError({
       </p>
       <button
         onClick={unstable_retry}
-        style={{ padding: '8px 20px', borderRadius: '8px', background: '#7C3AED', color: 'white', border: 'none', fontSize: '14px', fontWeight: 600, cursor: 'pointer' }}
+        style={{ padding: '8px 20px', borderRadius: '8px', background: '#13328D', color: 'white', border: 'none', fontSize: '14px', fontWeight: 600, cursor: 'pointer' }}
       >
         Erneut versuchen
       </button>

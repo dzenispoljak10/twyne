@@ -23,12 +23,12 @@ export default function BranchenPage() {
         {/* Hero */}
         <section style={{ background: '#111111', padding: '96px 0 80px' }}>
           <div className="max-w-7xl mx-auto px-6 lg:px-8">
-            <p style={{ fontSize: '11px', fontWeight: 700, textTransform: 'uppercase', letterSpacing: '0.12em', color: '#A78BFA', marginBottom: '16px' }}>
+            <p style={{ fontSize: '11px', fontWeight: 700, textTransform: 'uppercase', letterSpacing: '0.12em', color: '#4F6FBF', marginBottom: '16px' }}>
               Branchen
             </p>
             <h1 style={{ color: 'white', fontWeight: 800, lineHeight: 1.05, marginBottom: '20px', fontSize: 'clamp(36px, 5vw, 56px)', letterSpacing: '-2px' }}>
               Für Ihre Branche<br />
-              <span style={{ color: '#7C3AED' }}>gemacht</span>
+              <span style={{ color: '#13328D' }}>gemacht</span>
             </h1>
             <p style={{ color: '#9CA3AF', fontSize: '18px', maxWidth: '520px', lineHeight: 1.6 }}>
               Jede Branche hat eigene Anforderungen. Wir kennen sie — und liefern Digitallösungen, die wirklich passen.
@@ -48,8 +48,8 @@ export default function BranchenPage() {
           }
           .branche-card:hover {
             transform: translateY(-4px);
-            box-shadow: 0 8px 32px rgba(124,58,237,0.10);
-            border-color: #C4B5FD;
+            box-shadow: 0 8px 32px rgba(19, 50, 141,0.10);
+            border-color: #A8B5DD;
           }
         `}</style>
         <section style={{ background: 'white', padding: '80px 0' }}>
@@ -69,7 +69,7 @@ export default function BranchenPage() {
                     <p style={{ fontSize: '14px', color: '#6B7280', lineHeight: 1.7, margin: '0 0 20px' }}>
                       {meta.desc}
                     </p>
-                    <span style={{ fontSize: '13px', fontWeight: 700, color: '#7C3AED' }}>
+                    <span style={{ fontSize: '13px', fontWeight: 700, color: '#13328D' }}>
                       Mehr erfahren →
                     </span>
                   </div>

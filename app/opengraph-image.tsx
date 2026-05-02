@@ -30,7 +30,7 @@ export default function OGImage() {
             transform: 'translateX(-50%)',
             width: '900px',
             height: '700px',
-            background: 'radial-gradient(ellipse, rgba(124,58,237,0.18) 0%, transparent 65%)',
+            background: 'radial-gradient(ellipse, rgba(19, 50, 141,0.18) 0%, transparent 65%)',
             borderRadius: '50%',
           }}
         />
@@ -63,7 +63,7 @@ export default function OGImage() {
           <div
             style={{
               fontSize: '32px',
-              color: '#A78BFA',
+              color: '#4F6FBF',
               fontWeight: 600,
               marginBottom: '32px',
               letterSpacing: '-0.5px',
@@ -128,7 +128,7 @@ export default function OGImage() {
               width: '8px',
               height: '8px',
               borderRadius: '50%',
-              background: '#7C3AED',
+              background: '#13328D',
             }}
           />
           <div style={{ fontSize: '16px', color: '#6B7280', fontWeight: 500 }}>twyne.ch</div>

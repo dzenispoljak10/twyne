@@ -63,7 +63,7 @@ export default function AnfrageActions({ anfrageId, status, email, vorname, nach
       {projektId && (
         <Link
           href={`/admin/projekte/${projektId}`}
-          className="flex items-center gap-2 w-full px-4 py-2.5 text-sm font-medium text-[#7C3AED] border border-[#7C3AED]/30 rounded-lg hover:bg-violet-50 transition-colors"
+          className="flex items-center gap-2 w-full px-4 py-2.5 text-sm font-medium text-[#13328D] border border-[#13328D]/30 rounded-lg hover:bg-violet-50 transition-colors"
         >
           <ExternalLink size={15} />
           Zum Projekt

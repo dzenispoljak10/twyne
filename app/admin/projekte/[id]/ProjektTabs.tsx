@@ -121,7 +121,7 @@ export default function ProjektTabs({ projekt }: { projekt: Projekt }) {
                 <div className="space-y-1.5 text-sm">
                   <p className="font-medium text-[#111111]">{projekt.kontaktVorname} {projekt.kontaktNachname}</p>
                   <p className="text-[#374151]">{projekt.kontaktFirma}</p>
-                  <a href={`mailto:${projekt.kontaktEmail}`} className="text-[#7C3AED] hover:underline block">
+                  <a href={`mailto:${projekt.kontaktEmail}`} className="text-[#13328D] hover:underline block">
                     {projekt.kontaktEmail}
                   </a>
                   <p className="text-[#374151]">{projekt.kontaktTelefon}</p>
